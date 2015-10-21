@@ -1,0 +1,9 @@
+---
+title: "ResearchProject_Assignment1"
+author: "Katrin"
+date: "21. Oktober 2015"
+output: pdf_document
+---
+
+# Introduction
+# Literature Review
