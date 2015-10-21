@@ -1,9 +1,15 @@
 ---
-title: "ResearchProject_Assignment1"
-author: "Katrin"
+title: "Research Proposal"
+author: "Benedikt Abendroth and Katrin Heger"
 date: "21. Oktober 2015"
 output: pdf_document
+bibliography:
+- bibliography.bib
 ---
 
 # Introduction
+# Research Question
 # Literature Review
+# Data Sources
+# Methodology
+# References
