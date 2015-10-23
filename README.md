@@ -6,7 +6,7 @@ In brief, we address the observation that many states have recently pursued the 
 
 In order to perform statistical analysis with R Studio, we will use publicly available data sets from the University of Uppsala Conflict Database Program (UCDP) to provide reproducible and open source research.
 
-Our current proposal can be read in the R Markdown file “???”. Hence, we used its standard citation style Chicago. In addition, the bibliography will be automatically added after the section called “References”.
+Our current proposal can be read in the R Markdown file “CollabResearch_Assignment1.Rmd”. Hence, we used its standard citation style Chicago. In addition, the bibliography will be automatically added after the section called “References”.
 
 In case you have any questions or recommendations feel free to reach out to us or send any push requests!
 
