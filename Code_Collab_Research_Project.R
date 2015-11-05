@@ -6,8 +6,9 @@
 # For more information please read the README file               #
 ##################################################################
 
-# Setting the working directory (Benedikt in this case)
-setwd("/Users/Benedikt/GitHub/CollaborativeResearchProject/")
+# Setting the working directory
+# Include code here at the end (probably from the repmis package
+# and the slides from Lecture 6, 9 October 2015)
 
 # In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
