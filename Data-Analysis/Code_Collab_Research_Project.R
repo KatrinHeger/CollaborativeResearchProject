@@ -6,18 +6,26 @@
 # For more information please read the README file               #
 ##################################################################
 
-# Insert code here to set working directory
+# Setting the working directory
+# Include code here at the end (probably from the repmis package
+# and the slides from Lecture 6, 9 October 2015)
 
-# In order to pursue our analysis, one additional package is necessary:
+# In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
-# Information about the package can be found in our Citations
+# ??? additional packages here
+# Information about the packages being used in this project
+# can be found in our BibTeX file
 # If users would like to check which packages are already
-# installed, please use the following code: "installed.packages()"
+# installed, use the following code: "installed.packages()"
 
-# Starting the repmis package
-library(rio)
+# Starting the rio package
+library("rio")
 
 # Loading the data (csv file) from our Github repository
-# using the RCurl package
+# using the repmis package
 # SHA-1 hash of the downloaded data file is:
 # aec313662cd7e1e5fa8b205c5c1180d542cee91a
+library("rio")
+dataset1 <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Datasets/CIMI.csv")
+View(dataset1)
+
