@@ -21,11 +21,8 @@
 # Starting the rio package
 library("rio")
 
-# Loading the data (csv file) from our Github repository
-# using the repmis package
+# Loading the CIMI dataset (csv file) from our Github repository
 # SHA-1 hash of the downloaded data file is:
 # aec313662cd7e1e5fa8b205c5c1180d542cee91a
-library("rio")
-dataset1 <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Datasets/CIMI.csv")
-View(dataset1)
-
+dataset_CIMI <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Datasets/CIMI.csv")
+View(dataset_CIMI)
