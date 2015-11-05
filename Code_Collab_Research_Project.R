@@ -6,17 +6,18 @@
 # For more information please read the README file               #
 ##################################################################
 
-# Insert code here to set working directory
+# Setting the working directory (Benedikt in this case)
+setwd("/Users/Benedikt/GitHub/CollaborativeResearchProject/")
 
-# In order to pursue our analysis, two packages are necessary:
+# In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
 # ??? additional packages here
 # Information about the packages being used in this project
 # can be found in our BibTeX file
 # If users would like to check which packages are already
-# installed, you can use the following code: "installed.packages()"
+# installed, use the following code: "installed.packages()"
 
-# Starting the repmis package
+# Starting the rio package
 library("rio")
 
 # Loading the data (csv file) from our Github repository
@@ -26,3 +27,4 @@ library("rio")
 library("rio")
 dataset1 <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Datasets/CIMI.csv")
 View(dataset1)
+
