@@ -9,12 +9,15 @@
 # Insert code here to set working directory
 
 # In order to pursue our analysis, two packages are necessary:
-# (1) devtools
+# (1) devtools (to easily install the "repmis" package)
 # (2) repmis
 # Information about the packages being used in this project
 # can be found in our Citations
 # If users would like to check which packages are already
 # installed, please use the following code: "installed.packages()"
+
+# Starting the repmis package
+library(repmis)
 
 # Loading the data (csv file) from our Github repository
 # using the repmis package
