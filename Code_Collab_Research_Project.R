@@ -6,9 +6,14 @@
 # For more information please read the README file               #
 ##################################################################
 
+# The first thing we do is to make sure that our workspace in R Studio
+# is clean and we delete data and values that might be left in our
+# environment.
+rm(list=ls())
+
 # Setting the working directory
-# Include code here at the end (probably from the repmis package
-# and the slides from Lecture 6, 9 October 2015)
+# getwd()
+# setwd("<location of your dataset>")
 
 # In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
@@ -36,3 +41,10 @@ View(dataset_CIMI)
 # Therefore, the authors of the dataset have been contacted on November 7, 2015.
 # We would like to keep the option of directly accessing the dataset directly
 # from Dataverse into R Studio at a later point.
+
+# Loading our first dataset from UCDP (External Support)
+# Note: There is an R package called "UCDPtools" (https://github.com/tlscherer/UCDPtools),
+# which is supposed to directly import datasets from UCDP into R Studio. Unfortunately,
+# the current version of R Studio (3.2.2) is not supported. As we think that this tool
+# might be very helpful for other researchers as well, the author has been contacted.
+
