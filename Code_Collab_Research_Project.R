@@ -6,9 +6,9 @@
 # For more information please read the README file               #
 ##################################################################
 
-# The first thing we do is to make sure that our workspace in R Studio
-# is clean and we delete data and values that might be left in our
-# environment.
+# First of all, we need to make sure that our workspace in R Studio
+# is clean. Therefore, we delete data and values that might be left in
+# the environment.
 rm(list=ls())
 
 # Setting the working directory
@@ -18,6 +18,7 @@ rm(list=ls())
 # In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
 # (2) gdata
+# (3) mlogit
 # ??? additional packages here
 # Information about the packages being used in this project
 # can be found in our BibTeX file
@@ -27,6 +28,7 @@ rm(list=ls())
 # Loading all necessary packages
 library("rio")
 library("gdata")
+library("mlogit")
 
 # Loading the CIMI dataset (csv file) from our Github repository
 # SHA-1 hash of the downloaded data file is:
@@ -44,9 +46,13 @@ View(dataset_CIMI)
 # We would like to keep the option of directly accessing the dataset directly
 # from Dataverse into R Studio at a later point.
 
-# Loading our first dataset from UCDP (External Support)
 # Note: There is an R package called "UCDPtools" (https://github.com/tlscherer/UCDPtools),
 # which is supposed to directly import datasets from UCDP into R Studio. Unfortunately,
 # the current version of R Studio (3.2.2) is not supported. As we think that this tool
 # might be very helpful for other researchers as well, the author has been contacted.
 
+# Downlading UCDP_CT_xls dataset
+UCDP_CT_xls = "http://www.pcr.uu.se/digitalAssets/124/124924_1ucdp_conflict_termination_2010_dyad.xls"
+
+# Importing sheet 4 from UCDP_CT_xls datatset into R Studio
+UCDP_CT_data = gdata::read.xls(UCDP_CT_xls, sheet = 4)
