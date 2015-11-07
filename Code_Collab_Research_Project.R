@@ -17,14 +17,16 @@ rm(list=ls())
 
 # In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
+# (2) gdata
 # ??? additional packages here
 # Information about the packages being used in this project
 # can be found in our BibTeX file
 # If users would like to check which packages are already
 # installed, use the following code: "installed.packages()"
 
-# Starting the rio package
+# Loading all necessary packages
 library("rio")
+library("gdata")
 
 # Loading the CIMI dataset (csv file) from our Github repository
 # SHA-1 hash of the downloaded data file is:
