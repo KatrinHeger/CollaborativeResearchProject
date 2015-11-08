@@ -39,14 +39,16 @@ library("mlogit")
 dataset_CIMI <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Datasets/CIMI.csv")
 View(dataset_CIMI)
 
-# Note on the CIMI dataset: It was not possible so far to retrieve the necessary
-# fileid in order to find out if the dataset we would like to use can be downloaded
-# with a package called "DVN" (https://cran.r-project.org/web/packages/dvn/index.html)
-# Therefore, the authors of the dataset have been contacted on November 7, 2015.
-# We would like to keep the option of directly accessing the dataset directly
-# from Dataverse into R Studio at a later point.
+# Note on the CIMI dataset:
+# It is currently not possible to directly download the dataset from the Harvard
+# Dataverse Network. Although there is a package called "DVN"
+# (https://cran.r-project.org/web/packages/dvn/index.html) that can access it,
+# the current version does not support the new Dataverse v4.0
+# (https://github.com/ropensci/dvn/issues/23). Therefore, the dataset was downloaded
+# from the website and stored on our public Github repository.
 
-# Note: There is an R package called "UCDPtools" (https://github.com/tlscherer/UCDPtools),
+# Note on UCDP datasets: 
+# There is an R package called "UCDPtools" (https://github.com/tlscherer/UCDPtools),
 # which is supposed to directly import datasets from UCDP into R Studio. Unfortunately,
 # the current version of R Studio (3.2.2) is not supported. As we think that this tool
 # might be very helpful for other researchers as well, the author has been contacted.
