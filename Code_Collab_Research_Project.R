@@ -54,6 +54,4 @@ View(dataset_CIMI)
 # might be very helpful for other researchers as well, the author has been contacted.
 
 # Downloading and importing the three datasets
-source("Importing_CIMI.R")
-source("Importing_UCDP_CT.R")
-source("Importing_UCDP_ES.R")
+source("Importing_Datasets")
