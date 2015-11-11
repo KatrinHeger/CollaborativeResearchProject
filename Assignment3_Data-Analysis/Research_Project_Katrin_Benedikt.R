@@ -37,11 +37,20 @@ library("mlogit")
 # Source of issue of DVN package: https://github.com/ropensci/dvn/issues/23
 # The file was retrieved on November 1, 2015 from
 # https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BTKZEQ
-# SHA-1 hash of the downloaded data file:
+# SHA-1 hash:
 # aec313662cd7e1e5fa8b205c5c1180d542cee91a
 CIMI_Dataset <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Datasets/CIMI.csv")
 
 # Importing the UCDP_ES_Dataset
+# Note:
+# Unfortunately we haven't been able yet to directly access this file from
+# the website of UCDP directly, due to the error "Unknown format" when downloading
+# it in R Studio. While we are trying to resolve this issue, we are using the file
+# in our public Github repository.
+# The file has been retrieved on November 1, 2015, from
+# http://www.pcr.uu.se/digitalAssets/159/159834_1external_support_compact_dataset_1.00_20110325-1.xls
+# # SHA-1 hash:
+# f2b08a7805eb5d1a3f112486640e60a3add67045
 UCDP_ES_Dataset <- rio::import("~/GitHub/CollaborativeResearchProject/Datasets/UCDP_ExternalSupportDataset.xls")
 
 # Importing the UCDP_CT_Dataset
