@@ -12,6 +12,10 @@ rm(list=ls())
 # Setting the working directory
 # getwd()
 # setwd(add at end) !!!
+# # Create list of commonly used working directories
+# possible_dir <- c('/git_repos/Assignment1', 'C:\class\Assignment1')
+# Set to first valid directory in the possible_dir vector
+# repmis::set_valid_wd(possible_dir)
 
 # In order to pursue our analysis, the follogwing packages are necessary:
 # (1) rio
