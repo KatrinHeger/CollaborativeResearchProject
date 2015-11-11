@@ -13,4 +13,4 @@ UCDP_CT_xls = "http://www.pcr.uu.se/digitalAssets/124/124924_1ucdp_conflict_term
 UCDP_CT_Dataset = gdata::read.xls(UCDP_CT_xls, sheet = 4)
 
 # Importing the NSA_Dataset
-NSA_Dataset <- rio:: import("http://privatewww.essex.ac.uk/~ksg/data/nsa_v3.4_21November2013.asc", format = "tsv")
+NSA_Dataset <- rio::import("http://privatewww.essex.ac.uk/~ksg/data/nsa_v3.4_21November2013.asc", format = "tsv")
