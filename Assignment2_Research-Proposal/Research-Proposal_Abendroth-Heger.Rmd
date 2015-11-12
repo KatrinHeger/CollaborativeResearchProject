@@ -4,7 +4,7 @@ author: "Benedikt Abendroth and Katrin Heger"
 date: "October 23, 2015"
 documentclass: article
 output: pdf_document
-bibliography: Bibliography.bib
+bibliography: BibliographyA2.bib
 ---
 
 # Introduction And Research Question
