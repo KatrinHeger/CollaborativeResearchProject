@@ -22,6 +22,7 @@ rm(list=ls())
 # (2) gdata
 # (3) mlogit
 # (4) car
+# (5) testdat
 # ??? additional packages here
 # Information about the packages being used in this project
 # can be found in our BibTeX file.
