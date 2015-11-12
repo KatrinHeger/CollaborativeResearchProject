@@ -1,0 +1,39 @@
+---
+title: "Impact of Intervention on Conflict Outcomes"
+author: "K. Heger and B. Abendroth"
+date: "13. November 2015"
+output: pdf_document
+bibliography: BibliographyA3.bib
+---
+
+# Introduction
+In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. Our research project looks at how different types of third-party intervention (military, non-military, troops) into intrastate wars affect the outcome of the conflict (rebel or government victory, negotiated settlement, low intensity conflict). 
+
+# Data Gathering
+We use as a baseline for our analysis a publicly available dataset created by Sullivan and Karreth (@sullivan2014conditional), which we will henceforth refer to as the CIMI Dataset. Sullivan and Karreth draw from the 3.3 version of the Non-state Actors (NSA) dataset (@cunningham2013non), as well as the University of Uppsala Conflict Data Program's (UCDP) Conflict Termination Dataset (@kreutz2010and) and External Support Dataset (@hogbladh2011external).
+
+## Dependent Variable
+We follow the CIMI Dataset in disaggregating our dependent variable conflict outcome into four categories, coded from the UCDP Conflict Termination Dataset. Internal conflicts often fade out into a period of low activity with less than 25 deaths per year for at least one year (0), they end with a victory by either the rebel (1) or the opposition (3), or they terminate by some form of negotiated settlement (2). 
+
+## Independent Variables
+Measuring the impact of third-party military intervention on conflict outcomes, we distinguish between military, non-military and troop support, as coded by the NSA Dataset. 
+Further key explanatory variables in determining conflict outcomes are the capacity of rebels and government relative to each other. CIMI includes both rebel military capacity relative to the government and the log of GDP per capita as a measure for government strength. 
+
+## Control Variables
+We borrow the Cold War dummy, the coup dummy as well as the log of conflict duration from the CIMI dataset. As suggested by Sawyer et al. (@sawyer2015role), the NSA Dataset offers as a control for the rebel incentive to fight a dummy for whether the rebel group has a legal political wing. 
+
+# Data Cleaning And Merging
+Considering that we draw variables from two different datasets (CIMI and NSA), we needed to clean and merge these two datasets. 
+We first created a subset of the CIMI Dataset with the relevant variables needed for our initial statistical model. With the select command, we created the subset data frame Cleaned_CIMI_Model1. As is often the case with conflict data, we were faced with a missing values problem and deleted all observations with missing values in the dependent variable, leaving us with a data frame with observations and variables.
+In a second step, we cleaned the NSA Dataset for our purpose and equally created a subset of the data frame called Cleaned_NSA_Model1. We coded two dummies, external support to rebels (rebel.support.dummy) and external support to governments (gov.support.dummy), from the existent character variables. In addition, we transformed the character variables describing the type of support received by governments and rebels into categorical variables with the following factors: 1=troops, 2=military, 3=non-military. Missing data on these covariates reduced the number of observations to XXX. 
+Lastly, we merged the cleaned datasets around the unique identifiers conflicted and dyadid. As is common in recent conflict research, CIMI and NSA datasets take conflict dyads as their unit of analysis, modeling civil wars as dyadic struggles between the government and an opposition party instead of focusing on the state-level. The merged dataset Model_1 has XXX observations and XXX variables. 
+
+# Data Analysis
+In the following, we conduct some basic descriptive as well as inferential statistics. 
+
+## Descriptive Statistics
+
+## Multinomial Logistical Regression
+Our baseline model estimates a multinomial logit model and we stick to that model in Model 1 because our dependent variable - civil war outcome - is a categorical variable with four categories for the outcomes government victory, rebel victory, negotiated settlement, and low intensity conflict. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
+
+# Bibliography
