@@ -1,4 +1,4 @@
-# Load dplyr package
+# Load packages
 library("dplyr")
 library("testdat")
 
