@@ -40,7 +40,6 @@ class(NSA_Dataset$rebel.support)
 class(NSA_Dataset$gov.support)
 
 # Load car package
-install.packages("car")
 library("car")
 
 # Code rebel.support as a dummy with 1=support, 0=no support
@@ -72,3 +71,6 @@ head(Cleaned_NSA_Dataset)
 
 # Merge Cleaned_CIMI_Dataset and NSA_Dataset
 Merged_CIMI_NSA <- merge(x = Cleaned_CIMI_Dataset, y = Cleaned_NSA_Dataset, by = "conflictid", all = TRUE)
+
+# Check merged dataset
+View(Merged_CIMI_NSA)
