@@ -16,14 +16,12 @@ testdat::test_utf8(UCDP_ES_Dataset)
 # Create subset of CIMI_Dataset for Model 1
 Cleaned_CIMI_Model1 <- subset(CIMI_Dataset, select = c(1, 3, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25))
 
+# !!! ADD NOTE CONCERNING MODEL 2 !!!
 # Create subset of CIMI_Dataset for Model 2
 Cleaned_CIMI_Model2 <- subset(CIMI_Dataset, select = c(11, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25))
 
-# Delete all empty rows in Cleaned_CIMI_Model1
-Cleaned_CIMI_Model1 <- Cleaned_CIMI_Model1[-(2297:2428), ]
-
-# Delete all empty rows in Cleaned_CIMI_Model2
-Cleaned_CIMI_Model2 <- Cleaned_CIMI_Model2[-(2297:2428), ]
+# Remove all missing observations in column "outcome_d"
+Cleaned_CIMI_Model1 <- Cleaned_CIMI_Model1[!is.na(CIMI_Dataset$outcome_d),]
 
 ###########################
 # Clean NSA_Dataset       #
@@ -50,6 +48,20 @@ class(Cleaned_NSA_Model1$rtypesup)
 # Show variable class of gtypesup
 class(Cleaned_NSA_Model1$gtypesup)
 
+# Remove all missing observations in column "rtypesup"
+Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[!is.na(Cleaned_NSA_Model1$rtypesup),]
+
+# Remove all missing observations in column "gtypesup"
+Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[!is.na(Cleaned_NSA_Model1$gtypesup),]
+
+# Remove observations "endorsement; alleged military" in column "rtypesup_cat"
+# Note:
+# As we only take into account military support that has actually taken place,
+# we remove the category "endorsement; alleged military" (2 observations in total).
+# Delete two empty rows in Cleaned_CIMI_Model1
+Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[-131, ]
+Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[-431, ]
+
 # Code rtypesup as a categorical variable with 1=troops, 2=military, 3=non-military
 Cleaned_NSA_Model1$rtypesup_cat <- recode(Cleaned_NSA_Model1$rtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
 
@@ -60,6 +72,7 @@ Cleaned_NSA_Model1$gtypesup_cat <- recode(Cleaned_NSA_Model1$gtypesup, " 'troops
 # Clean UCDP_ES_Dataset   #
 ###########################
 
+# !!! ADD NOTE CONCERNING MODEL 2 !!!
 # Create subset of NSA_Dataset for Model 2
 Cleaned_ES_Model2 <- subset(UCDP_ES_Dataset, select = c(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30))
 
@@ -82,12 +95,3 @@ Dataset_Model_1 <- merge(Cleaned_CIMI_Model1, Cleaned_NSA_Model1, union("conflic
 
 # Check for complete cases
 sum(complete.cases(Dataset_Model_1))
-
-# Removing all missing observations in column "outcome_d"
-Dataset_Model_1 <- Dataset_Model_1[!is.na(Dataset_Model_1$outcome_d),]
-
-# Removing all missing observations in column "rtypesup"
-Dataset_Model_1 <- Dataset_Model_1[!is.na(Dataset_Model_1$rtypesup),]
-
-# Removing all missing observations in column "gtypesup"
-Dataset_Model_1 <- Dataset_Model_1[!is.na(Dataset_Model_1$gtypesup),]
