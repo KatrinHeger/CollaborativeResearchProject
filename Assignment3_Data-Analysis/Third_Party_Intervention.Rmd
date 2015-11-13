@@ -2,7 +2,9 @@
 title: "Impact of Intervention on Conflict Outcomes"
 author: "K. Heger and B. Abendroth"
 date: "13. November 2015"
-output: pdf_document
+output: 
+  pdf_document: 
+    latex_engine: xelatex
 bibliography: BibliographyA3.bib
 ---
 
@@ -36,4 +38,7 @@ In the following, we conduct some basic descriptive as well as inferential stati
 ## Multinomial Logistical Regression
 Our baseline model estimates a multinomial logit model and we stick to that model in Model 1 because our dependent variable - civil war outcome - is a categorical variable with four categories for the outcomes government victory, rebel victory, negotiated settlement, and low intensity conflict. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
 
-# Bibliography
+$$\large{ Pr\left(\Y_{i}=j\ right) = \frac{\exp(X_{i}, \beta)}{sum_{j=1}^{n}}\left(\exp(X_{i}\beta_{j})) }
+
+
+## Bibliography
