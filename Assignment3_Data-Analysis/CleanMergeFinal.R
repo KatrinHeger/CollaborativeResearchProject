@@ -41,17 +41,15 @@ class(Cleaned_NSA$rebel.support)
 # Show variable class of gov.support
 class(Cleaned_NSA$gov.support)
 
-# Code character rebel.support as dummy with 1 = support, 0 = no support
+# Code character variable rebel.support as dummy with 1 = support, 0 = no support
 Cleaned_NSA$rebel.support_d <- recode(Cleaned_NSA$rebel.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
 
 # Code character gov.support as a dummy with 1 = support and 0 = no support
 Cleaned_NSA$gov.support_d <- recode(Cleaned_NSA$gov.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
 
-# Remove observations "endorsement; alleged military" in variable "rtypesup"
-# Note:
-# As we only take into account military support that has actually taken place,
-# we remove the category "endorsement; alleged military" (2 observations in total).
-Cleaned_NSA[which(Cleaned_NSA == 'endorsement; alleged military')] = "NULL"
+# Treat "rebel.support_d" and "gov.support_d" as factor variables
+Cleaned_NSA$rebel.support_d=as.factor(Cleaned_NSA$rebel.support_d)
+Cleaned_NSA$gov.support_d=as.factor(Cleaned_NSA$rebel.support_d)
 
 # Remove all missing values from explanatory variable "rtypesup"
 Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rtypesup),]
@@ -71,6 +69,15 @@ Cleaned_NSA$rtypesup_cat <- recode(Cleaned_NSA$rtypesup, " 'troops' = 1; 'milita
 # Code gtypesup as a categorical variable with 1=troops, 2=military, 3=non-military
 Cleaned_NSA$gtypesup_cat <- recode(Cleaned_NSA$gtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
 
+# Treat "rtypesup_cat" and "gtype_cat" as factor variables
+Cleaned_NSA$rtypesup_cat=as.factor(Cleaned_NSA$rtypesup_cat)
+Cleaned_NSA$gtypesup_cat=as.factor(Cleaned_NSA$gtypesup_cat)
+
+# Remove observations "endorsement; alleged military" in variable "rtypesup"
+# Note:
+# As we only take into account support that has actually taken place,
+# we remove the category "endorsement; alleged military" (2 observations in total).
+
 
 ##########################################################################
 # Merging Cleaned_CIMI and Cleaned_NSA to Dataset_1  #
@@ -80,7 +87,7 @@ Cleaned_NSA$gtypesup_cat <- recode(Cleaned_NSA$gtypesup, " 'troops' = 1; 'milita
 Cleaned_CIMI <- rename(Cleaned_CIMI, dyadid = dyad_id)
 
 # Merge Cleaned_CIMI and Cleaned_NSA
-Dataset_dyadid <- merge(x = Cleaned_CIMI, y= Cleaned_NSA, by = "dyadid" , all = TRUE)
+Dataset_1 <- merge(x = Cleaned_CIMI, y= Cleaned_NSA, by = "dyadid" , all = TRUE)
 
 # Check for complete cases
 sum(complete.cases(Dataset_1))
