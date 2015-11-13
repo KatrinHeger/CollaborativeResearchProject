@@ -1,7 +1,7 @@
 ---
 title: "Impact of Intervention on Conflict Outcomes"
 author: "K. Heger and B. Abendroth"
-date: "13. November 2015"
+date: "13 November 2015"
 output: 
   pdf_document: 
     latex_engine: xelatex
@@ -10,6 +10,7 @@ bibliography: BibliographyA3.bib
 
 # Introduction
 In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. Our research project looks at how different types of third-party intervention (military, non-military, troops) into intrastate wars affect the outcome of the conflict (rebel or government victory, negotiated settlement, low intensity conflict). 
+This paper briefly outlines the design, operationalization and data selection, before conducting a first regression analysis and briefly describing its results. More extensive information will be available in the final report. 
 
 # Data Gathering
 We use as a baseline for our analysis a publicly available dataset created by Sullivan and Karreth (@sullivan2014conditional), which we will henceforth refer to as the CIMI Dataset. Sullivan and Karreth draw from the 3.3 version of the Non-state Actors (NSA) dataset (@cunningham2013non), as well as the University of Uppsala Conflict Data Program's (UCDP) Conflict Termination Dataset (@kreutz2010and) and External Support Dataset (@hogbladh2011external).
@@ -36,9 +37,12 @@ In the following, we conduct some basic descriptive as well as inferential stati
 ## Descriptive Statistics
 
 ## Multinomial Logistical Regression
-Our baseline model estimates a multinomial logit model and we stick to that model in Model 1 because our dependent variable - civil war outcome - is a categorical variable with four categories for the outcomes government victory, rebel victory, negotiated settlement, and low intensity conflict. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
+Our baseline model estimates a multinomial logit model because our dependent variable - conflict outcome - is a categorical variable with the four outcomes government victory, rebel victory, negotiated settlement, and low intensity conflict. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
 
-$$\large{ Pr\left(\Y_{i}=j\ right) = \frac{\exp(X_{i}, \beta)}{sum_{j=1}^{n}}\left(\exp(X_{i}\beta_{j})) }
+\begin{equation}\begin{aligned} Pr(Y_{i}=j) = \frac{exp(X_{i}\beta_{j})} {\sum_{j=1}^{J} exp(X_{i}\beta_{j})}\end{aligned}\end{equation}
 
+In our model, j represents each of the four outcomes and i indixes the unit of analysis, being a dyadic episode of intrastate armed conflict. FOllowing Sullivan and Karreth, we omit the most common conflict outcome, low intensity conflict, as the baseline category and calculate estimates for the remaining outcomes government victory, negotiated settlement and rebel victory. 
 
-## Bibliography
+Table 1 shows the results for five different logit models. 
+
+# Bibliography
