@@ -36,13 +36,46 @@ In the following, we conduct some basic descriptive as well as inferential stati
 
 ## Descriptive Statistics
 
+Figure 1 shows the frequency of the different conflict outcome types.
+
+**Conflict Outcome Types:**
+0: Low Acitivity
+1: Rebel Victory
+2: Settlement
+3: Government Victory 
+
+```{r echo=FALSE}
+library("ggplot2")
+Dataset_1 <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_Markdown.csv")
+qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Fig. 1: Frequency of Conflict Outcomes", xlab = "Outcomes", ylab = "Frequency", fill = I("lightblue"))
+```
+
+Figure 2 shows the frequency of the different types of support to a government.
+
+**Support Types:**  
+1: Troops  
+2: Military  
+3: Non-military  
+
+```{r echo=FALSE}
+qplot(Dataset_1$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
+```
+
+Figure 3 shows the frequency of the different types of support to a rebel group (same suppurt types as in Figure 2).
+
+```{r echo=FALSE}
+qplot(Dataset_1$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
+```
+
 ## Multinomial Logistical Regression
 Our baseline model estimates a multinomial logit model because our dependent variable - conflict outcome - is a categorical variable with the four outcomes government victory, rebel victory, negotiated settlement, and low intensity conflict. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
 
 \begin{equation}\begin{aligned} Pr(Y_{i}=j) = \frac{exp(X_{i}\beta_{j})} {\sum_{j=1}^{J} exp(X_{i}\beta_{j})}\end{aligned}\end{equation}
 
-In our model, j represents each of the four outcomes and i indixes the unit of analysis, being a dyadic episode of intrastate armed conflict. FOllowing Sullivan and Karreth, we omit the most common conflict outcome, low intensity conflict, as the baseline category and calculate estimates for the remaining outcomes government victory, negotiated settlement and rebel victory. 
+In our model, j represents each of the four outcomes and i indixes the unit of analysis, being a dyadic episode of intrastate armed conflict. FOllowing Sullivan and Karreth, we omit the most common conflict outcome, low intensity conflict, as the baseline category and calculate estimates for the remaining outcomes government victory, negotiated settlement and rebel victory.
 
-Table 1 shows the results for five different logit models. 
+Table 1 shows the results for five different logit models.
 
-# Bibliography
+## Outlook
+
+## Bibliography
