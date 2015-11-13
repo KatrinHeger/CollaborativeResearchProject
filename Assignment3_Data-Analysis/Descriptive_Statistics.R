@@ -41,8 +41,11 @@ qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Fre
 # 3: non-military
 describe(Dataset_1$gtypesup_cat)
 
+# Remove missing values at "gtypesup_cat"
+Dataset_1_gtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
+
 # Histogram of third-party support types for government
-qplot(Dataset_1$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
+qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
 
 ##################################
 # Types of Rebel Support         #
@@ -56,5 +59,8 @@ qplot(Dataset_1$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequen
 # 3: non-military
 describe(Dataset_1$rtypesup_cat)
 
+# Remove missing values at "rtypesup_cat"
+Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
+
 # Histogram of third-party support types for rebels
-qplot(Dataset_1$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
+qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
