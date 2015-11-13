@@ -1,0 +1,1 @@
+Model_1_Dataset_test <- Model_1_Dataset[!(Model_1_Dataset$rtypesup_cat=="endorsement; alleged military"),]
