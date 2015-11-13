@@ -73,12 +73,6 @@ Cleaned_NSA$gtypesup_cat <- recode(Cleaned_NSA$gtypesup, " 'troops' = 1; 'milita
 Cleaned_NSA$rtypesup_cat=as.factor(Cleaned_NSA$rtypesup_cat)
 Cleaned_NSA$gtypesup_cat=as.factor(Cleaned_NSA$gtypesup_cat)
 
-# Remove observations "endorsement; alleged military" in variable "rtypesup"
-# Note:
-# As we only take into account support that has actually taken place,
-# we remove the category "endorsement; alleged military" (2 observations in total).
-
-
 ##########################################################################
 # Merging Cleaned_CIMI and Cleaned_NSA to Dataset_1  #
 ##########################################################################
