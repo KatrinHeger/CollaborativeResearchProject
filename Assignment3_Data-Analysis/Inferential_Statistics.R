@@ -9,20 +9,20 @@ library(memisc)
 
 
 # Multinomial Logit Regression
-dat.1 <- Model_1_Dataset[is.na(Model_1_Dataset$outcome_d) == FALSE & is.na(Model_1_Dataset$rebel.support_dummy) == FALSE, c("outcome_d", "rebel.support_dummy")]
-M1.1 <- multinom(outcome_d ~ rebel.support_dummy, data = dat.1)
+dat.1 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE, c("conflict_outcome", "rebel.support_d")]
+m1 <- multinom(conflict_outocme ~ rebel.support_dummy, data = dat.1)
 
-dat.2 <- Model_1_Dataset[is.na(Model_1_Dataset$outcome_d) == FALSE & is.na(Model_1_Dataset$rebel.support_dummy) == FALSE & is.na(Model_1_Dataset$gov.support_dummy) == FALSE, ]
-M1.2 <- multinom(outcome_d ~ rebel.support_dummy + gov.support_dummy, data = dat.2)
+dat.2 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE, ]
+m2 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d, data = dat.2)
 
-dat.3 <- Model_1_Dataset[is.na(Model_1_Dataset$outcome_d) == FALSE & is.na(Model_1_Dataset$rebel.support_dummy) == FALSE & is.na(Model_1_Dataset$gov.support_dummy) == FALSE & is.na(Model_1_Dataset$rtypesup_cat) == FALSE, ]
-M1.3 <- multinom(outcome_d ~ rebel.support_dummy + gov.support_dummy + rtypesup_cat, data = dat.3)
+dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE, ]
+m3 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat, data = dat.3)
 
-dat.4 <- Model_1_Dataset[is.na(Model_1_Dataset$outcome_d) == FALSE & is.na(Model_1_Dataset$rebel.support_dummy) == FALSE & is.na(Model_1_Dataset$gov.support_dummy) == FALSE & is.na(Model_1_Dataset$rtypesup_cat) == FALSE & is.na(Model_1_Dataset$gtypesup_cat) == FALSE, ]
-M1.4 <- multinom(outcome_d ~ rebel.support_dummy + gov.support_dummy + rtypesup_cat + gtypesup_cat, data = dat.4)
+dat.4 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE, ]
+m4 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat, data = dat.4)
 
-dat.5 <- Model_1_Dataset[is.na(Model_1_Dataset$outcome_d) == FALSE & is.na(Model_1_Dataset$rebel.support_dummy) == FALSE & is.na(Model_1_Dataset$gov.support_dummy) == FALSE & is.na(Model_1_Dataset$rtypesup_cat) == FALSE & is.na(Model_1_Dataset$gtypesup_cat) == FALSE & is.na(Model_1_Dataset$fightcaphigh) == FALSE & is.na(Model_1_Dataset$coup) == FALSE & is.na(Model_1_Dataset$land) == FALSE & is.na(Model_1_Dataset$lngdp) == FALSE & is.na(Model_1_Dataset$lnyears) == FALSE & is.na(Model_1_Dataset$postCW) == FALSE, ]
-M1.5 <- multinom(outcome_d ~ rebel.support_dummy + gov.support_dummy + rtypesup_cat + gtypesup_cat + fightcaphigh + coup + land + lngdp + lnyears + postCW, data = dat.5)
+dat.5 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$fightcaphigh) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Model_1_Dataset$postCW) == FALSE, ]
+m5 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat + fightcaphigh + lngdp + lnyears + postCW, data = dat.5)
 
 # Table 1
-mtable(M1.1, M1.2, M1.3, M1.4, M1.5, digits = 3)
+mtable(m1, m2, m3, m4, m5, digits = 3)
