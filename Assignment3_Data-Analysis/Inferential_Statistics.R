@@ -25,4 +25,4 @@ dat.5 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$
 m5 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat + fightcaphigh + lngdp + lnyears + postCW, data = dat.5)
 
 # Table 1
-mtable(m1, m2, m3, m4, m5, digits = 3)
+mtable(m1, m2, m3, m4, m5, digits = 2)
