@@ -13,7 +13,7 @@ dim(Dataset_1) # Our dataset currently entails 497 rows and 23 columns/variables
 # Conflict Outcomes              #
 ##################################
 
-# Show the distribution of all conflict outcomes ("outcome_d"),
+# Show the distribution of all conflict outcomes ("conflict_outcome),
 # including the percentage distribution (last line out print).
 # Coding of "outcome_d":
 # 0: low activity
@@ -22,7 +22,7 @@ dim(Dataset_1) # Our dataset currently entails 497 rows and 23 columns/variables
 # 3: government victory
 describe(Dataset_1$conflict_outcome)
 
-# Create histogram of conflict outcomes ("outcome_d")
+# Create histogram of conflict outcomes ("conflict_outcome)
 # Note:
 # Unfortunately we still can't create the histogram when the code is not on one single line.
 # Therefore, all following histograms will be written in one line.
