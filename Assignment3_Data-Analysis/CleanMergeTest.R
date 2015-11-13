@@ -59,8 +59,8 @@ Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[!is.na(Cleaned_NSA_Model1$gtypesup),]
 # As we only take into account military support that has actually taken place,
 # we remove the category "endorsement; alleged military" (2 observations in total).
 # Delete two empty rows in Cleaned_CIMI_Model1
-Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[-131, ]
-Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[-431, ]
+# !!! Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[-131, ]
+# !!! Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[-423, ]
 
 # Code rtypesup as a categorical variable with 1=troops, 2=military, 3=non-military
 Cleaned_NSA_Model1$rtypesup_cat <- recode(Cleaned_NSA_Model1$rtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
