@@ -103,10 +103,13 @@ m4 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat
 dat.5 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE & is.na(Dataset_1_Multinom$gov.support_d) == FALSE & is.na(Dataset_1_Multinom$rtypesup_cat) == FALSE & is.na(Dataset_1_Multinom$gtypesup_cat) == FALSE & is.na(Dataset_1_Multinom$fightcaphigh) == FALSE & is.na(Dataset_1_Multinom$lngdp) == FALSE & is.na(Dataset_1_Multinom$lnyears) == FALSE & is.na(Dataset_1_Multinom$postCW) == FALSE, ]
 m5 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat + fightcaphigh + lngdp + lnyears + postCW, data = dat.5)
 
-stargazer::stargazer(m1,m2,m3,m4,m5, digits = 2)
+stargazer::stargazer(m1, digits = 2)
 ```
 
 ## Outlook
 text
+
+## R Packages
+In our analysis, the following packages have been used: @CiteR, @rio, @warnes2014gdata, @croissant2012estimation, @wickham2014dplyr, @fox2009car, @wickham2009ggplot2, @hlavac2013stargazer, @ripley2015package, @testdat_package, @harrell2006hmisc, @elff2015package.
 
 ## Bibliography
