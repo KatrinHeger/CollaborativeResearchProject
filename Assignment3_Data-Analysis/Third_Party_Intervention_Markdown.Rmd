@@ -46,7 +46,7 @@ Figure 1 shows the frequency of the different conflict outcome types.
 
 ```{r echo=FALSE}
 library("ggplot2")
-Dataset_1 <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_Markdown.csv")
+Dataset_1 <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_outcome_HG_RMD.csv")
 qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Fig. 1: Frequency of Conflict Outcomes", xlab = "Outcomes", ylab = "Frequency", fill = I("lightblue"))
 ```
 
@@ -58,13 +58,15 @@ Figure 2 shows the frequency of the different types of support to a government.
 3: Non-military  
 
 ```{r echo=FALSE}
-qplot(Dataset_1$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
+Dataset_1_gtype_HG <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_gtype_HG_Rmd.csv")
+qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
 ```
 
 Figure 3 shows the frequency of the different types of support to a rebel group (same suppurt types as in Figure 2).
 
 ```{r echo=FALSE}
-qplot(Dataset_1$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
+Dataset_1_rtype_HG <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_rtype_HG_Rmd.csv")
+qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
 ```
 
 ## Multinomial Logistical Regression
