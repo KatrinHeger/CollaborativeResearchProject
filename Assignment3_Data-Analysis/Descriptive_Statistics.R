@@ -63,7 +63,7 @@ describe(Model_1_Dataset$rtypesup_cat)
 
 # !!! Histogram not working !!!
 # Histogram of third-party support types for rebels
-hist(Model_1_Dataset$rtypesup_cat, main = "Frequency of Rebel Support Types", xlab = "Rebel Support Types", las = 1, breaks = seq(.5,3.5,1), col = "lightblue")
+hist(Model_1_Dataset$rtypesup_cat, main = "Frequency of Rebel Support Types", xlab = "Rebel Support Types", las = 1, breaks = seq(.5,3.5,1), col = "lightyellow")
 
 # Create legend for histogram with support types for rebels
 legend("topright", title="Support Types", c("1: Troops","2: Military","3: Military"), cex = 0.4)
