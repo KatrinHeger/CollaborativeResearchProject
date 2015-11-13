@@ -74,7 +74,7 @@ Cleaned_NSA$rtypesup_cat=as.factor(Cleaned_NSA$rtypesup_cat)
 Cleaned_NSA$gtypesup_cat=as.factor(Cleaned_NSA$gtypesup_cat)
 
 ##########################################################################
-# Merging Cleaned_CIMI and Cleaned_NSA to Dataset_1  #
+# Merge Cleaned_CIMI and Cleaned_NSA to Dataset_1  #
 ##########################################################################
 
 # Create unique identifiers dyadid as preparation for merging
