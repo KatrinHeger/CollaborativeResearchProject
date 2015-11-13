@@ -10,7 +10,7 @@ library(memisc)
 
 # Multinomial Logit Regression
 dat.1 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE, c("conflict_outcome", "rebel.support_d")]
-m1 <- multinom(conflict_outocme ~ rebel.support_dummy, data = dat.1)
+m1 <- multinom(conflict_outcome ~ rebel.support_d, data = dat.1)
 
 dat.2 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE, ]
 m2 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d, data = dat.2)
@@ -21,7 +21,7 @@ m3 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat
 dat.4 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE, ]
 m4 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat, data = dat.4)
 
-dat.5 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$fightcaphigh) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Model_1_Dataset$postCW) == FALSE, ]
+dat.5 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE & is.na(Dataset_1$gov.support_d) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$fightcaphigh) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$postCW) == FALSE, ]
 m5 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat + fightcaphigh + lngdp + lnyears + postCW, data = dat.5)
 
 # Table 1
