@@ -7,36 +7,31 @@ output:
     latex_engine: xelatex
 bibliography: BibliographyA3.bib
 ---
-
 # Introduction
-In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. Our research project looks at how different types of third-party intervention (military, non-military, troops) into intrastate wars affect the outcome of the conflict (rebel or government victory, negotiated settlement, low intensity conflict). 
-This paper briefly outlines the design, operationalization and data selection, before conducting a first regression analysis and briefly describing its results. More extensive information will be available in the final report. 
+In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. Our research project looks at how different types of third-party intervention (military, non-military, troops) into intrastate wars affect the outcome of the conflict (rebel or government victory, negotiated settlement, low intensity conflict). This paper briefly outlines the data gathering and cleaning process, before conducting basic descriptive statistics and a first regression analysis. A more comprehensive analysis will follow in the final paper. 
 
 # Data Gathering
-We use as a baseline for our analysis a publicly available dataset created by Sullivan and Karreth (@sullivan2014conditional), which we will henceforth refer to as the CIMI Dataset. Sullivan and Karreth draw from the 3.3 version of the Non-state Actors (NSA) dataset (@cunningham2013non), as well as the University of Uppsala Conflict Data Program's (UCDP) Conflict Termination Dataset (@kreutz2010and) and External Support Dataset (@hogbladh2011external).
+We use as a baseline for our analysis a publicly available dataset created by Sullivan and Karreth (@sullivan2014conditional), which  will henceforth be refered to as the CIMI Dataset. Sullivan and Karreth draw from the 3.3 version of the Non-state Actors (NSA) dataset (@cunningham2013non), as well as the University of Uppsala Conflict Data Program's (UCDP) Conflict Termination Dataset (@kreutz2010and) and External Support Dataset (@hogbladh2011external).
 
 ## Dependent Variable
-We follow the CIMI Dataset in disaggregating our dependent variable conflict outcome into four categories, coded from the UCDP Conflict Termination Dataset. Internal conflicts often fade out into a period of low activity with less than 25 deaths per year for at least one year (0), they end with a victory by either the rebel (1) or the opposition (3), or they terminate by some form of negotiated settlement (2). 
+We adopt our dependent variable conflict_outcome from the CIMI Dataset, which disaggregates four different conflict outcomes coded from the UCDP Conflict Termination Dataset. Internal conflicts either fade out into a period of low activity (0), they end with a victory by the rebels (1), they terminate with some form of negotiated settlement (2), or with government victory (3). 
 
 ## Independent Variables
-Measuring the impact of third-party military intervention on conflict outcomes, we distinguish between military, non-military and troop support, as coded by the NSA Dataset. 
-Further key explanatory variables in determining conflict outcomes are the capacity of rebels and government relative to each other. CIMI includes both rebel military capacity relative to the government and the log of GDP per capita as a measure for government strength. 
-
-## Control Variables
-We borrow the Cold War dummy, the coup dummy as well as the log of conflict duration from the CIMI dataset. As suggested by Sawyer et al. (@sawyer2015role), the NSA Dataset offers as a control for the rebel incentive to fight a dummy for whether the rebel group has a legal political wing. 
+Measuring the impact of third-party military intervention on conflict outcomes, we distinguish between troops, military, and non-military support, as coded by the NSA Dataset. Further key explanatory variables in determining conflict outcomes are the capacity of rebels and government relative to each other. CIMI includes both rebel military capacity relative to the government and the log of GDP per capita as a measure for government strength. We borrow the Cold War dummy, the coup dummy as well as the log of conflict duration as controls from the CIMI dataset. 
 
 # Data Cleaning And Merging
-Considering that we draw variables from two different datasets (CIMI and NSA), we needed to clean and merge these two datasets. 
-We first created a subset of the CIMI Dataset with the relevant variables needed for our initial statistical model. With the select command, we created the subset data frame Cleaned_CIMI_Model1. As is often the case with conflict data, we were faced with a missing values problem and deleted all observations with missing values in the dependent variable, leaving us with a data frame with observations and variables.
-In a second step, we cleaned the NSA Dataset for our purpose and equally created a subset of the data frame called Cleaned_NSA_Model1. We coded two dummies, external support to rebels (rebel.support.dummy) and external support to governments (gov.support.dummy), from the existent character variables. In addition, we transformed the character variables describing the type of support received by governments and rebels into categorical variables with the following factors: 1=troops, 2=military, 3=non-military. Missing data on these covariates reduced the number of observations to XXX. 
-Lastly, we merged the cleaned datasets around the unique identifiers conflicted and dyadid. As is common in recent conflict research, CIMI and NSA datasets take conflict dyads as their unit of analysis, modeling civil wars as dyadic struggles between the government and an opposition party instead of focusing on the state-level. The merged dataset Model_1 has XXX observations and XXX variables. 
+Considering that we drew variables from two different datasets (CIMI and NSA), we had to clean and merge these two datasets. 
+We first created a subset of the CIMI Dataset with the relevant variables needed for our statistical model, which we called Cleaned_CIMI. As is often the case with conflict data, we were faced with a missing values problem and deleted all observations with missing values in the dependent variable, leaving us with a data frame with 425 observations and 10 variables.
+In a second step, we cleaned the NSA Dataset for our purpose and equally created a subset of the data frame called Cleaned_NSA. We coded two dummies, external support du rebels and external support to governments, from the existing character variables. In addition, we transformed the character variables describing the type of support received by governments and rebels into categorical variables with the following factors: 1=troops, 2=military, 3=non-military. Missing data on these covariates reduced the number of observations from 578 to 160. 
+Lastly, we merged the cleaned datasets around the unique identifier dyadid. As is common in recent conflict research, both CIMI and NSA datasets take conflict dyads as their unit of analysis, modeling civil wars as dyadic struggles between the government and an opposition party, which enables easy merging. The merged dataset Dataset_1 has 497 observations and 23 variables. 
 
 # Data Analysis
 In the following, we conduct some basic descriptive as well as inferential statistics. 
 
 ## Descriptive Statistics
-
-Figure 1 shows the frequency of the different conflict outcome types with the following conflict outcome types:
+Figure 1 shows the frequency of the different conflict outcomes. The most common outcome for a conflict dyad is low activity, defined as a violent conflict with less than 25 deaths per year for at least one year. While 44% of all conflict dyads level off like that, 35% end in a victory of one side. Governments win the conflict in 22% of the cases, rebels prevail in only 13%. 21% of conflicts terminate with a negotiated settlements.  
+Figure 2 displays the frequency, with which different types of support are lent to the government. In 20% of the cases, governments are supported with troops, in 72% they receive some other form of military support. Only in 7% of the cases, third-party governments support the government with non-military means.   
+Figure 3 depicts the kind of support rebels receive. Similar to support to governments, by far the most common type of support is military support with 70%. Both troops and non-military support are less frequent with 14% and 15%, respectively. The variable recording the type of support to rebels further includes as a fourth category endorsement. In 2 cases in our sample, foreign governments supported the rebels by publicly endorsing them. 
 
 0: Low Activity  
 1: Rebel Victory  
@@ -158,10 +153,10 @@ m5 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat
 stargazer::stargazer(m5, digits = 2)
 ```
 
-
+Our initial analysis has shown that neither support for the rebels nor for the government is significant. 
 
 ## Outlook
-text
+Due to the structure of the multinomial logit estimation, it is very complicated to interprete the effects from the above inserted tables. In future analysis, we thus will have to evaluate the statistical significance of each independent variable. Moreover, intervention into a conflict and military strength might vary within one conflict dyad. This variation could be accounted for by switching the unit of analysis from conflict dyads to conflict dyad years. 
 
 ## R Packages
 In our analysis, the following packages have been used: @CiteR, @rio, @warnes2014gdata, @croissant2012estimation, @wickham2014dplyr, @fox2009car, @wickham2009ggplot2, @hlavac2013stargazer, @ripley2015package, @testdat_package, @harrell2006hmisc, @elff2015package.
