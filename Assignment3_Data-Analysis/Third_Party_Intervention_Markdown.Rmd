@@ -36,41 +36,44 @@ In the following, we conduct some basic descriptive as well as inferential stati
 
 ## Descriptive Statistics
 
-Figure 1 shows the frequency of the different conflict outcome types.
+Figure 1 shows the frequency of the different conflict outcome types with the following conflict outcome types:
 
-**Conflict Outcome Types:**
-0: Low Acitivity
-1: Rebel Victory
-2: Settlement
-3: Government Victory 
+0: Low Activity  
+1: Rebel Victory  
+2: Settlement  
+3: Government Victory  
 
-```{r echo=FALSE}
-library("ggplot2")
-Dataset_1 <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_outcome_HG_RMD.csv")
+Figure 2 and 3 show the frequency of the different types of support to a government or a rebel group respectively. Both refer to the following types of support:
 
-qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Fig. 1: Frequency of Conflict Outcomes", xlab = "Outcomes", ylab = "Frequency", fill = I("lightblue"))
-```
-
-Figure 2 shows the frequency of the different types of support to a government.
-
-**Support Types:**  
 1: Troops  
 2: Military  
 3: Non-military  
 
-```{r echo=FALSE}
+
+```{r fig.width=5, fig.height=4, echo=FALSE}
+library("ggplot2")
+Dataset_1 <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_outcome_HG_RMD.csv")
+
+qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Fig.1: Frequency of Conflict Outcomes", xlab = "Outcomes", ylab = "Frequency", fill = I("lightblue"))
+```
+
+
+
+```{r fig.width=5, fig.height=4, echo=FALSE}
 Dataset_1_gtype_HG <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_gtype_HG_Rmd.csv")
 
-qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
+qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Fig.2: Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", fill = I("lightgreen"))
 ```
 
-Figure 3 shows the frequency of the different types of support to a rebel group (same suppurt types as in Figure 2).
 
-```{r echo=FALSE}
+
+```{r fig.width=5, fig.height=4, echo=FALSE}
 Dataset_1_rtype_HG <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_rtype_HG_Rmd.csv")
 
-qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
+qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Fig.3: Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
 ```
+
+
 
 ## Multinomial Logistical Regression
 Our baseline model estimates a multinomial logit model because our dependent variable - conflict outcome - is a categorical variable with the four outcomes government victory, rebel victory, negotiated settlement, and low intensity conflict. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
@@ -79,9 +82,10 @@ Our baseline model estimates a multinomial logit model because our dependent var
 
 In our model, j represents each of the four outcomes and i indixes the unit of analysis, being a dyadic episode of intrastate armed conflict. FOllowing Sullivan and Karreth, we omit the most common conflict outcome, low intensity conflict, as the baseline category and calculate estimates for the remaining outcomes government victory, negotiated settlement and rebel victory.
 
-Table 1 shows the results for five different logit models.
 
-```{r echo=FALSE}
+The following Tables 1-5 show the results for our five different logit models.
+
+```{r echo=FALSE, results='asis', warning=FALSE, message=FALSE}
 library("nnet")
 library("memisc")
 library("stargazer")
@@ -91,20 +95,70 @@ Dataset_1_Multinom <- read.csv("https://raw.githubusercontent.com/KatrinHeger/Co
 dat.1 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE, c("conflict_outcome", "rebel.support_d")]
 m1 <- multinom(conflict_outcome ~ rebel.support_d, data = dat.1)
 
+stargazer::stargazer(m1, digits = 2)
+```
+
+
+
+```{r, echo=FALSE, results='asis', warning=FALSE, message=FALSE}
+library("nnet")
+library("memisc")
+library("stargazer")
+
+Dataset_1_Multinom <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_Multinom.csv")
+
 dat.2 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE & is.na(Dataset_1_Multinom$gov.support_d) == FALSE, ]
 m2 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d, data = dat.2)
 
-dat.3 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE & is.na(Dataset_1_Multinom$gov.support_d) == FALSE & is.na(Dataset_1_Multinom$rtypesup_cat) == FALSE, ]
+stargazer::stargazer(m2, digits = 2)
+```
+
+
+
+```{r, echo=FALSE, results='asis', warning=FALSE, message=FALSE}
+library("nnet")
+library("memisc")
+library("stargazer")
+
+Dataset_1_Multinom <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_Multinom.csv")
+
+dat.3 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE & is.na(Dataset_1_Multinom$gov.support_d) == FALSE & is.na(Dataset_1_Multinom$rtypesup_cat) == FALSE & is.na(Dataset_1_Multinom$gtypesup_cat) == FALSE, ]
 m3 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat, data = dat.3)
+
+stargazer::stargazer(m3, digits = 2)
+```
+
+
+
+```{r, echo=FALSE, results='asis', warning=FALSE, message=FALSE}
+library("nnet")
+library("memisc")
+library("stargazer")
+
+Dataset_1_Multinom <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_Multinom.csv")
 
 dat.4 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE & is.na(Dataset_1_Multinom$gov.support_d) == FALSE & is.na(Dataset_1_Multinom$rtypesup_cat) == FALSE & is.na(Dataset_1_Multinom$gtypesup_cat) == FALSE, ]
 m4 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat, data = dat.4)
 
+stargazer::stargazer(m4, digits = 2)
+```
+
+
+
+```{r, echo=FALSE, results='asis', warning=FALSE, message=FALSE}
+library("nnet")
+library("memisc")
+library("stargazer")
+
+Dataset_1_Multinom <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_Multinom.csv")
+
 dat.5 <- Dataset_1_Multinom[is.na(Dataset_1_Multinom$conflict_outcome) == FALSE & is.na(Dataset_1_Multinom$rebel.support_d) == FALSE & is.na(Dataset_1_Multinom$gov.support_d) == FALSE & is.na(Dataset_1_Multinom$rtypesup_cat) == FALSE & is.na(Dataset_1_Multinom$gtypesup_cat) == FALSE & is.na(Dataset_1_Multinom$fightcaphigh) == FALSE & is.na(Dataset_1_Multinom$lngdp) == FALSE & is.na(Dataset_1_Multinom$lnyears) == FALSE & is.na(Dataset_1_Multinom$postCW) == FALSE, ]
 m5 <- multinom(conflict_outcome ~ rebel.support_d + gov.support_d + rtypesup_cat + gtypesup_cat + fightcaphigh + lngdp + lnyears + postCW, data = dat.5)
 
-stargazer::stargazer(m1, digits = 2)
+stargazer::stargazer(m5, digits = 2)
 ```
+
+
 
 ## Outlook
 text
