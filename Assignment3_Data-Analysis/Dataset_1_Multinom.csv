@@ -1,0 +1,498 @@
+"","dyadid","conflict_outcome","fightcaphigh","coup","lngdp","lnyears","postCW","year","Government","Opposition","side_a","side_b","startdate","enddate","rebpolwinglegal","rebel.support","rtypesup","gov.support","gtypesup","rebel.support_d","gov.support_d","rtypesup_cat","gtypesup_cat"
+"1",1,2,0,0,8.604193,1.791759,1,1997,"Algeria","AIS","Algeria","FIS","1992-12-01","1997-10-01","yes","alleged","military","explicit","military","0","0","2","2"
+"2",2,0,0,0,8.620814,0,1,1991,"Algeria","Takfir wa'l Hijra",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3",3,0,0,0,8.698404,2.397895,1,2003,"Algeria","GIA","Algeria","GIA","1993-01-01","2003-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"4",7,2,0,0,7.074802,2.833213,1,1991,"Angola","UNITA","Angola, Cuba","UNITA","1975-11-11","1980-12-31","no","explicit","troops","explicit","troops","1","1","1","1"
+"5",7,2,0,0,7.074802,2.833213,1,1991,"Angola","UNITA","Angola, Cuba","UNITA","1981-01-01","1988-12-31",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"6",7,2,0,0,7.588314,3.332205,1,2002,"Angola","UNITA","Angola, Cuba","UNITA","1975-11-11","1980-12-31","no","explicit","troops","explicit","troops","1","1","1","1"
+"7",7,2,0,0,7.588314,3.332205,1,2002,"Angola","UNITA","Angola, Cuba","UNITA","1981-01-01","1988-12-31",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"8",11,2,0,0,7.006596,0.6931472,1,1992,"Burundi","Palipehutu",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"9",12,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Burundi","CNDD","1994-11-26","1998-05-08","no","explicit","military","explicit","military","1","1","2","2"
+"10",13,2,0,0,6.632397,0,1,1997,"Burundi","Frolina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"11",14,2,0,0,6.637664,1.791759,1,2003,"Burundi","CNDD–FDD","Burundi","CNDD-FDD","1998-06-07","2003-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"12",15,2,0,0,NA,2.484907,1,2008,"Burundi","Palipehutu–FNL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"13",17,3,0,1,6.861439,0,1,2001,"Central African Republic","Military faction (forces of André Kolingba)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"14",18,0,0,0,6.800303,0,0,1989,"Chad","Revolutionary Forces of 1 April",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"15",19,0,0,0,6.800303,0,0,1989,"Chad","MOSANAT",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"16",20,0,0,0,6.724529,0.6931472,1,1990,"Chad","Islamic Legion","Chad","Islamic Legion","1989-01-01","1990-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"17",21,2,0,0,6.756921,1.098612,1,1994,"Chad","CSNPD",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"18",22,0,0,0,6.756921,1.098612,1,1994,"Chad","CNR",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"19",23,1,1,0,6.724529,0,1,1990,"Chad","MPS","Chad","MPS","1990-03-31","1990-12-02",NA,"explicit","military","explicit","military","1","1","2","2"
+"20",24,2,0,0,6.756921,1.098612,1,1994,"Chad","FNT",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"21",25,2,0,0,6.724157,0,1,1997,"Chad","MDD","Chad","MDD [-FANT]","1997-01-01","1997-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"22",25,2,0,0,6.724157,0,1,1997,"Chad","MDD","Chad","MDD [-FANT]","1991-12-31","1993-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"23",25,0,0,0,6.773858,1.098612,1,1993,"Chad","MDD","Chad","MDD [-FANT]","1997-01-01","1997-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"24",25,0,0,0,6.773858,1.098612,1,1993,"Chad","MDD","Chad","MDD [-FANT]","1991-12-31","1993-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"25",26,2,0,0,6.773012,0.6931472,1,1998,"Chad","FARF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"26",27,0,0,0,6.576316,1.386294,1,2002,"Chad","MDJT","Chad","MDJT","1999-12-31","2002-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"27",35,2,0,0,7.361509,0,1,1997,"Comoros","MPA/Republic of Anjouan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"28",36,2,0,0,7.576645,0.6931472,1,1994,"Congo","Ninjas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"29",36,0,0,0,7.321195,1.94591,1,1999,"Congo","Ninjas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"30",37,0,0,0,7.321195,1.098612,1,1999,"Congo","Cocoyes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"31",38,2,0,0,7.298296,1.609438,1,2002,"Congo","Ntsiloulous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"32",39,1,1,0,6.172202,0.6931472,1,1997,"Democratic Republic of Congo (Zaire)","AFDL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"33",40,2,1,0,5.852461,1.386294,1,2001,"Democratic Republic of Congo (Zaire)","RCD","Congo/Zaire, Zimbabwe, Angola, Namibia, Chad","RCD","1998-08-11","2001-12-31",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"34",41,2,0,0,5.852461,1.386294,1,2001,"Democratic Republic of Congo (Zaire)","MLC","Congo/Zaire, Zimbabwe, Angola, Namibia, Chad","MLC","1998-11-07","2001-12-31",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"35",42,2,0,0,5.88374,0.6931472,1,2000,"Democratic Republic of Congo (Zaire)","RCD–ML",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"36",43,2,1,0,7.959346,1.386294,1,1994,"Djibouti","FRUD",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"37",44,2,0,0,8.410153,0,1,1999,"Djibouti","FRUD – AD","Djibouti","FRUD – AD","1997-09-30","1999-12-31","no","alleged","military","explicit","military","0","0","2","2"
+"38",48,1,0,0,6.078032,1.098612,1,1991,"Ethiopia","EPRDF","Ethiopia","EPRDF","1989-01-08","1991-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"39",49,3,0,1,6.064483,0,0,1989,"Ethiopia","Military faction (forces of Amsha Desta and Merid Negusie)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"40",50,0,0,0,5.90039,1.386294,0,1987,"Ethiopia","EPRP","Ethiopia","EPRP","1984-01-01","1987-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"41",50,0,0,0,5.90039,1.386294,0,1987,"Ethiopia","EPRP","Ethiopia","EPRP","1976-12-02","1977-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"42",50,0,0,0,6.19363,0.6931472,0,1977,"Ethiopia","EPRP","Ethiopia","EPRP","1984-01-01","1987-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"43",50,0,0,0,6.19363,0.6931472,0,1977,"Ethiopia","EPRP","Ethiopia","EPRP","1976-12-02","1977-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"44",52,0,0,0,6.471032,0,1,1996,"Ethiopia","ARDUF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"45",53,1,0,0,6.078032,2.944439,1,1991,"Ethiopia","EPLF","Ethiopia","EPLF","1973-09-01","1974-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"46",53,1,0,0,6.078032,2.944439,1,1991,"Ethiopia","EPLF","Ethiopia","EPLF","1975-01-01","1991-05-28",NA,"explicit","military","explicit","military","1","1","2","2"
+"47",55,0,0,0,NA,3.496508,1,2009,"Ethiopia","OLF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"48",57,0,0,0,7.908615,0.6931472,1,2001,"Guinea","RFDG",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"49",58,1,1,1,6.301336,0.6931472,1,1999,"Guinea-Bissau","Military Junta for the Consolidation of Democracy, Peace and Justice",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"50",89,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Cote D’Ivoire","MPCI","2002-09-19","2002-12-31","yes","alleged","military","alleged","military","0","0","2","2"
+"51",91,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Cote D’Ivoire","MPIGO","2002-11-11","2003-12-31",NA,"alleged","military","alleged","military","0","0","2","2"
+"52",92,3,1,1,7.519166,0,1,1998,"Lesotho","Military faction",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"53",93,0,1,0,6.316081,0.6931472,1,1990,"Liberia","NPFL","Liberia","NPFL","1989-12-29","1990-09-10",NA,"explicit","military","explicit","troops","1","1","2","1"
+"54",94,0,1,0,6.316081,0,1,1990,"Liberia","INPFL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"55",95,2,0,0,5.836184,1.386294,1,2003,"Liberia","LURD",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"56",96,2,0,0,6.761816,0,1,1990,"Mali","MPA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"57",97,0,0,0,6.82687,0,1,1994,"Mali","FIAA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"58",98,0,0,0,8.192463,2.70805,0,1989,"Morocco","POLISARIO","Morocco","POLISARIO","1975-01-20","1989-10-11",NA,"explicit","military","explicit","military","1","1","2","2"
+"59",99,2,1,0,6.897745,2.772589,1,1992,"Mozambique","Renamo","Mozambique","Renamo","1977-01-01","1992-10-04",NA,"explicit","military","explicit","military","1","1","2","2"
+"60",111,2,0,0,6.754441,0,1,1994,"Niger","CRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"61",113,0,0,0,6.733176,0,1,1995,"Niger","FDR","Niger","FDR","1995-07-10","1995-12-31",NA,"alleged","non-military","alleged","military","0","0","3","2"
+"62",127,1,1,0,6.25431,1.609438,1,1994,"Rwanda","FPR","Rwanda","FPR","1990-10-01","1994-07-19",NA,"explicit","military","explicit","military","1","1","2","2"
+"63",128,0,0,0,7.046691,1.791759,1,2002,"Rwanda","FDLR","Rwanda","Opposition alliance","1997-05-25","2002-12-31","no","explicit","military","explicit","non-military","1","1","2","3"
+"64",129,2,0,0,7.248888,2.639057,1,2003,"Senegal","MFDC","Senegal","MFDC","1990-09-01","2003-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"65",130,2,0,0,6.527563,2.302585,1,2000,"Sierra Leone","RUF","Sierra Leone, United Kingdom","RUF","1997-01-01","2000-11-10","yes","explicit","military","explicit","troops","1","1","2","1"
+"66",130,2,0,0,6.527563,2.302585,1,2000,"Sierra Leone","RUF","Sierra Leone, United Kingdom","RUF","1991-03-23","1996-12-31","yes","explicit","military","explicit","non-military","1","1","2","3"
+"67",131,3,1,0,6.49783,1.098612,1,1999,"Sierra Leone","AFRC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"68",132,0,1,1,6.582814,0.6931472,1,1998,"Sierra Leone","Kamajors",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69",148,0,0,0,6.600319,1.791759,1,1992,"Uganda","UPA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"70",149,3,0,0,6.47114,0.6931472,0,1987,"Uganda","HSM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"71",151,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Uganda","LRA","1988-02-25","2001-08-08",NA,"explicit","military","explicit","troops","1","1","2","1"
+"72",152,0,0,0,6.811696,0,1,1996,"Uganda","WNBF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"73",153,0,0,0,6.99659,1.94591,1,2002,"Uganda","ADF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"74",153,0,0,0,NA,0,1,2007,"Uganda","ADF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"75",158,1,1,1,7.623549,0,0,1989,"Comoros","Presidential guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"76",189,1,0,0,7.711688,0,1,1997,"Congo","Cobras",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"77",190,0,0,0,7.494831,1.609438,1,1998,"Angola","FLEC–FAC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"78",190,0,0,0,NA,2.079442,1,2009,"Angola","FLEC–FAC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"79",191,0,0,0,7.444593,1.94591,1,1997,"Angola","FLEC–R","Angola","FLEC","1991-06-03","1997-12-31","yes","explicit","military","explicit","troops","1","1","2","1"
+"80",191,0,0,0,7.588314,0,1,2002,"Angola","FLEC–R","Angola","FLEC","1991-06-03","1997-12-31","yes","explicit","military","explicit","troops","1","1","2","1"
+"81",207,1,0,0,6.922486,2.197225,1,1991,"Somalia","SNM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"82",208,1,0,0,6.922486,1.098612,1,1991,"Somalia","SPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"83",209,1,0,0,6.896492,1.098612,0,1984,"Somalia","SSDF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"84",210,1,0,0,6.922486,0.6931472,1,1991,"Somalia","USC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"85",211,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Somalia","USC Faction","1991-01-29","1996-12-31",NA,"alleged","non-military","explicit","military","0","0","3","2"
+"86",212,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Somalia","SRRC","2001-05-12","2002-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"87",216,0,0,0,9.87744,3.044523,1,1991,"United Kingdom","PIRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"88",219,3,0,1,9.111936,0,1,1990,"Trinidad and Tobago","Jamaat al-Muslimeen","Trinidad and Tobago","Jamaat al-Muslimeen","1990-07-27","1990-08-01",NA,"alleged","non-military","explicit","non-military","0","0","3","3"
+"89",220,0,0,1,8.075138,1.386294,1,1990,"Philippines","Military Faction (forces of Honasan, Abenina & Zumel)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"90",223,2,0,0,7.383325,2.890372,1,1992,"Bangladesh","JSS/SB",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"91",225,2,0,0,8.231065,2.484907,1,1991,"El Salvador","FMLN","El Salvador","FMLN","1980-09-02","1991-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"92",228,2,0,0,8.19181,2.639057,1,1995,"Guatemala","URNG",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"93",230,2,0,0,8.899405,0,1,1994,"Mexico","EZLN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"94",231,2,0,0,8.270865,2.197225,1,1990,"Nicaragua","Contras/FDN","Nicaragua","FDN/Contras","1982-03-18","1990-04-19",NA,"explicit","military","explicit","military","1","1","2","2"
+"95",235,0,0,0,8.331377,2.890372,1,1999,"Peru","Sendero Luminoso",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"96",235,0,0,0,NA,1.098612,1,2009,"Peru","Sendero Luminoso",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"97",237,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Colombia","FARC","1978-01-01","2011-12-31","yes","explicit","non-military","explicit","military","1","1","3","2"
+"98",237,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Colombia","FARC","1964-01-01","1977-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"99",239,1,1,0,8.432341,0.6931472,1,1992,"Georgia","National Guard and Mkhedrioni",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"100",241,0,0,0,8.355189,1.791759,1,1998,"Egypt","al-Gama'a al-Islamiyya","Egypt","al-Gamaa al-Islamiyya","1993-03-17","1998-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"101",242,0,0,0,8.075138,0,1,1990,"Philippines","MILF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"102",242,0,0,0,NA,2.995732,1,2009,"Philippines","MILF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"103",243,3,0,0,NA,3.258096,1,2009,"Sri Lanka (Ceylon)","LTTE",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"104",244,3,0,1,7.574872,0,0,1989,"Haiti","Military faction (forces of Himmler Rebu and Guy Francois)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"105",245,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Cote D’Ivoire","MJP","2002-12-03","2003-12-31",NA,"alleged","military","alleged","military","0","0","2","2"
+"106",246,0,0,0,8.46919,1.386294,0,1982,"Iran","MEK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"107",246,0,0,0,8.546057,2.70805,1,1993,"Iran","MEK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"108",246,0,0,0,8.701988,3.135494,1,2001,"Iran","MEK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"109",247,2,0,0,8.056978,3.091043,1,1993,"Philippines","MNLF","Philippines","MNLF","1981-01-01","1993-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"110",247,2,0,0,8.056978,3.091043,1,1993,"Philippines","MNLF","Philippines","MNLF","1972-12-31","1980-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"111",248,2,0,0,10.05108,0,1,1998,"United Kingdom","RIRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"112",251,1,1,1,7.552972,0,1,1991,"Haiti","Military faction (forces of Raol Cédras)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"113",252,0,0,0,8.193188,0.6931472,1,2002,"Philippines","MNLF – NM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"114",256,3,0,1,7.162661,0,0,1971,"Sri Lanka (Ceylon)","JVP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"115",256,3,0,0,7.919531,0.6931472,1,1990,"Sri Lanka (Ceylon)","JVP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"116",259,2,0,0,7.921739,0.6931472,1,1993,"Georgia","Republic of Abkhazia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"117",260,3,0,0,NA,0,0,1946,"Iran","KDPI","Iran","Republic of Kurdistan/KDPI","1946-01-01","1946-12-15",NA,"explicit","troops","explicit","non-military","1","1","1","3"
+"118",260,0,0,0,8.589289,2.890372,1,1996,"Iran","KDPI","Iran","Republic of Kurdistan/KDPI","1946-01-01","1946-12-15",NA,"explicit","troops","explicit","non-military","1","1","1","3"
+"119",260,0,0,0,8.466536,1.098612,0,1968,"Iran","KDPI","Iran","Republic of Kurdistan/KDPI","1946-01-01","1946-12-15",NA,"explicit","troops","explicit","non-military","1","1","1","3"
+"120",262,2,0,0,7.565798,0.6931472,1,1993,"India","ATTF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"121",262,0,0,0,7.860563,2.079442,1,1999,"India","ATTF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"122",269,0,0,0,NA,2.484907,1,2006,"India","NLFT",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"123",279,0,0,0,7.708451,2.70805,0,1975,"Iraq","KDP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"124",279,0,0,0,6.832385,3.433987,1,1991,"Iraq","KDP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"125",281,2,0,0,8.27416,0,1,1991,"Serbia (Yugoslavia)","Republic of Slovenia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"126",283,0,0,0,6.584087,1.94591,1,1999,"Ethiopia","AIAI",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"127",285,0,0,0,7.58765,3.044523,1,1996,"Iraq","PUK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"128",286,2,0,0,7.879992,2.197225,1,2000,"India","NSCN – IM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"129",287,1,1,0,6.822034,0,1,2002,"Central African Republic","Forces of Francois Bozize","Central African Republic, Libya","Faction of Francois Bozize","2002-09-20","2002-12-31",NA,"alleged","military","explicit","troops","0","0","2","1"
+"130",289,0,0,0,7.921739,0.6931472,1,1993,"Georgia","Zviadists",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"131",291,3,0,0,8.899486,0,1,1992,"Croatia","Serbian irregulars",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"132",292,2,1,0,7.411852,1.386294,1,1995,"Bosnia-Herzegovina","Serbian Republic of Bosnia and Herzegovina","Bosnia and Herzegovina","Serbian Republic of Bosnia and Herzegovina","1992-04-07","1995-12-14",NA,"explicit","troops","explicit","non-military","1","1","1","3"
+"133",293,2,1,0,6.899199,0.6931472,1,1994,"Bosnia-Herzegovina","Croatian Republic of Bosnia and Herzegovina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"134",294,3,0,0,7.411852,1.098612,1,1995,"Bosnia-Herzegovina","Autonomous Province of Western Bosnia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"135",295,2,0,0,7.560148,0.6931472,1,1999,"Serbia (Yugoslavia)","UCK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"136",296,0,0,0,NA,2.995732,1,2009,"India","ULFA","India","UFLA","1990-02-01","2009-12-31","no","alleged","military","explicit","military","0","0","2","2"
+"137",297,2,0,0,8.432341,0,1,1992,"Georgia","Republic of South Ossetia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"138",297,0,0,0,8.667279,0,1,2004,"Georgia","Republic of South Ossetia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"139",297,2,0,0,NA,0,1,2008,"Georgia","Republic of South Ossetia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"140",298,0,0,0,8.008066,1.791759,0,1987,"Iraq","SCIRI",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"141",298,0,0,0,7.58765,1.791759,1,1996,"Iraq","SCIRI",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"142",299,0,0,0,8.84627,0,1,1996,"Mexico","EPR",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"143",300,2,0,0,7.411852,1.386294,1,1995,"Bosnia-Herzegovina","Serbian irregulars",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"144",301,2,0,0,6.899199,0.6931472,1,1994,"Bosnia-Herzegovina","Croatian irregulars",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"145",303,3,0,0,8.908689,1.386294,1,1995,"Croatia","Serbian Republic of Krajina","Croatia","Serbian Republic of Krajina","1992-01-01","1995-11-12",NA,"explicit","military","explicit","military","1","1","2","2"
+"146",304,2,0,0,6.77588,3.465736,1,1992,"Myanmar","KIO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"147",305,0,0,0,6.494177,3.713572,0,1988,"Myanmar","CPB",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"148",306,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Myanmar","KNU","1988-01-01","2011-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"149",308,0,0,0,6.494177,1.386294,0,1988,"Myanmar","MTA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"150",308,2,0,0,6.77588,2.397895,1,1995,"Myanmar","MTA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"151",309,0,0,0,7.548746,0.6931472,1,1990,"India","ABSU",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"152",310,0,0,0,6.77588,3.465736,1,1990,"Myanmar","NMSP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"153",310,0,0,0,6.396263,1.609438,0,1963,"Myanmar","NMSP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"154",311,0,0,0,6.77588,0,1,1992,"Myanmar","KNPP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"155",311,0,0,0,NA,0,1,2005,"Myanmar","KNPP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"156",311,0,0,0,5.959199,0,0,1957,"Myanmar","KNPP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"157",311,0,0,0,6.657896,0,0,1987,"Myanmar","KNPP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"158",311,0,0,0,6.77588,0,1,1996,"Myanmar","KNPP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"159",312,0,0,0,6.77588,1.386294,1,1994,"Myanmar","RSO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"160",313,2,0,0,8.003052,2.484907,1,2004,"India","NDFB",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"161",314,3,0,0,6.77588,0,1,2000,"Myanmar","God's army",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"162",319,0,0,0,8.155962,1.609438,1,1993,"Peru","MRTA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"163",321,2,0,0,6.77588,0,1,1997,"Myanmar","UWSA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"164",322,0,0,0,6.77588,1.609438,1,1994,"Myanmar","ABSDF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"165",323,0,0,0,6.77588,0.6931472,1,1992,"Myanmar","ARIF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"166",325,0,0,0,NA,1.098612,1,2006,"India","PLA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"167",325,0,0,0,7.486809,1.94591,0,1988,"India","PLA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"168",325,0,0,0,7.769704,2.833213,1,1998,"India","PLA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"169",326,3,0,0,6.77588,0,1,1996,"Myanmar","BMA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"170",327,1,1,0,6.845624,0.6931472,1,1996,"Afghanistan","Taleban",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"171",330,0,0,0,8.499546,0.6931472,1,1992,"Turkey","Devrimci Sol","Turkey","Devrimci Sol","1991-07-13","1992-10-07",NA,"alleged","military","explicit","non-military","0","0","2","3"
+"172",333,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Turkey","PKK/Kadek","1984-08-15","2011-12-31","yes","explicit","military","explicit","military","1","1","2","2"
+"173",336,0,0,0,NA,2.772589,1,2009,"India","UNLF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"174",337,2,0,0,8.366168,2.079442,1,1996,"Papua New Guinea","BRA","Papua New Guinea","BRA","1989-01-01","1996-06-15",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"175",340,0,0,0,7.776401,0.6931472,1,1996,"Pakistan","MQM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"176",340,0,0,0,7.69733,0,1,1990,"Pakistan","MQM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"177",341,2,0,0,8.554252,0,1,2001,"Macedonia","UCK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"178",342,0,0,0,8.277915,2.079442,0,1973,"Colombia","ELN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"179",343,2,0,0,8.601141,1.94591,1,1990,"Colombia","EPL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"180",343,0,0,0,8.715109,3.044523,1,2004,"Colombia","EPL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"181",344,2,0,0,8.19,0.6931472,1,1998,"Indonesia","Fretilin","Indonesia","Fretilin","1992-12-15","1992-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"182",344,2,0,0,8.19,0.6931472,1,1998,"Indonesia","Fretilin","Indonesia","Fretilin","1985-01-01","1989-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"183",344,2,0,0,8.19,0.6931472,1,1998,"Indonesia","Fretilin","Indonesia","Fretilin","1975-12-07","1984-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"184",344,2,0,0,8.19,0.6931472,1,1998,"Indonesia","Fretilin","Indonesia","Fretilin","1997-05-31","1998-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"185",344,0,0,0,7.935387,2.70805,0,1989,"Indonesia","Fretilin","Indonesia","Fretilin","1992-12-15","1992-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"186",344,0,0,0,7.935387,2.70805,0,1989,"Indonesia","Fretilin","Indonesia","Fretilin","1985-01-01","1989-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"187",344,0,0,0,7.935387,2.70805,0,1989,"Indonesia","Fretilin","Indonesia","Fretilin","1975-12-07","1984-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"188",344,0,0,0,7.935387,2.70805,0,1989,"Indonesia","Fretilin","Indonesia","Fretilin","1997-05-31","1998-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"189",344,0,0,0,8.106053,0,1,1992,"Indonesia","Fretilin","Indonesia","Fretilin","1992-12-15","1992-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"190",344,0,0,0,8.106053,0,1,1992,"Indonesia","Fretilin","Indonesia","Fretilin","1985-01-01","1989-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"191",344,0,0,0,8.106053,0,1,1992,"Indonesia","Fretilin","Indonesia","Fretilin","1975-12-07","1984-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"192",344,0,0,0,8.106053,0,1,1992,"Indonesia","Fretilin","Indonesia","Fretilin","1997-05-31","1998-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"193",347,3,0,0,8.047119,0.6931472,1,1991,"Indonesia","GAM","Indonesia","GAM","1999-01-01","2005-10-12",NA,"alleged","military","explicit","military","0","0","2","2"
+"194",347,3,0,0,8.047119,0.6931472,1,1991,"Indonesia","GAM","Indonesia","GAM","1989-05-31","1991-06-15",NA,"alleged","military","explicit","military","0","0","2","2"
+"195",347,2,0,0,NA,1.94591,1,2005,"Indonesia","GAM","Indonesia","GAM","1999-01-01","2005-10-12",NA,"alleged","military","explicit","military","0","0","2","2"
+"196",347,2,0,0,NA,1.94591,1,2005,"Indonesia","GAM","Indonesia","GAM","1989-05-31","1991-06-15",NA,"alleged","military","explicit","military","0","0","2","2"
+"197",348,2,0,0,8.980946,1.098612,1,1996,"Russia (Soviet Union)","Chechen Republic of Ichkeria",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"198",349,2,0,0,NA,2.397895,1,2006,"Nepal","CPN–M",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"199",350,3,0,0,9.164805,0,1,1993,"Russia (Soviet Union)","Parliamentary forces",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"200",352,2,0,0,5.836184,0,1,2003,"Liberia","MODEL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"201",353,2,0,0,7.089285,1.94591,1,1998,"Tajikistan","UTO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"202",357,1,1,0,8.709374,0,0,1989,"Rumania","NSF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"203",360,0,0,0,NA,2.302585,1,2010,"United States of America","al-Qaida",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"204",361,2,0,0,8.103049,1.386294,1,1994,"Azerbaijan","Republic of Nagorno-Karabakh",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"205",361,0,1,0,NA,2.70805,1,2005,"Azerbaijan","Republic of Nagorno-Karabakh",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"206",362,1,1,1,8.103049,0,1,1993,"Azerbaijan","Military faction (forces of Suret Husseinov)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"207",363,0,0,0,8.172797,0.6931472,1,2000,"Uzbekistan","IMU","Uzbekistan, Kyrgyzstan","MIU","1999-02-16","2000-12-31",NA,"alleged","non-military","explicit","military","0","0","3","2"
+"208",364,1,0,0,7.596221,2.197225,0,1975,"Cambodia","KR","Cambodia, Vietnam","Khmer Rouge/PDK","1990-01-01","1998-10-25",NA,"explicit","military","explicit","military","1","1","2","2"
+"209",364,1,0,0,7.596221,2.197225,0,1975,"Cambodia","KR","Cambodia","Khmer Rouge","1967-05-01","1970-03-17",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"210",364,1,0,0,7.596221,2.197225,0,1975,"Cambodia","KR","Cambodia, Vietnam","Khmer Rouge/PDK","1979-01-09","1989-12-31",NA,"explicit","military","explicit","troops","1","1","2","1"
+"211",364,1,0,0,7.596221,2.197225,0,1975,"Cambodia","KR","Cambodia","FUNK","1970-03-18","1975-04-17",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"212",364,3,0,0,7.763561,2.995732,1,1998,"Cambodia","KR","Cambodia, Vietnam","Khmer Rouge/PDK","1990-01-01","1998-10-25",NA,"explicit","military","explicit","military","1","1","2","2"
+"213",364,3,0,0,7.763561,2.995732,1,1998,"Cambodia","KR","Cambodia","Khmer Rouge","1967-05-01","1970-03-17",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"214",364,3,0,0,7.763561,2.995732,1,1998,"Cambodia","KR","Cambodia, Vietnam","Khmer Rouge/PDK","1979-01-09","1989-12-31",NA,"explicit","military","explicit","troops","1","1","2","1"
+"215",364,3,0,0,7.763561,2.995732,1,1998,"Cambodia","KR","Cambodia","FUNK","1970-03-18","1975-04-17",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"216",366,0,0,0,9.391635,1.609438,0,1982,"Spain","ETA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"217",366,0,0,0,9.516565,1.098612,0,1987,"Spain","ETA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"218",366,0,0,0,9.669702,0.6931472,1,1992,"Spain","ETA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"219",367,2,1,0,7.972701,0,1,1992,"Moldova","PMR","Moldova","Dniestr Republic","1992-03-01","1992-07-21",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"220",368,3,0,0,9.051506,0,1,1999,"Russia (Soviet Union)","Wahhabi movement of the Buinaksk district",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"221",373,3,0,0,9.425548,0,1,1990,"Russia (Soviet Union)","APF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"222",375,3,0,0,NA,0,1,1994,"Yemen","Democratic Republic of Yemen","Yemen","Democratic Republic of Yemen","1994-04-27","1994-07-07","yes","explicit","military","explicit","military","1","1","2","2"
+"223",376,3,1,0,8.185364,0.6931472,1,1990,"Lebanon","Lebanese Army (Aoun)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"224",377,2,0,0,NA,2.890372,1,2007,"Israel","Fatah","Israel","Fatah","2000-11-01","2007-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"225",378,2,0,0,7.839565,2.564949,1,1991,"Cambodia","KPNLF","Cambodia, Vietnam","KPNLF","1979-11-01","1989-12-31",NA,"explicit","military","explicit","troops","1","1","2","1"
+"226",378,2,0,0,7.839565,2.564949,1,1991,"Cambodia","KPNLF","Cambodia, Vietnam","KPNLF","1990-01-01","1991-10-23",NA,"explicit","military","explicit","military","1","1","2","2"
+"227",379,0,0,0,7.732409,2.772589,1,1997,"Cambodia","FUNCINPEC","Cambodia, Vietnam","FUNCINPEC/ANS","1990-01-01","1991-10-23",NA,"explicit","military","explicit","military","1","1","2","2"
+"228",379,0,0,0,7.732409,2.772589,1,1997,"Cambodia","FUNCINPEC","Cambodia, Vietnam","FUNCINPEC/ANS","1982-01-01","1989-12-31",NA,"explicit","military","explicit","troops","1","1","2","1"
+"229",379,2,0,0,7.839565,2.302585,1,1991,"Cambodia","FUNCINPEC","Cambodia, Vietnam","FUNCINPEC/ANS","1990-01-01","1991-10-23",NA,"explicit","military","explicit","military","1","1","2","2"
+"230",379,2,0,0,7.839565,2.302585,1,1991,"Cambodia","FUNCINPEC","Cambodia, Vietnam","FUNCINPEC/ANS","1982-01-01","1989-12-31",NA,"explicit","military","explicit","troops","1","1","2","1"
+"231",380,0,0,0,9.886601,0,1,1995,"Israel","PIJ","Israel","PIJ","2002-01-01","2011-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"232",381,0,0,0,NA,2.833213,1,2009,"Israel","Hamas","Israel","Hamas","1993-09-12","1994-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"233",381,0,0,0,NA,2.833213,1,2009,"Israel","Hamas","Israel","Hamas","2001-01-01","2011-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"234",381,0,0,0,9.842463,0.6931472,1,1994,"Israel","Hamas","Israel","Hamas","1993-09-12","1994-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"235",381,0,0,0,9.842463,0.6931472,1,1994,"Israel","Hamas","Israel","Hamas","2001-01-01","2011-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"236",382,0,0,0,7.168125,0.6931472,1,1990,"Laos","LRM","Laos","LRM","1989-12-01","1990-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"237",383,2,1,0,8.185364,0,0,1989,"Lebanon","Lebanese Forces","Lebanon","Lebanese Forces","1989-01-01","1989-09-23",NA,"explicit","military","explicit","troops","1","1","2","1"
+"238",387,0,0,0,7.565798,2.397895,1,1993,"India","Sikh insurgents",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"239",407,3,0,1,7.737739,0,1,1995,"Azerbaijan","OPON forces",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"240",411,1,0,0,7.277483,2.639057,1,1992,"Afghanistan","Jam'iyyat-i Islami-yi Afghanistan","Afghanistan, Soviet Union","Jamiat-i-Islami","1979-03-20","1989-02-28",NA,"explicit","military","explicit","troops","1","1","2","1"
+"241",411,1,0,0,7.277483,2.639057,1,1992,"Afghanistan","Jam'iyyat-i Islami-yi Afghanistan","Afghanistan","Jamiat-i-Islami","1996-01-01","1996-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"242",411,1,0,0,7.277483,2.639057,1,1992,"Afghanistan","Jam'iyyat-i Islami-yi Afghanistan","Afghanistan, Soviet Union","Jamiat-i-Islami","1989-03-01","1992-04-28",NA,"explicit","military","explicit","military","1","1","2","2"
+"243",412,1,0,0,7.277483,2.564949,1,1992,"Afghanistan","Hizb-i Islami-yi Afghanistan","Afghanistan, Soviet Union","Hezb-i-Islami","1989-03-01","1992-04-28",NA,"explicit","military","explicit","military","1","1","2","2"
+"244",412,1,0,0,7.277483,2.564949,1,1992,"Afghanistan","Hizb-i Islami-yi Afghanistan","Afghanistan","Hezb-i-Islami","2008-01-01","2011-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"245",412,1,0,0,7.277483,2.564949,1,1992,"Afghanistan","Hizb-i Islami-yi Afghanistan","Afghanistan, Soviet Union","Hezb-i-Islami","1980-03-01","1989-02-28",NA,"explicit","military","explicit","troops","1","1","2","1"
+"246",413,1,1,0,6.825275,1.94591,1,1995,"Afghanistan","Hizb-i Wahdat","Afghanistan, Soviet Union","Hezb-i-Wahdat","1989-02-28","1995-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"247",415,3,0,0,7.089285,0,1,1998,"Tajikistan","Movement for Peace in Tajikistan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"248",419,0,0,0,9.665949,0,0,1989,"Israel","PFLP","Israel","PFLP","2001-01-01","2001-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"249",419,0,0,0,9.665949,0,0,1989,"Israel","PFLP","Israel","PFLP","1989-01-01","1989-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"250",419,0,0,0,9.980485,0,1,2001,"Israel","PFLP","Israel","PFLP","2001-01-01","2001-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"251",419,0,0,0,9.980485,0,1,2001,"Israel","PFLP","Israel","PFLP","1989-01-01","1989-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"252",422,0,1,0,6.825275,1.098612,1,1995,"Afghanistan","Junbish-i Milli-yi Islami","Afghanistan","Junbish-i Milli-yi Islami","1993-03-08","1995-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"253",423,1,0,0,6.036032,1.791759,1,2001,"Afghanistan","UIFSA","Afghanistan, Soviet Union","UIFSA","1996-10-13","2001-11-12",NA,"explicit","military","explicit","non-military","1","1","2","3"
+"254",427,0,0,0,9.920374,0,1,1996,"Israel","PNA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"255",427,2,0,0,9.949686,1.098612,1,2002,"Israel","PNA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"256",428,0,0,0,9.665949,0,0,1989,"Israel","PFLP–GC","Israel","PFLP-GC","1989-01-01","1989-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"257",431,0,0,0,6.856399,0,1,1997,"Uganda","UNRF II","Uganda","UNRF II","1997-01-01","1997-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"258",433,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sudan","SLM/A","2003-1-1","2003-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"259",434,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sudan","JEM","2003-1-1","2003-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"260",435,0,0,0,6.336879,1.098612,1,1999,"Eritrea","EIJM – AS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"261",435,2,0,0,6.414557,0,1,2003,"Eritrea","EIJM – AS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"262",439,0,1,0,7.610244,0,1,2004,"Cote d’Ivoire","FN","Cote D’Ivoire","FRCI","2004-06-07","2004-12-31","yes","alleged","military","alleged","military","0","0","2","2"
+"263",440,1,1,0,7.634961,0,1,2004,"Haiti","FLRN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"264",441,0,0,0,7.634961,0,1,2004,"Haiti","OP Lavalas (Chimères)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"265",442,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Iraq","Al-Mahdi Army","2004-01-01","2008-12-31","yes","alleged","military","explicit","military","0","0","2","2"
+"266",444,0,0,0,8.272923,0,1,2004,"Uzbekistan","JIG",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"267",446,0,0,0,7.098525,0,1,2004,"Nigeria","Ahlul Sunnah Jamaa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"268",453,0,0,0,NA,1.098612,1,2007,"India","NSCN – K",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"269",455,2,0,0,NA,0.6931472,1,2006,"Chad","FUCD","Chad","FUCD","2005-01-01","2006-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"270",457,0,0,0,NA,0,1,2005,"Turkey","MKP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"271",459,0,0,0,NA,1.609438,1,2009,"Iran","PJAK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"272",461,3,0,1,8.69548,0,0,1989,"Panama","Military faction (forces of Moisés Giroldi)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"273",462,1,1,1,NA,0,0,1946,"Bolivia","Popular Revolutionary Movement",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"274",463,1,0,1,8.016972,0,0,1952,"Bolivia","MNR",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"275",464,3,0,0,8.012558,0,0,1967,"Bolivia","ELN","Bolivia","ELN","1967-03-01","1967-10-16","no","explicit","military","explicit","military","1","1","2","2"
+"276",466,1,0,0,NA,1.386294,0,1949,"China","PLA","China","Peoples Liberation Army","1946-01-01","1949-10-1","no","explicit","military","explicit","military","1","1","2","2"
+"277",467,3,0,0,NA,1.386294,0,1949,"Greece","DSE","Greece","DSE","1946-03-01","1949-10-16","no","explicit","military","explicit","military","1","1","2","2"
+"278",468,3,0,0,NA,0,0,1946,"Iran","Republic of Azerbaijan","Iran","Republic of Azerbaijan","1945-11-19","1946-12-15","yes","explicit","troops","explicit","non-military","1","1","1","3"
+"279",469,3,1,0,7.446766,2.197225,0,1954,"Philippines","Huk",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"280",471,3,0,1,6.77181,0,0,1986,"Togo","MTD","Togo","MTD","1986-09-23","1986-09-24","no","alleged","military","explicit","troops","0","0","2","1"
+"281",473,0,0,0,7.098525,0,1,2004,"Nigeria","NDPVF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"282",474,1,1,1,8.551548,0,0,1989,"Paraguay","Military Faction (forces of Andres Rodriguez)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"283",475,3,0,1,9.031911,0,1,1992,"Venezuela","Military faction (forces of Hugo Chávez)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"284",476,3,0,1,7.47011,0,1,1990,"Afghanistan","Military faction (forces of Shahnawaz Tanay)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"285",478,3,0,0,NA,1.098612,0,1948,"Russia (Soviet Union)","Forest Brothers",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"286",479,3,0,0,NA,0,0,1946,"Russia (Soviet Union)","LTS(p)A",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"287",481,3,0,0,NA,0,0,1946,"Russia (Soviet Union)","LNPA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"288",482,3,0,0,NA,1.098612,0,1948,"Russia (Soviet Union)","BDPS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"289",483,3,0,0,8.142756,1.609438,0,1950,"Russia (Soviet Union)","UPA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"290",485,3,0,1,6.463201,0,0,1965,"Burundi","Military faction (forces loyal to Gervais Nyangoma)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"291",487,1,0,1,6.758257,0,0,1987,"Burkina Faso","Popular Front",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"292",490,1,1,1,8.706079,0,0,1973,"Chile","Military faction (forces of Augusto Pinochet, Toribio Merino and Leigh Guzman)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"293",491,3,0,0,8.72369,0,0,1972,"Uruguay","MLN/Tupamaros",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"294",493,3,1,0,7.748067,0,0,1965,"Dominican Republic","Military faction (Constitutionalists)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"295",494,3,1,1,6.845146,0,0,1966,"Nigeria","Military faction (forces of Patrick Nzeogwu)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"296",495,0,0,0,8.563909,2.397895,0,1988,"Colombia","M-19","Colombia","M-19","1978-05-28","1988-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"297",498,0,0,0,7.068777,1.609438,0,1969,"Indonesia","OPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"298",498,0,0,0,7.636892,1.791759,0,1981,"Indonesia","OPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"299",498,0,0,0,7.716238,0,0,1984,"Indonesia","OPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"300",499,3,0,0,8.273638,0,0,1965,"Peru","MIR",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"301",500,3,0,0,8.273638,0,0,1965,"Peru","ELN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"302",502,1,1,1,6.535532,0,0,1966,"Ghana","NLC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"303",503,1,1,1,7.032032,0,0,1981,"Ghana","Military faction (forces of Jerry John Rawlings)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"304",504,3,0,1,6.947092,0,0,1983,"Ghana","Military faction (forces of Ekow Dennis and Edward Adjei-Ampofo)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"305",505,0,0,0,6.969321,1.098612,0,1968,"India","MNF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"306",508,NA,NA,NA,NA,NA,NA,NA,NA,NA,"El Salvador","FPL","1979-10-01","1979-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"307",510,NA,NA,NA,NA,NA,NA,NA,NA,NA,"El Salvador","ERP","1979-10-01","1979-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"308",514,3,0,1,8.25127,0,0,1972,"El Salvador","Military faction (forces of Benjamin Mejia)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"309",515,3,0,0,7.486809,2.302585,0,1988,"India","TNV",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"310",516,2,0,0,8.928998,3.135494,0,1988,"South Africa","SWAPO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"311",518,1,1,1,6.869451,0,0,1966,"Syria","Military faction (forces loyal to Nureddin Atassi and Youssef Zeayen)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"312",519,3,0,0,7.647065,1.386294,0,1982,"Syria","Muslim Brotherhood","Syria","Muslim Brotherhood","1979-06-16","1982-02-15",NA,"alleged","military","explicit","military","0","0","2","2"
+"313",520,3,0,1,6.925281,0,0,1971,"Sudan","Sudanese Communist Party",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"314",521,3,0,1,7.080279,0,0,1976,"Sudan","Islamic Charter Front","Sudan","Islamic Charter Front","1976-07-02","1976-07-11","yes","alleged","military","explicit","non-military","0","0","2","3"
+"315",522,0,0,0,6.2555,2.079442,0,1983,"Ethiopia","WSLF","Ethiopia, Cuba","WSLF","1976-09-01","1983-12-31",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"316",525,1,1,1,7.449317,0,0,1980,"Liberia","Military faction (forces of Samuel Doe)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"317",526,0,0,0,7.766629,0.6931472,0,1985,"Sri Lanka (Ceylon)","TELO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"318",528,3,1,0,6.941847,1.386294,0,1970,"Nigeria","Republic of Biafra","Nigeria","Republic of Biafra","1967-07-06","1970-01-12","yes","explicit","military","explicit","troops","1","1","2","1"
+"319",536,3,0,1,7.12406,0,0,1982,"Kenya","Military faction (forces of Hezekiah Ochuka)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"320",539,3,0,1,5.989838,0,0,1984,"Cameroon","Military faction (forces of Ibrahim Saleh)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"321",540,3,0,0,7.23994,0,0,1971,"Madagascar","Monima",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"322",541,3,0,1,7.769919,0,0,1971,"Morocco","Military faction (forces of Mohamed Madbouh)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"323",542,1,1,0,NA,0,0,1971,"Pakistan","Mukti Bahini",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"324",544,0,0,0,7.26126,1.386294,0,1977,"Pakistan","Baluchi insurgents",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"325",546,0,0,0,8.622904,0.6931472,0,1980,"Iran","APCO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"326",547,3,0,1,6.786739,0,0,1981,"Gambia","NRC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"327",548,3,0,0,10.34201,0,0,1979,"Saudi Arabia","JSM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"328",551,3,0,0,8.354559,0,0,1980,"Tunisia","Résistance Armée Tunisienne","Tunisia","Resistance Armee Tunisienne","1980-01-27","1980-01-27",NA,"explicit","endorsement; alleged military","explicit","military","1","1","endorsement; alleged military","2"
+"329",553,1,0,0,7.704046,0.6931472,0,1979,"Cambodia","KNUFNS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"330",554,1,1,1,6.931306,0,0,1971,"Uganda","Military faction (forces of Idi Amin)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"331",555,0,0,1,6.945215,0,0,1974,"Uganda","Military faction (forces of Charles Arube)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"332",556,1,0,0,6.664332,0,0,1979,"Uganda","UNLF","Uganda","UNLF","1979-04-07","1979-12-31",NA,"explicit","troops","explicit","military","1","1","1","2"
+"333",558,2,0,0,8.928998,2.079442,0,1988,"South Africa","ANC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"334",559,0,0,0,8.370281,0,0,1987,"Suriname","SLA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"335",561,0,0,0,9.15348,1.94591,0,1975,"Oman","PFLO","Oman, Iran, Jordan, United Kingdom","PFLOAG","1969-01-01","1975-12-31",NA,"explicit","military","explicit","troops","1","1","2","1"
+"336",564,1,1,0,6.59578,0,0,1986,"South Yemen","Yemenite Socialist Party - Abdul Fattah Ismail faction",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"337",565,0,0,0,7.589118,0.6931472,0,1968,"Zimbabwe (Rhodesia)","ZAPU",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"338",567,1,0,0,8.611379,1.098612,0,1979,"Nicaragua","FSLN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"339",568,0,0,0,6.856051,1.609438,0,1979,"Angola","FNLA","Angola, Cuba","FNLA","1975-11-11","1979-12-31","no","explicit","troops","explicit","troops","1","1","1","1"
+"340",570,2,1,0,8.185364,0,0,1958,"Lebanon","Independent Nasserite Movement /Mourabitoun militia","Lebanon","Independent Nasserite Movement /Mourabitoun militia","1958-05-15","1958-10-15",NA,"alleged","military","explicit","troops","0","0","2","1"
+"341",574,1,0,0,6.510526,1.791759,0,1986,"Uganda","NRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"342",575,0,0,0,6.554887,0,0,1982,"Uganda","UFM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"343",578,0,0,0,NA,1.098612,1,2007,"Iraq","RJF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"344",580,3,0,0,NA,0,0,1947,"China","Taiwanese insurgents",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"345",581,1,1,0,NA,0,0,1948,"Costa Rica","National Liberation Army",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"346",583,3,0,1,9.248944,0,0,1964,"Gabon","Military faction (forces loyal to Léon M'Ba)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"347",584,3,0,0,9.148196,0.6931472,0,1962,"France","OAS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"348",585,0,0,0,8.548965,3.178054,0,1981,"Malaysia","CPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"349",585,0,0,0,7.495953,1.098612,0,1960,"Malaysia","CPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"350",585,0,0,0,8.217185,2.890372,0,1975,"Malaysia","CPM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"351",586,3,0,0,7.726371,1.386294,0,1966,"Malaysia","CCO","Malaysia","CCO","1963-01-01","1966-08-11","no","explicit","troops","explicit","troops","1","1","1","1"
+"352",587,3,1,0,6.734104,1.098612,0,1962,"Democratic Republic of Congo (Zaire)","State of Katanga","Democratic Republic of Congo (Zaire)","Katanga","1960-07-01","1962-12-30","no","explicit","troops","explicit","troops","1","1","1","1"
+"353",588,3,0,0,6.734104,1.098612,0,1962,"Democratic Republic of Congo (Zaire)","Independent Mining State of South Kasai",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"354",590,1,1,1,8.90191,0,0,1955,"Argentina","Military faction (forces of Eduardo A. Lonardi Doucet)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"355",592,3,0,1,8.921309,0,0,1963,"Argentina","Military faction (Colorados)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"356",593,3,0,0,9.272989,1.098612,0,1977,"Argentina","Montoneros",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"357",594,3,0,0,9.272989,1.386294,0,1977,"Argentina","ERP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"358",595,3,0,0,7.000981,1.386294,0,1961,"Indonesia","Darul Islam",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"359",595,0,0,0,6.97661,0,0,1953,"Indonesia","Darul Islam",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"360",596,3,0,0,7.000981,1.386294,0,1961,"Indonesia","PRRI","Indonesia","PRRI","1958-02-15","1961-12-31","yes","explicit","military","explicit","non-military","1","1","2","3"
+"361",598,3,0,1,6.936556,0,0,1951,"Thailand","Military faction (Navy)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"362",599,0,0,0,8.012025,2.197225,0,1982,"Thailand","CPT","Thailand","CPT","1974-10-01","1982-04-15","no","explicit","military","explicit","military","1","1","2","2"
+"363",600,3,0,1,7.889088,0,0,1953,"Cuba","M-26-7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"364",600,1,0,0,7.889088,1.098612,0,1958,"Cuba","M-26-7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"365",602,3,0,0,7.889088,0,0,1961,"Cuba","Cuban Revolutionary Council","Cuba","National Revolutionary Council","1961-04-17","1961-04-20",NA,"explicit","military","explicit","non-military","1","1","2","3"
+"366",605,3,0,0,6.97661,0,0,1950,"Indonesia","Republic of South Moluccas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"367",606,3,0,0,6.113372,0,0,1959,"China","Tibet",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"368",606,0,0,0,5.963605,0,0,1956,"China","Tibet",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"369",606,0,0,0,5.78794,0,0,1950,"China","Tibet",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"370",607,3,0,0,7.841776,0,0,1957,"Oman","State of Oman/Free Oman","Muscat and Oman, United Kingdom","State of Oman/Free Oman","1957-07-01","1957-08-12",NA,"explicit","endorsement; alleged military","explicit","troops","1","1","endorsement; alleged military","1"
+"371",614,NA,NA,NA,NA,NA,NA,NA,NA,NA,"South Vietnam, USA","FNL","1955-04-01","1964-12-31","no","explicit","military","explicit","troops","1","1","2","1"
+"372",615,1,1,0,NA,0,0,1948,"North Yemen","Opposition coalition",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"373",616,2,0,0,7.139565,2.197225,0,1970,"North Yemen","Royalists","Yemen [North], Egypt","Royalists","1962-10-01","1970-03-15","no","explicit","troops","explicit","troops","1","1","1","1"
+"374",617,2,0,0,7.597843,1.386294,0,1982,"North Yemen","National Democratic Front","Yemen [North]","National Democratic Front","1979-03-01","1982-05-31","yes","explicit","military","explicit","military","1","1","2","2"
+"375",621,3,0,1,NA,0,0,1949,"Guatemala","Military faction",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"376",622,1,1,0,7.731356,0,0,1954,"Guatemala","Forces of Carlos Castillo Armas",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"377",624,0,0,0,8.172031,2.484907,0,1974,"Guatemala","FAR I",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"378",628,0,0,0,NA,0,1,2006,"Central African Republic","UFDR",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"379",629,0,0,0,NA,0,1,2006,"Israel","PRC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"380",630,2,0,0,NA,0,1,2006,"Sudan","NRF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"381",631,2,0,0,NA,0,1,2006,"Sudan","SLM/A – MM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"382",632,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Somalia","ARS/UIC","2006-01-01","2008-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"383",633,2,0,0,NA,0,1,2006,"Chad","RAFD","Chad","RAFD","2006-06-04","2006-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"384",634,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Chad","UFDD","2006-01-01","2007-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"385",639,0,0,0,NA,1.791759,1,2009,"Pakistan","BLA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"386",640,0,0,0,NA,1.386294,1,2009,"Iran","Jondullah",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"387",641,2,0,0,7.071327,3.091043,1,2004,"Sudan","SPLM/A","Sudan","SPLM","1983-05-17","2004-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"388",643,0,0,0,NA,2.833213,1,2006,"Israel","Hezbollah","Israel","Hezbollah","1990-11-09","1999-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"389",643,0,0,0,NA,2.833213,1,2006,"Israel","Hezbollah","Israel","Hezbollah","2006-01-01","2006-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"390",643,0,0,0,9.950324,2.302585,1,1999,"Israel","Hezbollah","Israel","Hezbollah","1990-11-09","1999-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"391",643,0,0,0,9.950324,2.302585,1,1999,"Israel","Hezbollah","Israel","Hezbollah","2006-01-01","2006-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"392",645,2,0,0,6.998108,1.791759,1,2001,"Sudan","NDA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"393",646,2,0,0,NA,1.098612,1,2008,"Democratic Republic of Congo (Zaire)","CNDP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"394",647,0,0,0,NA,0,1,2007,"Philippines","MNLF – HM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"395",648,0,0,0,NA,0.6931472,1,2008,"Sudan","SLM/A–Unity",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"396",650,0,0,0,NA,1.098612,1,2009,"Mali","ATNMC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"397",651,0,0,0,NA,0.6931472,1,2008,"Democratic Republic of Congo (Zaire)","BDK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"398",652,3,0,0,6.680202,1.098612,0,1962,"Nepal","Nepali Congress",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"399",653,0,0,0,8.093258,0.6931472,0,1978,"Iraq","KDP–QM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"400",654,NA,NA,NA,NA,NA,NA,NA,NA,NA,"France","Khmer Issarak","1946-08-01","1953-11-09","yes","explicit","military","explicit","military","1","1","2","2"
+"401",658,0,0,0,6.80145,0.6931472,0,1972,"Chad","First Liberation Army","Chad","First Liberation Army","1971-01-01","1972-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"402",659,0,0,0,6.89723,0,0,1971,"Chad","Second Liberation Army","Chad","Second Liberation Army (Frolinat)","1971-06-18","1971-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"403",660,1,1,0,6.432313,1.94591,0,1982,"Chad","FAN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"404",661,2,0,0,6.50285,1.098612,0,1979,"Chad","FAP","Chad","FAP","1977-06-21","1979-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"405",662,0,0,0,6.432313,0,0,1982,"Chad","FAT",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"406",663,0,1,0,6.72579,1.386294,0,1986,"Chad","GUNT","Chad","GUNT","1983-02-24","1986-12-31","no","explicit","troops","explicit","military","1","1","1","2"
+"407",664,0,0,0,6.667262,0,0,1987,"Chad","CDR","Chad","CDR","1987-01-01","1987-12-31",NA,"explicit","troops","explicit","troops","1","1","1","1"
+"408",667,3,0,0,6.225152,2.833213,0,1980,"Ethiopia","ELF","Ethiopia","ELF","1964-03-15","1974-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"409",671,1,1,1,7.781443,0,0,1954,"Paraguay","Military faction (forces of Alfredo Stroessner)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"410",672,3,0,1,8.761475,0,0,1962,"Venezuela","Military faction (navy)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"411",673,3,0,0,NA,0,0,1947,"Paraguay","Opposition coalition (Febreristas, Liberals and Communists)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"412",676,2,0,0,6.929223,2.302585,0,1972,"Sudan","Anya Nya",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"413",677,3,0,0,6.396263,3.135494,0,1970,"Myanmar","CPB–RF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"414",677,0,0,0,5.790143,1.098612,0,1950,"Myanmar","CPB–RF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"415",678,0,0,0,5.909848,1.791759,0,1953,"Myanmar","PVO – ""White Band"" faction",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"416",679,3,0,0,6.667058,0.6931472,0,1965,"Democratic Republic of Congo (Zaire)","CNL","Democratic Republic of Congo (Zaire)","CNL","1964-05-01","1965-12-31","yes","explicit","military","explicit","military","1","1","2","2"
+"417",680,3,0,0,6.756048,0,0,1967,"Democratic Republic of Congo (Zaire)","Opposition militias",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"418",681,3,0,0,7.043361,0.6931472,0,1978,"Democratic Republic of Congo (Zaire)","FLNC","Democratic Republic of Congo (Zaire)","FLNC","1977-08-17","1978-06-15",NA,"explicit","military","explicit","troops","1","1","2","1"
+"419",684,2,0,0,5.921471,1.94591,0,1958,"Myanmar","MPF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"420",685,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Portugal","Frelimo","1964-11-19","1974-10-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"421",687,0,0,0,7.832224,0,0,1989,"Sri Lanka (Ceylon)","EPRLF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"422",687,0,0,0,7.766629,0,0,1985,"Sri Lanka (Ceylon)","EPRLF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"423",689,0,0,0,6.622337,1.386294,0,1951,"India","CPI",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"424",690,0,0,0,7.078611,1.098612,0,1971,"India","CPI–ML",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"425",692,0,0,0,6.853024,0.6931472,0,1961,"Cameroon","UPC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"426",700,3,0,0,6.970551,0,0,1972,"Uganda","Kikosi Maalum","Uganda","Kikosi Maalum","1972-09-17","1972-12-31","no","explicit","troops","explicit","military","1","1","1","2"
+"427",700,3,0,0,6.970551,0,0,1972,"Uganda","Kikosi Maalum","Uganda","Kikosi Maalum","1979-01-01","1979-3-26","no","explicit","troops","explicit","military","1","1","1","2"
+"428",701,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Uganda","Fronasa","1979-01-01","1979-3-26",NA,"explicit","troops","explicit","military","1","1","1","2"
+"429",703,0,0,0,6.499802,0.6931472,0,1981,"Uganda","FUNA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"430",704,0,0,0,6.605704,1.098612,0,1983,"Uganda","UNRF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"431",706,0,0,0,6.47114,0.6931472,0,1987,"Uganda","UPDA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"432",708,0,0,0,6.469622,0,0,1988,"Uganda","Lord's Army",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"433",711,0,0,0,6.969321,2.564949,0,1968,"India","NNC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"434",712,2,0,0,8.05194,1.386294,0,1979,"Zimbabwe (Rhodesia)","PF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"435",714,3,0,0,6.527563,0,1,2000,"Sierra Leone","WSB",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"436",715,NA,NA,NA,NA,NA,NA,NA,NA,NA,"France, Spain","National Liberation Army","1957-01-12","1958-03-01",NA,"explicit","military","explicit","military","1","1","2","2"
+"437",716,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Spain","NLA","1957-10-1","1958-6-30",NA,"explicit","military","explicit","military","1","1","2","2"
+"438",717,1,1,1,8.355079,0,0,1958,"Iraq","Military Faction (Free Officers Movement)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"439",718,3,0,1,8.347289,0,0,1959,"Iraq","Military faction (forces of Abdul Wahab al-Shawaf)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"440",719,1,1,1,8.528987,0,0,1963,"Iraq","Military faction (forces of Abd as-Salam Arif)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"441",720,1,1,1,8.528987,0,0,1963,"Iraq","NCRC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"442",722,2,1,0,8.185364,2.302585,0,1984,"Lebanon","LNM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"443",722,2,1,0,8.185364,0.6931472,0,1976,"Lebanon","LNM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"444",723,2,1,0,8.185364,0,0,1976,"Lebanon","LAA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"445",725,0,1,0,8.185364,0.6931472,0,1986,"Lebanon","NUF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"446",726,3,0,0,8.185364,0,0,1986,"Lebanon","Lebanese Forces - Hobeika faction",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"447",727,1,1,1,7.698687,0,0,1978,"Afghanistan","PDPA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"448",731,0,0,0,7.647003,2.197225,0,1988,"Afghanistan","Harakat-i Inqilab-i Islami-yi Afghanistan","Afghanistan","Harakat-i Inqilab-i Islami-yi Afghanistan","1980-01-01","1988-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"449",732,0,0,0,7.552495,2.302585,0,1989,"Afghanistan","Mahaz-i Milli-yi Islami-yi Afghanistan","Afghanistan","Mahaz-i Milli-yi Islami-yi Afghanistan","1980-01-01","1989-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"450",733,0,0,0,7.647003,2.197225,0,1988,"Afghanistan","Jabha-yi Nijat-i Milli-yi Afghanistan","Afghanistan","Jabha-yi Nijat-i Milli-yi Afghanistan","1980-01-01","1988-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"451",734,1,1,0,6.897028,2.70805,0,1973,"Laos","Pathet Lao","Laos, United States, Thailand, South Vietnam","Pathet Lao","1959-11-12","1973-02-22","no","explicit","troops","explicit","troops","1","1","1","1"
+"452",735,0,0,0,7.647003,2.079442,0,1988,"Afghanistan","Ittihad-i Islami Bara-yi Azadi-yi Afghanistan","Afghanistan","Ittihad-i Islami Bara-yi Azadi-yi Afghanistan","1981-07-16","1988-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"453",736,0,0,0,6.894417,0,0,1960,"Laos","Neutralists","Laos, Thailand","Neutrals","1960-12-10","1960-12-31","no","explicit","military","explicit","troops","1","1","2","1"
+"454",737,0,0,0,7.845365,0,0,1984,"Afghanistan","Harakat-i Islami-yi Afghanistan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"455",738,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Portugal","MPLA","1961-02-04","1974-07-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"456",739,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Portugal","FNLA","1961-02-04","1974-07-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"457",740,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Portugal","UNITA","1966-12-01","1967-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"458",745,0,0,0,7.235511,1.386294,0,1978,"Mauritania","POLISARIO","Mauritania","POLISARIO","1975-12-10","1978-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"459",746,0,0,0,6.379376,2.302585,0,1973,"Myanmar","SSA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"460",747,0,0,0,6.396263,0.6931472,0,1970,"Myanmar","SURA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"461",748,0,0,0,6.396263,0.6931472,0,1970,"Myanmar","SSNLO",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"462",749,0,0,0,NA,0.6931472,1,2008,"Niger","MNJ",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"463",750,0,0,0,6.429203,0,0,1976,"Myanmar","SSRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"464",751,0,0,0,6.734104,0,0,1984,"Myanmar","TRC",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"465",752,3,0,0,7.000981,1.386294,0,1961,"Indonesia","Permesta movement","Indonesia","Permesta movement","1958-02-15","1961-12-31",NA,"explicit","military","explicit","non-military","1","1","2","3"
+"466",753,3,0,0,5.790143,0.6931472,0,1950,"Myanmar","PNDF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"467",754,0,0,0,6.172786,0.6931472,0,1978,"Ethiopia","EDU","Ethiopia","EDU","1977-01-01","1978-12-31",NA,"explicit","non-military","explicit","military","1","1","3","2"
+"468",755,3,0,1,5.991664,0,0,1960,"Ethiopia","Military faction (forces of Mengistu Neway)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"469",760,0,0,0,7.515976,2.484907,1,1991,"Afghanistan","Hizb-i Islami-yi Afghanistan - Khalis faction","Afghanistan","Hizb-i Islami-yi Afghanistan - Khalis faction","1980-01-01","1991-12-31","no","explicit","military","explicit","military","1","1","2","2"
+"470",761,0,0,0,6.811773,0.6931472,1,1992,"Niger","FLAA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"471",762,2,0,0,6.72513,0,1,1997,"Niger","UFRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"472",764,0,0,0,NA,0.6931472,1,2009,"India","KCP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"473",765,0,0,0,NA,0,1,2008,"India","DHD – BW",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"474",766,0,0,0,NA,0.6931472,1,2009,"India","PREPAK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"475",767,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Chad","AN","2008-01-28","2008-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"476",770,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Somalia","Al-Shabaab","2008-01-01","2011-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"477",772,0,0,0,NA,0,1,2008,"India","PULF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"478",774,0,0,0,NA,0.6931472,1,2009,"Pakistan","BRA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"479",777,3,0,0,6.771901,0,1,1991,"Chad","Military faction (forces of Maldoum Bada Abbas)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"480",778,3,0,0,9.041412,0,0,1982,"Venezuela","Bandera Roja",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"481",780,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Israel","Rejectionist Front","1974-01-01","1988-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"482",781,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Israel","PLO/Fatah","1965-01-03","1993-09-13",NA,"explicit","military","explicit","military","1","1","2","2"
+"483",783,0,0,0,NA,0,1,2009,"Chad","UFR","Chad","UFR","2009-04-19","2009-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"484",788,0,0,0,7.716234,0,1,1997,"India","KNF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"485",791,0,0,0,6.2555,0,0,1983,"Ethiopia","SLM",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"486",792,0,0,0,6.060827,0,0,1964,"Ethiopia","Ogaden Liberation Front",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"487",793,0,0,0,NA,0,1,2009,"Nigeria","Boko Haram",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"488",794,0,0,0,6.507113,1.791759,0,1978,"Myanmar","RPF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"489",795,3,0,0,6.463341,0,0,1977,"Myanmar","ALP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"490",796,0,0,0,6.225152,1.386294,0,1980,"Ethiopia","SALF","Ethiopia","SALF","1977-01-01","1980-12-31",NA,"alleged","military","explicit","military","0","0","2","2"
+"491",798,3,0,0,NA,0,1,2009,"Myanmar","MNDAA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"492",799,2,0,0,5.959199,2.302585,0,1957,"Myanmar","APLP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"493",800,3,0,0,6.106978,2.639057,0,1961,"Myanmar","Mujahid Party",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"494",801,0,0,0,6.398662,3.218876,0,1972,"Myanmar","ANLP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"495",802,0,0,0,6.379376,2.302585,0,1973,"Myanmar","CPA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"496",804,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Somalia","Hizbul-Islam","2009-03-17","2010-12-31",NA,"explicit","military","explicit","military","1","1","2","2"
+"497",810,3,0,1,8.90191,0,0,1955,"Argentina","Military faction (forces of Samuel Toranzo Calderón)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
