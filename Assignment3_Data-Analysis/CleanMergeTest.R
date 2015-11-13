@@ -36,7 +36,7 @@ class(Cleaned_NSA_Model1$rebel.support)
 # Show variable class of gov.support
 class(Cleaned_NSA_Model1$gov.support)
 
-# Code rebel.support as a dummy with 1=support, 0=no support
+# Code rebel.support as a dummy with 1 = support, 0 = no support
 Cleaned_NSA_Model1$rebel.support_dummy <- recode(Cleaned_NSA_Model1$rebel.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
 
 # Code gov.support as a dummy with 1 = support and 0 = no support
@@ -48,10 +48,10 @@ class(Cleaned_NSA_Model1$rtypesup)
 # Show variable class of gtypesup
 class(Cleaned_NSA_Model1$gtypesup)
 
-# Remove all missing observations in column "rtypesup"
+# Remove all missing values in column "rtypesup"
 Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[!is.na(Cleaned_NSA_Model1$rtypesup),]
 
-# Remove all missing observations in column "gtypesup"
+# Remove all missing values in column "gtypesup"
 Cleaned_NSA_Model1 <- Cleaned_NSA_Model1[!is.na(Cleaned_NSA_Model1$gtypesup),]
 
 # Remove observations "endorsement; alleged military" in column "rtypesup_cat"
@@ -84,14 +84,8 @@ Cleaned_ES_Model2 <- subset(UCDP_ES_Dataset, select = c(2, 3, 4, 5, 6, 7, 8, 9, 
 Cleaned_NSA_Model1 <- rename(Cleaned_NSA_Model1, conflictid = ucdpid)
 Cleaned_CIMI_Model1 <- rename(Cleaned_CIMI_Model1, dyadid = dyad_id)
 
-# Sort Cleaned_NSA_Model1 by conflictid
-Cleaned_NSA_Model1[ order(Cleaned_NSA_Model1$conflictid), ]
-
-# Sort Cleaned_CIMI_Model1 by conflictid
-Cleaned_CIMI_Model1[ order(Cleaned_CIMI_Model1$conflictid), ]
-
 # Merge Cleaned_CIMI_Model1 and Cleaned_NSA_Model1
-Dataset_Model_1 <- merge(Cleaned_CIMI_Model1, Cleaned_NSA_Model1, union("conflictid", "dyadid"), all = TRUE)
+Model_1_Dataset <- merge(Cleaned_CIMI_Model1, Cleaned_NSA_Model1, union("conflictid", "dyadid"), all = TRUE)
 
 # Check for complete cases
-sum(complete.cases(Dataset_Model_1))
+sum(complete.cases(Model_1_Dataset))
