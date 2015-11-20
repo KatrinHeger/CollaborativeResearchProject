@@ -9,4 +9,13 @@ Coming soon...
 ....Website on our research project
 
 # Introduction
-In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. Our research project looks at how different types of third-party intervention (military, non-military, troops) into intrastate wars affect the outcome of the conflict (rebel or government victory, negotiated settlement, low intensity conflict). 
+In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. Our research project looks at how different types of third-party intervention (military, non-military, troops) into intrastate wars affect the outcome of the conflict (rebel or government victory, negotiated settlement, low intensity conflict).
+
+Exemplary table
+
+```{r fig.width=5, fig.height=4, echo=FALSE}
+library("ggplot2")
+Dataset_1 <- read.csv("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Dataset_1_outcome_HG_RMD.csv")
+
+qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Fig.1: Frequency of Conflict Outcomes", xlab = "Outcomes", ylab = "Frequency", fill = I("lightblue"))
+```
