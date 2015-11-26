@@ -1,0 +1,289 @@
+@article{sullivan2014conditional,
+  title={The conditional impact of military intervention on internal armed conflict outcomes},
+  author={Sullivan, Patricia L and Karreth, Johannes},
+  journal={Conflict Management and Peace Science},
+  pages={0738894214526540},
+  year={2014},
+  publisher={SAGE Publications}
+}
+
+@article{sawyer2015role,
+  title={The Role of External Support in Civil War Termination},
+  author={Sawyer, Katherine and Cunningham, Kathleen Gallagher and Reed, William},
+  journal={Journal of Conflict Resolution},
+  pages={0022002715600761},
+  year={2015},
+  publisher={SAGE Publications}
+}
+
+@article{kreutz2010and,
+  title={How and when armed conflicts end: Introducing the UCDP Conflict Termination dataset},
+  author={Kreutz, Joakim},
+  journal={Journal of Peace Research},
+  volume={47},
+  number={2},
+  pages={243--250},
+  year={2010},
+  publisher={Sage Publications}
+}
+
+@inproceedings{hogbladh2011external,
+  title={External support in armed conflict 1975-2009. Presenting new data},
+  author={Hoegbladh, Stina and Pettersson, Therse and Themner, Lotta},
+  booktitle={52nd Annual International Studies Association Convention, Montreal, Canada, March},
+  pages={16--19},
+  year={2011}
+}
+
+@article{cunningham2013non,
+  title={Non-state actors in civil wars: A new dataset},
+  author={Cunningham, David E and Gleditsch, Kristian Skrede and Salehyan, Idean},
+  journal={Conflict Management and Peace Science},
+  pages={0738894213499673},
+  year={2013},
+  publisher={SAGE Publications}
+}
+
+@Manual{CiteR,
+  title = {R: A Language and Environment for Statistical Computing},
+  author = {{R Core Team}},
+  organization = {R Foundation for Statistical Computing},
+  address = {Vienna, Austria},
+  year = {2015},
+  url = {https://www.R-project.org/},
+  note = {Version 3.2.2}, 
+}
+
+@Manual{rio,
+  title = {rio: A Swiss-army knife for data file I/O},
+  author = {Chung-hong Chan and Geoffrey CH Chan and Thomas J.
+  Leeper},
+  year = {2015},
+  note = {R package version 0.2},
+}
+  
+@article{warnes2014gdata,
+  title={gdata: Various R programming tools for data manipulation},
+  author={Warnes, Gregory R and Bolker, B and Gorjanc, G and Grothendieck, G and Korosec, A and Lumley, T and     MacQueen, D and Magnusson, A and Rogers, J and others},
+  journal={R package version},
+  volume={2},
+  number={3},
+  year={2014}
+}
+
+@article{croissant2012estimation,
+  title={Estimation of multinomial logit models in R: The mlogit Packages},
+  author={Croissant, Yves and others},
+  journal={R package version 0.2-2. URL: http://cran. r-project. org/web/packages/mlogit/vignettes/mlogit. pdf},
+  year={2012}
+}
+
+@article{wickham2014dplyr,
+  title={dplyr: A grammar of data manipulation},
+  author={Wickham, Hadley and Francois, Romain},
+  journal={R package version 0.3. 0.2},
+  year={2014}
+}
+
+@article{fox2009car,
+  title={car: Companion to Applied Regression [Software]},
+  author={Fox, J and Weisberg, S},
+  journal={URL http://CRAN. r-project. org/package= car (R package Version 1.2—16)},
+  year={2009}
+}
+
+@book{wickham2009ggplot2,
+  title={ggplot2: elegant graphics for data analysis},
+  author={Wickham, Hadley},
+  year={2009},
+  publisher={Springer Science \& Business Media}
+}
+
+@misc{hlavac2013stargazer,
+  title={Stargazer: LaTeX code and ASCII text for well-formatted regression and summary statistics tables. R      package version 4.5. 3},
+  author={Hlavac, Marek},
+  year={2013}
+}
+
+@article{ripley2015package,
+  title={Package 'nnet'},
+  author={Ripley, Brian and Venables, William and Ripley, Maintainer Brian},
+  year={2015}
+}
+
+@MISC{testdat_package,
+  AUTHOR = "Karthik Ram",
+  TITLE = "Testdat Package R Language",
+  YEAR = 2011,
+  url = {https://github.com/ropensci/testdat}
+}
+
+@article{harrell2006hmisc,
+  title={The Hmisc Package},
+  author={Harrell Jr, Frank E and Dupont, Maintainer Charles},
+  journal={R package version},
+  pages={3--0},
+  year={2006}
+}
+
+@article{elff2015package,
+  title={Package ‘memisc’},
+  author={Elff, Martin and Elff, Maintainer Martin},
+  year={2015}
+}
+
+@article{regan1996conditions,
+  title={Conditions of successful third-party intervention in intrastate conflicts},
+  author={Regan, Patrick M},
+  journal={Journal of Conflict Resolution},
+  volume={40},
+  number={2},
+  pages={336--359},
+  year={1996},
+  publisher={Sage Publications}
+}
+
+@book{regan2002civil,
+  title={Civil wars and foreign powers: Outside intervention in intrastate conflict},
+  author={Regan, Patrick M},
+  year={2002},
+  publisher={University of Michigan Press}
+}
+
+@article{regan2002third,
+  title={Third-party interventions and the duration of intrastate conflicts},
+  author={Regan, Patrick M},
+  journal={Journal of Conflict Resolution},
+  volume={46},
+  number={1},
+  pages={55--73},
+  year={2002},
+  publisher={Sage Publications}
+}
+
+@article{lacina2006explaining,
+  title={Explaining the severity of civil wars},
+  author={Lacina, Bethany},
+  journal={Journal of Conflict Resolution},
+  volume={50},
+  number={2},
+  pages={276--289},
+  year={2006},
+  publisher={Sage Publications}
+}
+
+@article{elbadawi2000external,
+  title={External interventions and the duration of civil wars},
+  author={Elbadawi, Ibrahim},
+  journal={World Bank Policy Research Working Paper},
+  number={2433},
+  year={2000}
+}
+
+@article{cunningham2010blocking,
+  title={Blocking resolution: How external states can prolong civil wars},
+  author={Cunningham, David E},
+  journal={Journal of Peace Research},
+  volume={47},
+  number={2},
+  pages={115--127},
+  year={2010},
+  publisher={Sage Publications}
+}
+
+@article{jervis1999civil,
+  title={Civil war and the security dilemma},
+  author={Jervis, Robert and Snyder, Jack},
+  journal={Civil Wars, Insecurity, and Intervention},
+  pages={15--37},
+  year={1999}
+}
+
+@article{toft2010ending,
+  title={Ending Civil Wars: A Case for Rebel Victory?},
+  author={Toft, Monica Duffy},
+  journal={International Security},
+  volume={34},
+  number={4},
+  pages={7--36},
+  year={2010},
+  publisher={MIT Press}
+}
+
+@article{visser2014irrelevance,
+  title={The Irrelevance of the Security Dilemma for Civil Wars},
+  author={Visser, Esther and Duyvesteyn, Isabelle},
+  journal={Civil Wars},
+  volume={16},
+  number={1},
+  pages={65--85},
+  year={2014},
+  publisher={Taylor \& Francis}
+}
+
+@article{henderson2013provision,
+  title={Provision of Arms and Non-Lethal Assistance to Governmental and Opposition Forces, The},
+  author={Henderson, Christian},
+  journal={UNSWLJ},
+  volume={36},
+  pages={642},
+  year={2013},
+  publisher={HeinOnline}
+}
+
+@article{themner2011armed,
+  title={Armed conflict, 1946--2010},
+  author={Themner, Lotta and Wallensteen, Peter},
+  journal={Journal of Peace Research},
+  volume={48},
+  number={4},
+  pages={525--536},
+  year={2011},
+  publisher={Sage Publications}
+}
+
+@article{gleditsch2002armed,
+  title={Armed conflict 1946-2001: A new dataset},
+  author={Gleditsch, Nils Petter and Wallensteen, Peter and Eriksson, Mikael and Sollenberg, Margareta and Strand, Havard},
+  journal={Journal of peace research},
+  volume={39},
+  number={5},
+  pages={615--637},
+  year={2002},
+  publisher={Sage Publications}
+}
+
+@inproceedings{hogbladh2011external,
+  title={External support in armed conflict 1975-2009. Presenting new data},
+  author={Hoegbladh, Stina and Pettersson, Therse and Themner, Lotta},
+  booktitle={52nd Annual International Studies Association Convention, Montreal, Canada, March},
+  pages={16--19},
+  year={2011}
+}
+
+@article{kreutz2010and,
+  title={How and when armed conflicts end: Introducing the UCDP Conflict Termination dataset},
+  author={Kreutz, Joakim},
+  journal={Journal of Peace Research},
+  volume={47},
+  number={2},
+  pages={243--250},
+  year={2010},
+  publisher={Sage Publications}
+}
+
+@Manual{,
+  title = {R: A Language and Environment for Statistical Computing},
+  author = {{R Core Team}},
+  organization = {R Foundation for Statistical Computing},
+  address = {Vienna, Austria},
+  year = {2013},
+  url = {http://www.R-project.org/},
+}
+  
+@book{hobbes1969leviathan,
+  title={Leviathan, 1651},
+  author={Hobbes, Thomas},
+  year={1969},
+  publisher={Scolar Press}
+}
