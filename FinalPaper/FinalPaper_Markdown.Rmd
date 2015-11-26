@@ -1,0 +1,10 @@
+---
+title: "Third-Party Intervention in Intrastate War"
+author: "K Heger and B Abendroth"
+date: "26 November 2015"
+output: pdf_document: 
+    latex_engine: xelatex
+bibliography: BibliographyFinal.bib
+---
+# Introduction
+
