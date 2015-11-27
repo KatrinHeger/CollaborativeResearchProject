@@ -51,6 +51,10 @@ Cleaned_NSA$gov.support_d <- recode(Cleaned_NSA$gov.support, " 'explicit' = 1;'n
 Cleaned_NSA$rebel.support_d=as.factor(Cleaned_NSA$rebel.support_d)
 Cleaned_NSA$gov.support_d=as.factor(Cleaned_NSA$rebel.support_d)
 
+# Removing "endorsement alleged military" before removing missing values
+Cleaned_NSA$rtypesup_cat <- gsub(';', '', Cleaned_NSA$rtypesup_cat)
+Cleaned_NSA$rtypesup_cat[Cleaned_NSA$rtypesup_cat == 'endorsement alleged military'] <- NA
+
 # Remove all missing values from explanatory variable "rtypesup"
 Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rtypesup),]
 
