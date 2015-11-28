@@ -172,6 +172,9 @@ Dataset_1$settle.dummy <- recode(Dataset_1$conflict_outcome, " '2' = 1; '0' = 0;
 # Create dummy variable for low activity as conflict outcome
 Dataset_1$low.act.dummy <- recode(Dataset_1$conflict_outcome, " '0' = 1; '1' = 0; '2' = 0; '3' = 0 ")
 
+# Create interaction variable between government intervention and fighting capacity
+Dataset_1$gov.supXfight.cap <- interaction(Dataset_1$gov.support_d, Dataset_1$fightcaphigh)
+
 # Check for complete cases
 sum(complete.cases(Dataset_1))
 
