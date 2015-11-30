@@ -84,10 +84,13 @@ testdat::test_utf8(NSA_Dataset)
 ###########################
 
 # Create subset of CIMI_Dataset including relevant variables
-Cleaned_CIMI <- subset(CIMI_Dataset, select = c(1, 2, 3, 4, 6, 8, 9, 10, 20, 21, 22, 23, 24, 25))
+Cleaned_CIMI <- subset(CIMI_Dataset, select = c(1, 2, 3, 4, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24, 25))
 
 # Rename dependent variable "outcome_d" into "conflict_outcome"
 colnames(Cleaned_CIMI)[colnames(Cleaned_CIMI)=="outcome_d"] <- "conflict_outcome"
+
+# Rename variable "land" into "secessionist"
+colnames(Cleaned_CIMI)[colnames(Cleaned_CIMI)=="land"] <- "secessionist"
 
 # Remove all missing observations in dependent variable "conflict_outcome"
 Cleaned_CIMI <- Cleaned_CIMI[!is.na(Cleaned_CIMI$conflict_outcome),]
@@ -131,10 +134,10 @@ Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rtypesup),]
 # Remove all missing values from explanatory variable "gtypesup"
 Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$gtypesup),]
 
-# Show variable class of rtypesup
+# Show class of rtypesup
 class(Cleaned_NSA$rtypesup)
 
-# Show variable class of gtypesup
+# Show class of gtypesup
 class(Cleaned_NSA$gtypesup)
 
 # Code rtypesup as a categorical variable with 1=troops, 2=military, 3=non-military
@@ -171,6 +174,12 @@ Dataset_1$settle.dummy <- recode(Dataset_1$conflict_outcome, " '2' = 1; '0' = 0;
 
 # Create dummy variable for low activity as conflict outcome
 Dataset_1$low.act.dummy <- recode(Dataset_1$conflict_outcome, " '0' = 1; '1' = 0; '2' = 0; '3' = 0 ")
+
+# Show class of "fightcaphigh"
+class(Dataset_1$fightcaphigh)
+
+# Recode "fightcaphigh" into from an integer to a factor
+Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
 
 # Create interaction variable between government intervention and fighting capacity
 Dataset_1$gov.supXfight.cap <- interaction(Dataset_1$gov.support_d, Dataset_1$fightcaphigh)
@@ -240,6 +249,10 @@ qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main =
 #############################
 # Inferential Statistics   ##
 #############################
+
+# 
+
+
 
 # Multinomial Logit Regression - Model 1
 dat.1 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$rebel.support_d) == FALSE, c("conflict_outcome", "rebel.support_d")]
