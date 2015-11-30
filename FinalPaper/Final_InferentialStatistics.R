@@ -2,28 +2,31 @@
 # Inferential Statistics   ##
 #############################
 
+## Regression Preparation 
+# Create dataframe of independent variables
+
+# Check for multicollinearity with correlation matrix of independent variables
+COR<-cor(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
+
+# Check for multicollinearity using the "Variance Inflation Factor (VIF)"
+VIF<- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
+
+  
+
 ##########################
 #### Logit Regression #### 
 ##########################
+
 # What kind of support is most likely to lead to an intended outcome? How high is the probability of the desired outcome, given a specific kind of intervention?
 
-# Checking for multicollinearity with correlation matrix of independent variables
-COR<-cor()
-
-# Checking for multicollinearity using the "Variance Inflation Factor (VIF)"
-VIF<- vif(
-
-# Checking for ordinal odds 
-
-  
 # Estimate an ordered logistic regression model with polr command from MASS package
-# Specify HESS=TRUE to have the model return the observed information matrix from optimization which is used to get standard errors
+# Specify HESS=TRUE to have the model return the observed information matrix from optimization which is used to get standard errors
 ### Regression on government victory
 reg1.1_gov.vic<-polr(gov.vic.dummy ~ , method='logistic', data=dataset_1, Hess = TRUE)
 summary(reg1.1)
 
 # Store table
-(ctable1 <- coef(summary(reg1_gov.vic)))
+ctable1 <- coef(summary(reg1.1_gov.vic))
   
 # Calculate and store p values
 p1.1 <- pnorm(abs(ctable1[, "t value"]), lower.tail = FALSE) * 2
