@@ -100,7 +100,7 @@ Cleaned_CIMI <- Cleaned_CIMI[!is.na(Cleaned_CIMI$conflict_outcome),]
 ###########################
 
 # Create subset of NSA_Dataset including relevant variables
-Cleaned_NSA <- subset(NSA_Dataset, select = c(3, 4, 6, 7, 8, 14, 27, 32, 33, 35, 36))
+Cleaned_NSA <- subset(NSA_Dataset, select = c(3, 7, 8, 14, 27, 32, 33, 35, 36))
 
 # Remove all missing values from explanatory variable "rebel.support"
 Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rebel.support),]
