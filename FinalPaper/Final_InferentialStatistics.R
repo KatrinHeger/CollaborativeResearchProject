@@ -1,99 +1,147 @@
-#############################
-# Inferential Statistics   ##
-#############################
+###########################
+# Inferential Statistics  #
+###########################
+
+#####################################
+# !!! Check with Christopher !!!    #
+#####################################
 
 ## Regression Preparation 
 # Create dataframe of independent variables
+DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Dataset_1$rtypesup_cat), as.numeric(Dataset_1$gov.supXfight.cap), as.numeric(Dataset_1$lngdp), as.numeric(Dataset_1$coup), as.numeric(Dataset_1$secessionist), as.numeric(Dataset_1$lnyears), as.numeric(Dataset_1$postCW), as.numeric(Dataset_1$rebpolwinglegal))
 
 # Check for multicollinearity with correlation matrix of independent variables
-COR<-cor(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
+COR <- cor(DF_Independent)
 
 # Check for multicollinearity using the "Variance Inflation Factor (VIF)"
-VIF<- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
+VIF <- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
 
-  
+####################
+# Logit Regression # 
+####################
 
-##########################
-#### Logit Regression #### 
-##########################
+# What kind of support is most likely to lead to an intended outcome?
+# How high is the probability of the desired outcome, given a specific kind of intervention?
 
-# What kind of support is most likely to lead to an intended outcome? How high is the probability of the desired outcome, given a specific kind of intervention?
+####################################
+# Regression on government victory #
+####################################
 
-# Estimate an ordered logistic regression model with polr command from MASS package
-# Specify HESS=TRUE to have the model return the observed information matrix from optimization which is used to get standard errors
-### Regression on government victory
-reg1.1_gov.vic<-polr(gov.vic.dummy ~ , method='logistic', data=dataset_1, Hess = TRUE)
-summary(reg1.1)
+# Recode "gov.vic.dummy" into factor
+Dataset_1$gov.vic.dummy <- as.factor(Dataset_1$gov.vic.dummy)
 
-# Store table
-ctable1 <- coef(summary(reg1.1_gov.vic))
-  
-# Calculate and store p values
-p1.1 <- pnorm(abs(ctable1[, "t value"]), lower.tail = FALSE) * 2
-  
-# Create combined table
-(ctable1.1 <- cbind(ctable1, "p value" = p1.1))
+# Logit Regression on government victory (1)
+reg1.1_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat, data=Dataset_1, family = binomial)
+stargazer(reg1.1_gov.vic, type = "text", digits = 2)
 
+# Logit Regression on government victory (2)
+reg1.2_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap, data=Dataset_1, family = binomial)
+stargazer(reg1.2_gov.vic, type = "text", digits = 2)
 
-reg1.2_gov.vic<-polr(gov.vic.dummy ~  method='logistic', data=dataset_1, Hess = TRUE)
-summary(reg1.2)
+# Logit Regression on government victory (3)
+reg1.3_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp, data=Dataset_1, family = binomial)
+stargazer(reg1.3_gov.vic, type = "text", digits = 2)
 
-# Store table
-(ctable1.2 <- coef(summary(reg1.2_gov.vic)))
+# Logit Regression on government victory (4)
+reg1.4_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup, data=Dataset_1, family = binomial)
+stargazer(reg1.4_gov.vic, type = "text", digits = 2)
 
-# Calculate and store p values
-p2 <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
+# Logit Regression on government victory (5)
+reg1.5_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears, data=Dataset_1, family = binomial)
+stargazer(reg1.5_gov.vic, type = "text", digits = 2)
 
-# Create combined table
-(ctable1.2 <- cbind(ctable1.2, "p value" = p1.2))
+# Logit Regression on government victory (6)
+reg1.6_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal, data=Dataset_1, family = binomial)
+stargazer(reg1.6_gov.vic, type = "text", digits = 2)
 
+# Logit Regression on government victory (7)
+reg1.7_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data=Dataset_1, family = binomial)
+stargazer(reg1.7_gov.vic, type = "text", digits = 2)
 
+###############################
+# Regression on rebel victory #
+###############################
 
-#### Regression on rebel victory
-reg2.1_reb.vic<-polr(reb.vic.dummy ~ , method='logistic', data=dataset_1, Hess = TRUE)
-summary(reg2.1)
+# Recode "reb.vic.dummy" into factor
+Dataset_1$reb.vic.dummy <- as.factor(Dataset_1$reb.vic.dummy)
 
-# Store table
-(ctable2.1 <- coef(summary(reg2.1_reb.vic)))
+# Logit Regression on rebel victory (1)
+reg2.1_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat, family = binomial)
+stargazer(reg2.1_reb.vic, type = "text", digits = 2)
 
-# Calculate and store p values
-p2.1 <- pnorm(abs(ctable2.1[, "t value"]), lower.tail = FALSE) * 2
+# Logit Regression on rebel victory (2)
+reg2.2_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh, family = binomial)
+stargazer(reg2.2_reb.vic, type = "text", digits = 2)
 
-# Create combined table
-(ctable2.1 <- cbind(ctable2.1, "p value" = p2.1))
+# Logit Regression on rebel victory (3)
+reg2.3_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$lngdp, family = binomial)
+stargazer(reg2.3_reb.vic, type = "text", digits = 2)
 
+# Logit Regression on rebel victory (4)
+reg2.4_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$lngdp + Dataset_1$coup, family = binomial)
+stargazer(reg2.4_reb.vic, type = "text", digits = 2)
 
-reg2.2_reb.vic<-polr(reb.vic.dummy ~ CorruptionPresident + CorruptionTax + EconomicSituation, method='logistic', data=dataset_1, Hess = TRUE)
-summary(reg2.2)
+# Logit Regression on rebel victory (5)
+reg2.5_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears, family = binomial)
+stargazer(reg2.5_reb.vic, type = "text", digits = 2)
 
-# Store table
-(ctable2.2 <- coef(summary(reg2.2_reb.vic)))
+# Logit Regression on rebel victory (6)
+reg2.6_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal, family = binomial)
+stargazer(reg2.6_reb.vic, type = "text", digits = 2)
 
-# Calculate and store p values
-p2.2 <- pnorm(abs(ctable2.2[, "t value"]), lower.tail = FALSE) * 2
-
-# Create combined table
-(ctable2.2 <- cbind(ctable2.2, "p value" = p2.2))
-
-
-#### Regression on negotiated settlement
-reg3.1_settle<-polr(settle.dummy ~ CorruptionPresident + CorruptionTax + EconomicSituation, method='logistic', data=dataset_1, Hess = TRUE)
-summary(reg3.1)
-
-# Store table
-(ctable3.1 <- coef(summary(reg3.1_settlement)))
-
-# Calculate and store p values
-p3.1 <- pnorm(abs(ctable3.1[, "t value"]), lower.tail = FALSE) * 2
-
-# Create combined table
-(ctable3.1 <- cbind(ctable3.1, "p value" = p3.1))
-
-
+# Logit Regression on rebel victory (7)
+reg2.7_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, family = binomial)
+stargazer(reg2.7_reb.vic, type = "text", digits = 2)
 
 #######################################
-#### Multinomial Logit Regreesion #####
+# Regression on negotiated settlement #
 #######################################
+
+# Recode "settle.dummy" into factor
+Dataset_1$settle.dummy <- as.factor(Dataset_1$settle.dummy)
+
+# Logit Regression on negotiated settlement (1)
+reg3.1_settle <- glm(Dataset_1$settle.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat, family = binomial)
+stargazer(reg3.1_settle, type = "text", digits = 2)
+
+# Logit Regression on negotiated settlement (2)
+reg3.2_settle <- glm(Dataset_1$settle.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap, family = binomial)
+stargazer(reg3.2_settle, type = "text", digits = 2)
+
+# Logit Regression on negotiated settlement (3)
+reg3.3_settle <- glm(Dataset_1$settle.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp, family = binomial)
+stargazer(reg3.3_settle, type = "text", digits = 2)
+
+# Logit Regression on negotiated settlement (4)
+reg3.4_settle <- glm(Dataset_1$settle.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, family = binomial)
+stargazer(reg3.4_settle, type = "text", digits = 2)
+
+#######################################
+# Regression on low activity #
+#######################################
+
+# Recode "low.act.dummy" into factor
+Dataset_1$low.act.dummy <- as.factor(Dataset_1$low.act.dummy)
+
+# Logit Regression on low activity (1)
+reg4.1_low.act <- glm(Dataset_1$low.act.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat, family = binomial)
+stargazer(reg4.1_low.act, type = "text", digits = 2)
+
+# Logit Regression on low activity (2)
+reg4.2_low.act <- glm(Dataset_1$low.act.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap, family = binomial)
+stargazer(reg4.2_low.act, type = "text", digits = 2)
+
+# Logit Regression on low activity (3)
+reg4.3_low.act <- glm(Dataset_1$low.act.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp, family = binomial)
+stargazer(reg4.3_low.act, type = "text", digits = 2)
+
+# Logit Regression on low activity (4)
+reg4.4_low.act <- glm(Dataset_1$low.act.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, family = binomial)
+stargazer(reg4.4_low.act, type = "text", digits = 2)
+
+################################
+# Multinomial Logit Regreesion #
+################################
 
 # Hausman Specification Test
 
