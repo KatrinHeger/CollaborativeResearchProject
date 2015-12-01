@@ -154,15 +154,15 @@ hmftest(x, )
 
 # Multinomial Logit Regression - Model 1
 dat.1 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE, ]
-mlogit1 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat, data = dat.1)
-stargazer(mlogit1, type = "text", digits = 2)
+mlogit1 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1, data = dat.1)
+stargazer(mlogit1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
 
 # Multinomial Logit Regression - Model 2
 dat.2 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE, ]
-mlogit2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp, data = dat.2)
-stargazer(mlogit2, type = "text", digits = 2)
+mlogit2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp -1, data = dat.2)
+stargazer(mlogit2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
 
 # Multinomial Logit Regression - Model 3
 dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$coup) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE, ]
-mlogit3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
+mlogit3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist -1, data = dat.3)
 stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
