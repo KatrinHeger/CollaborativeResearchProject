@@ -16,8 +16,17 @@ COR <- cor(DF_Independent)
 # Check for multicollinearity using the "Variance Inflation Factor (VIF)"
 VIF <- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
 
+# Test for endogeneity with a Hausman test
+# 
+
+# Test for heteroscedasticity
+# plot(XXXXX, which = 1)
+
+# Test for non-normality of errors
+# plot(XXX, which = 2)
+
 ####################
-# Logit Regression # 
+# Logit Regression #        Plot logit regressions with "car::scatterplotMatrix(XXX)" 
 ####################
 
 # What kind of support is most likely to lead to an intended outcome?
@@ -58,6 +67,9 @@ stargazer(reg1.6_gov.vic, type = "text", digits = 2)
 reg1.7_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data=Dataset_1, family = binomial)
 stargazer(reg1.7_gov.vic, type = "text", digits = 2)
 
+# Confidence Intervals
+confint(reg1.7_gov.vic)
+
 ###############################
 # Regression on rebel victory #
 ###############################
@@ -93,6 +105,9 @@ stargazer(reg2.6_reb.vic, type = "text", digits = 2)
 reg2.7_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, family = binomial)
 stargazer(reg2.7_reb.vic, type = "text", digits = 2)
 
+# Confidence Intervals
+confint(reg2.7_reb.vic)
+
 #######################################
 # Regression on negotiated settlement #
 #######################################
@@ -115,6 +130,9 @@ stargazer(reg3.3_settle, type = "text", digits = 2)
 # Logit Regression on negotiated settlement (4)
 reg3.4_settle <- glm(Dataset_1$settle.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, family = binomial)
 stargazer(reg3.4_settle, type = "text", digits = 2)
+
+# Confidence Intervals
+confint(reg3.4_settle)
 
 #######################################
 # Regression on low activity #
@@ -139,6 +157,11 @@ stargazer(reg4.3_low.act, type = "text", digits = 2)
 reg4.4_low.act <- glm(Dataset_1$low.act.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, family = binomial)
 stargazer(reg4.4_low.act, type = "text", digits = 2)
 
+# Confidence Intervals
+confint(reg4.4_low.act)
+
+
+
 ################################
 # Multinomial Logit Regression #
 ################################
@@ -146,8 +169,6 @@ stargazer(reg4.4_low.act, type = "text", digits = 2)
 #####################################
 # !!! Add missing Hausman Tests !!! #
 #####################################
-
-# Hausman Specification Test
 
 # Hausman-McFadden Test for testing independence of irrelevant alternatives
 hmftest(x, )
@@ -166,3 +187,9 @@ stargazer(mlogit2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'N
 dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$coup) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE, ]
 mlogit3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist -1, data = dat.3)
 stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
+
+# Confidence Intervals
+confint(mlogit3)
+
+# Transform into fitted values
+fitted <- with(Dataset_1, data.frame(gtypesup_cat = factor(1:3), rtypesup_cat = factor(1:3), mi_fightcap, lngdp, coup, lnyears, rebpolwinglegal, secessionist ))
