@@ -12,7 +12,28 @@ output:
 
 ## Motivation & Relevance
 
-- Bullet 1
+- Intra-state conflicts ???
+- Difficult decision wether to intervene or not
+- Different forms of third-party intervention
+..1.Troops
+..2.Military
+..3.Non-Military
+
+## Government Support
+
+```{r}
+qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightgreen"))
+```
+
+## Rebel Support
+```{r}
+qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
+```
+
+## Conflict Outcomes
+```{r}
+qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Frequency of Conflict Outcomes", xlab = "Conflict Outcomes", ylab = "Frequency", alpha = I(.9), fill = I("lightblue"))
+```
 
 ## Research Question
 

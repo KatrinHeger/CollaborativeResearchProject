@@ -215,7 +215,7 @@ dim(Dataset_1) # Our dataset currently entails 497 rows and 27 columns/variables
 describe(Dataset_1$conflict_outcome)
 
 # Create histogram of conflict outcomes ("conflict_outcome)
-qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightblue"))
+qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Frequency of Conflict Outcomes", xlab = "Conflict Outcomes", ylab = "Frequency", alpha = I(.9), fill = I("lightblue"))
 
 ##################################
 # Types of Government Support    #

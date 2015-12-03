@@ -2,10 +2,6 @@
 # Inferential Statistics  #
 ###########################
 
-#####################################
-# !!! Check with Christopher !!!    #
-#####################################
-
 ## Regression Preparation 
 # Create dataframe of independent variables
 DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Dataset_1$rtypesup_cat), as.numeric(Dataset_1$gov.supXfight.cap), as.numeric(Dataset_1$lngdp), as.numeric(Dataset_1$coup), as.numeric(Dataset_1$secessionist), as.numeric(Dataset_1$lnyears), as.numeric(Dataset_1$postCW), as.numeric(Dataset_1$rebpolwinglegal_d))
@@ -14,10 +10,10 @@ DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Data
 COR <- cor(DF_Independent, use = 'complete.obs')
 
 # Check for multicollinearity using the "Variance Inflation Factor (VIF)"
-VIF <- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
+# !!! Not working yet due to error "atomic vector"
+# VIF <- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
 
 # Test for endogeneity with a Hausman test
-# 
 
 # Test for heteroscedasticity
 # plot(XXXXX, which = 1)
@@ -172,7 +168,7 @@ confint(reg4.4_low.act)
 #####################################
 
 # Hausman-McFadden Test for testing independence of irrelevant alternatives
-hmftest(x, )
+# hmftest(x, )
 
 # Multinomial Logit Regression - Model 1
 dat.1 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE, ]
@@ -192,13 +188,11 @@ stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'N
 # Confidence Intervals
 confint(mlogit3)
 
-# Transform into fitted values
-predicted.mlogit1 <- predict(mlogit1)
-table(predicted.mlogit1)
-stargazer(predicted.mlogit1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
+# Create probabilities for each complete case
+predict_mlogit3 <- predict(mlogit3, dat.3, type = "prob")
+table(predict_mlogit3)
+stargazer(predict_mlogit3, type = "text", digits = 2)
 
-predicted.mlogit2 <- predict(mlogit2)
-stargazer(predicted.mlogit2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
+d_conflict_outcome <- data.frame(rtypesup_cat = c("troops", "military", "non-military"), conflict_outcome = mean(dat.3$conflict_outcome))
 
-predicted.mlogit3 <- predict(mlogit3)
-stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
+summary(Dataset_1$rtypesup_cat)
