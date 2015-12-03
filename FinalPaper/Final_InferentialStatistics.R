@@ -70,6 +70,7 @@ stargazer(reg1.7_gov.vic, type = "text", digits = 2)
 # Confidence Intervals
 confint(reg1.7_gov.vic)
 
+
 ###############################
 # Regression on rebel victory #
 ###############################
@@ -192,4 +193,12 @@ stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'N
 confint(mlogit3)
 
 # Transform into fitted values
-fitted <- with(Dataset_1, data.frame(gtypesup_cat = factor(1:3), rtypesup_cat = factor(1:3), mi_fightcap, lngdp, coup, lnyears, rebpolwinglegal, secessionist ))
+predicted.mlogit1 <- predict(mlogit1)
+table(predicted.mlogit1)
+stargazer(predicted.mlogit1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
+
+predicted.mlogit2 <- predict(mlogit2)
+stargazer(predicted.mlogit2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
+
+predicted.mlogit3 <- predict(mlogit3)
+stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
