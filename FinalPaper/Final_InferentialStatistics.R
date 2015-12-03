@@ -8,10 +8,10 @@
 
 ## Regression Preparation 
 # Create dataframe of independent variables
-DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Dataset_1$rtypesup_cat), as.numeric(Dataset_1$gov.supXfight.cap), as.numeric(Dataset_1$lngdp), as.numeric(Dataset_1$coup), as.numeric(Dataset_1$secessionist), as.numeric(Dataset_1$lnyears), as.numeric(Dataset_1$postCW), as.numeric(Dataset_1$rebpolwinglegal))
+DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Dataset_1$rtypesup_cat), as.numeric(Dataset_1$gov.supXfight.cap), as.numeric(Dataset_1$lngdp), as.numeric(Dataset_1$coup), as.numeric(Dataset_1$secessionist), as.numeric(Dataset_1$lnyears), as.numeric(Dataset_1$postCW), as.numeric(Dataset_1$rebpolwinglegal_d))
 
 # Check for multicollinearity with correlation matrix of independent variables
-COR <- cor(DF_Independent)
+COR <- cor(DF_Independent, use = 'complete.obs')
 
 # Check for multicollinearity using the "Variance Inflation Factor (VIF)"
 VIF <- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
