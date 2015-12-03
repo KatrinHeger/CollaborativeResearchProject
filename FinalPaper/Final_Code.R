@@ -108,17 +108,23 @@ Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rebel.support),]
 # Remove all missing values from explanatory variable "gov.support"
 Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$gov.support),]
 
-# Show variable class of rebel.support
+# Show class of rebel.support
 class(Cleaned_NSA$rebel.support)
 
-# Show variable class of gov.support
+# Show class of gov.support
 class(Cleaned_NSA$gov.support)
+
+# Show class of rebpolwinglegal
+class(Cleaned_NSA$rebpolwinglegal)
 
 # Code character variable rebel.support as dummy (rebel.support_d) with 1 = support, 0 = no support
 Cleaned_NSA$rebel.support_d <- recode(Cleaned_NSA$rebel.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
 
 # Code character gov.support as a dummy (gov.support_d) with 1 = support and 0 = no support
 Cleaned_NSA$gov.support_d <- recode(Cleaned_NSA$gov.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
+
+# Code character rebpolwinglegal as a dummy (rebpolwinglegal_d) with 1 = yes, 0 = no
+Cleaned_NSA$rebpolwinglegal_d <- recode(Cleaned_NSA$rebpolwinglegal, " 'yes' = 1; 'no' = 0 ")
 
 # Treat "rebel.support_d" and "gov.support_d" as factor variables
 Cleaned_NSA$rebel.support_d=as.factor(Cleaned_NSA$rebel.support_d)
@@ -182,7 +188,8 @@ class(Dataset_1$fightcaphigh)
 Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
 
 # Create interaction variable between government intervention and fighting capacity
-Dataset_1$gov.supXfight.cap <- interaction(Dataset_1$gov.support_d, Dataset_1$fightcaphigh)
+Dataset_1$gov.supXfight.cap <- as.numeric(as.character(Dataset_1$gov.support_d)) * 
+                                as.numeric(as.character(Dataset_1$fightcaphigh))
 
 # Check for complete cases
 sum(complete.cases(Dataset_1))
