@@ -1,5 +1,5 @@
 ---
-title: "Third-Party Intervention in Intrastate War"
+title: "Final_Slides_2"
 author: "Katrin Heger & Benedikt Abendroth"
 date: "December 4, 2015"
 output:
