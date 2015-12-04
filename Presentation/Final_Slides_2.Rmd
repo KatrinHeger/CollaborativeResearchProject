@@ -1,5 +1,5 @@
 ---
-title: "Final_Slides_2"
+title: "Third-Party Intervention in Intrastate War"
 author: "Katrin Heger & Benedikt Abendroth"
 date: "December 4, 2015"
 output:
@@ -55,7 +55,6 @@ Dataset_1$low.act.dummy <- recode(Dataset_1$conflict_outcome, " '0' = 1; '1' = 0
 Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
 Dataset_1_gtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
 dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$coup) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE, ]
-mlogit3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist -1, data = dat.3)
 ```
 
 ## Outline
@@ -88,7 +87,7 @@ xlab(NULL)
 
 ## 2. Research Question
 
-**How do different forms of third-party intervention affect the outcome of conflict?**
+**How do different forms of third-party intervention affect the outcome of a conflict?**
 
 Assumptions:
 
@@ -108,18 +107,18 @@ Assumptions:
 **Dependent Variable**
 
 - Conflict Outcome
-- 1) military victory, 2) negotiated settlement, or 3) low intensity
+- 1. Military Victory, 2. Negotiated Settlement, or 3. Low Intensity
 
 **Independent Variable**
 
 - Type of support to either gov. or rebels
-- 1) Troops, 2) Military or 3) Non-military
+- 1. Troops, 2. Military, or 3. Non-military
 
 ## 4. Model
 
 **Control Variables**
 
-* Type of Gov./Rebel Support (Troops, Military or Non-Military)
+* Type of Gov./Rebel Support (Troops, Military or Non-military)
 * Fighting Capacity
 * GDP
 * Coup
@@ -127,13 +126,13 @@ Assumptions:
 * Legal Political Wing
 * Secessionist
 
-## 5. Anaylsis
+## 5. Analysis
 
-![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/Table_1.png)
+![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/rsz_3table_1.png)
 
 ## 5. Analysis
 
-text
+![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/rsz_3table_2.png)
 
 ## 5. Analysis
 
