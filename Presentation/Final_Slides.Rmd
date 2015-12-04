@@ -10,50 +10,128 @@ output:
   beamer_presentation: default
 ---
 
-## Motivation & Relevance
-
-- Intra-state conflicts ???
-- Difficult decision wether to intervene or not
-- Different forms of third-party intervention
-..1.Troops
-..2.Military
-..3.Non-Military
-
-## Government Support
-
-```{r}
-qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightgreen"))
+```{r header=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+library("rio")
+library("gdata")
+library("mlogit")
+library("dplyr")
+library("testdat")
+library("car")
+library("Hmisc")
+library("ggplot2")
+library("nnet")
+library("memisc")
+library("stargazer")
+library("png")
+CIMI_Dataset <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Data_Gathering/CIMI.csv")
+NSA_Dataset <- rio::import("http://privatewww.essex.ac.uk/~ksg/data/nsa_v3.4_21November2013.asc", format = "tsv")
+Cleaned_CIMI <- subset(CIMI_Dataset, select = c(1, 2, 3, 4, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24, 25))
+colnames(Cleaned_CIMI)[colnames(Cleaned_CIMI)=="outcome_d"] <- "conflict_outcome"
+colnames(Cleaned_CIMI)[colnames(Cleaned_CIMI)=="land"] <- "secessionist"
+Cleaned_CIMI <- Cleaned_CIMI[!is.na(Cleaned_CIMI$conflict_outcome),]
+Cleaned_NSA <- subset(NSA_Dataset, select = c(3, 7, 8, 14, 27, 32, 33, 35, 36))
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rebel.support),]
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$gov.support),]
+Cleaned_NSA$rebel.support_d <- recode(Cleaned_NSA$rebel.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
+Cleaned_NSA$gov.support_d <- recode(Cleaned_NSA$gov.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
+Cleaned_NSA$rebpolwinglegal_d <- recode(Cleaned_NSA$rebpolwinglegal, " 'yes' = 1; 'no' = 0 ")
+Cleaned_NSA$rebel.support_d=as.factor(Cleaned_NSA$rebel.support_d)
+Cleaned_NSA$gov.support_d=as.factor(Cleaned_NSA$rebel.support_d)
+Cleaned_NSA$rtypesup <- gsub(';', '', Cleaned_NSA$rtypesup)
+Cleaned_NSA$rtypesup[Cleaned_NSA$rtypesup == 'endorsement alleged military'] <- NA
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rtypesup),]
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$gtypesup),]
+Cleaned_NSA$rtypesup_cat <- recode(Cleaned_NSA$rtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
+Cleaned_NSA$gtypesup_cat <- recode(Cleaned_NSA$gtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
+Cleaned_NSA$rtypesup_cat=as.factor(Cleaned_NSA$rtypesup_cat)
+Cleaned_NSA$gtypesup_cat=as.factor(Cleaned_NSA$gtypesup_cat)
+Cleaned_CIMI <- rename(Cleaned_CIMI, dyad_id = "dyadid")
+Dataset_1 <- merge(x = Cleaned_CIMI, y= Cleaned_NSA, by = "dyadid" , all = TRUE)
+Dataset_1 <- dplyr::select(Dataset_1, -postCW.1)
+Dataset_1$gov.vic.dummy <- recode(Dataset_1$conflict_outcome, " '3' = 1; '0' = 0; '1' = 0; '2' = 0 ")
+Dataset_1$reb.vic.dummy <- recode(Dataset_1$conflict_outcome, " '1' = 1; '0' = 0; '2' = 0; '3' = 0 ")
+Dataset_1$settle.dummy <- recode(Dataset_1$conflict_outcome, " '2' = 1; '0' = 0; '1' = 0; '3' = 0 ")
+Dataset_1$low.act.dummy <- recode(Dataset_1$conflict_outcome, " '0' = 1; '1' = 0; '2' = 0; '3' = 0 ")
+Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
+Dataset_1_gtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
 ```
 
-## Rebel Support
-```{r}
-qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
+## Outline
+
+1. Motivation & Relevance
+2. Research Question
+3. Data
+4. Model
+5. Analysis
+
+## 1. Motivation & Relevance
+
+![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Presentation/rsz_266314_1armed-conflict-by-type-1946-2014jpg.jpg)
+
+## 1. Motivation & Relevance {.flexbox .vcenter}
+<div class="columns-2">
+```{r, header=FALSE, echo=FALSE, message=FALSE, dpi=53}
+qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightgreen")) + 
+scale_x_discrete(breaks = 1:3, labels=c("Troops","Military","Non-military")) +
+xlab(NULL)
 ```
 
-## Conflict Outcomes
-```{r}
-qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Frequency of Conflict Outcomes", xlab = "Conflict Outcomes", ylab = "Frequency", alpha = I(.9), fill = I("lightblue"))
+```{r, header=FALSE, echo=FALSE, message=FALSE, dpi=53}
+Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
+qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown")) + 
+scale_x_discrete(breaks = 1:3, labels=c("Troops","Military","Non-military")) +
+xlab(NULL)
 ```
+</div>
 
-## Research Question
+## 2. Research Question
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+**How do different forms of third-party intervention affect the outcome of conflict?**
 
-## Data & Analysis
+Assumptions:
 
-- Bullet 1
+- Interveners want to induce a victory for the respective side or a negotiated settlement
+- Parties in the conflict behave according to cost-benefit-analysis
 
-## Data & Analysis
+## 3. Data
 
-```{r}
-summary(cars)
-```
+- Two datasets from the University of Uppsala Conflict Database Program (UCDP)
+- Cover years from 1975 to 2009
+- Same conflict units
+- 169 different conflicts
+- Limitations: Covert weapons transfers and data on lethal aid
 
-## Data & Analysis
+## 4. Model
 
-- Bullet 1
+**Dependent Variable**
+
+- Conflict Outcome
+- 1) military victory, 2) negotiated settlement, or 3) low intensity
+
+**Independent Variable**
+
+- Type of support to either gov. or rebels
+- 1) Troops, 2) Military or 3) Non-military
+
+## 4. Model
+
+**Control Variables**
+
+* Type of Gov./Rebel Support (Troops, Military or Non-Military)
+* Fighting Capacity
+* GDP
+* Coup
+* Duration of Conflict
+* Legal Political Wing
+* Secessionist
+
+## 5. Analysis
+
+logit 
+
+## 5. Analysis
+
+mlogit table
 
 ## Feedback {.flexbox .vcenter}
 
