@@ -64,6 +64,7 @@ dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$
 3. Data
 4. Model
 5. Analysis
+6. Results
 
 ## 1. Motivation & Relevance
 
@@ -91,15 +92,15 @@ xlab(NULL)
 
 Assumptions:
 
-- Interveners want to induce a victory for the respective side or a negotiated settlement
-- Parties in the conflict behave according to cost-benefit-analysis
+* **H1:** The more fungible the support to rebels, the less likely is a rebel victory
+* **H2:** Troops and military support to governments will increase the probability of a government military victory only when opposition military strength approaches that of the state.
 
 ## 3. Data
 
-- Two datasets from the University of Uppsala Conflict Database Program (UCDP)
+- Two Datasets: 1. Non-state Actor dataset & 2. Replication dataset
 - Cover years from 1975 to 2009
-- Same conflict units
-- 169 different conflicts
+- Conflict Unit = Conflict Dyad
+- 169 different conflict dyads
 - Limitations: Covert weapons transfers and data on lethal aid
 
 ## 4. Model
@@ -107,18 +108,17 @@ Assumptions:
 **Dependent Variable**
 
 - Conflict Outcome
-- 1. Military Victory, 2. Negotiated Settlement, or 3. Low Intensity
+- 1. Rebel Military Victory, 2. Government Military Victory, 3. Negotiated Settlement, or 4. Low Intensity
 
 **Independent Variable**
 
-- Type of support to either gov. or rebels
+- Type of support to either government or rebels
 - 1. Troops, 2. Military, or 3. Non-military
 
 ## 4. Model
 
 **Control Variables**
 
-* Type of Gov./Rebel Support (Troops, Military or Non-military)
 * Fighting Capacity
 * GDP
 * Coup
@@ -134,9 +134,14 @@ Assumptions:
 
 ![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/rsz_3table_2.png)
 
-## 5. Analysis
+## 6. Results {.smaller}
 
-direction/results
+**Significant results:**
+
+1. Any type of government support will decrease the probabiity for a negotiated settlement
+2. Rebel support: Only military support will decrease the probability for a government victory
+3. If the rebels have a legal political wing a negotiated settlement becomes more likely
+4. A secession by the rebels decreases the probability for a negotiated settlement and increases the likelihood for a rebel victory
 
 ## Feedback {.flexbox .vcenter}
 
