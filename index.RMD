@@ -3,6 +3,7 @@ title: "Third Party Intervention in Intrastate War"
 author: "Benedikt Abendroth & Katrin Heger"
 date: "17 December 2015"
 output: html_document
+logo: https://openclipart.org/image/2400px/svg_to_png/97015/tanque.png
 ---
 
 ```{r header=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
