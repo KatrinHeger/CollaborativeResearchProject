@@ -1,8 +1,5 @@
 ---
-output: 
-  html_document: 
-    theme: readable
-    fig_caption: true
+output: html_document
 ---
 
 ```{r, header=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
