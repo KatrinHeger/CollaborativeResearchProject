@@ -77,7 +77,7 @@ Our research project analyzes how different types of third-party intervention in
 
 **Intervention Types**
 
-We differentiated between 1) Troops, 2) Military and 3) Non-military as types of support to either the government or the rebels. 
+We differentiate between 1) Troops, 2) Military and 3) Non-military types of support to either the government or the rebels. Military support reflects goods such as weapons and tanks, whereas non-military support captures goods that can have an impact on the outcome of the conflict, e.g. money.
 
 ```{r, two_plots_same_size_side_by_side, header=FALSE, echo=FALSE, dpi=65}
 qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = 1, main = "Government Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightgreen")) + 
