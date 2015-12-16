@@ -1,12 +1,12 @@
 ---
-title: "Third Party Intervention in Intrastate War"
-author: "Benedikt Abendroth & Katrin Heger"
-date: "17 December 2015"
-output: html_document
-logo: https://openclipart.org/image/2400px/svg_to_png/97015/tanque.png
+output: 
+  html_document: 
+    theme: readable
+    fig_caption: true
 ---
 
-```{r header=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, header=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+# Loading the necessary work environment to create the website output
 library("rio")
 library("gdata")
 library("mlogit")
@@ -54,28 +54,45 @@ Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
 dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$coup) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE, ]
 ```
 
+<center>
+# Third-Party Intervention in Intrastate War 
+### Do outcomes match intentions?
+</center>
+
+<center>
+**Katrin Heger and Benedikt Abendroth**
 *Hertie School of Governance, Berlin (GER)*
+</center>
 
-
-**Motivation**
-
+<center>
+### Motivation
+</center>
 
 After the end of the Cold War there was optimism that the number of conflicts would decrease, but this hope was dashed with the emergence of numerous intrastate conflicts in Europe, Africa, and Asia. Although the incidences of conflict have declined over the last decade, the world seems far from being in peace with conflicts currently raging in Syria, Ukraine, Yemen, South Sudan and the DR Congo. Delivering money, weapons, and training to conflict zones has become a convenient solution for many Western states that constitutes a middle ground between being a passive bystander and sending troops. In Syria, the US provided weapons to the rebels fighting the autocratic Assad regime and in Ukraine, the pro-government forces have received arms in order to fight the separatist movement. In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars.
 
 
-**Rebel in Syria reloading a modern weapon**
-
-![](Rebels.jpg)
-
-*Source: [Huffington Post, 2013](http://bit.ly/1Ow4hRV)*
+[Syrian Rebel using a modern weapon](http://bit.ly/1Ow4hRV)   |  [Russian Troops in Syria](http://bit.ly/1P8n0rn)
+:-------------------------:|:-------------------------:
+<img src="Rebels.jpg" width="400px" height="400px" /> |  <img src="Russian_Troops.jpg" width="400px" height="400px" />
 
 
-**Research Question**
+<center>
+### Research Question
+</center>
 
 Our research project analyzes how different types of third-party intervention into intrastate wars affect the outcome of the conflict. The following charts illustrate the distribution of support types and conflict outcomes for 169 conflict units covering the years 1975 to 2009.
 
 
-**Intervention Types**
+<center>
+### Hypothesis
+</center>
+
+text
+
+
+<center>
+### Intervention Types
+</center>
 
 We differentiate between 1) Troops, 2) Military and 3) Non-military types of support to either the government or the rebels. Military support reflects goods such as weapons and tanks, whereas non-military support captures goods that can have an impact on the outcome of the conflict, e.g. money.
 
@@ -89,23 +106,34 @@ xlab(NULL)
 ```
 
 
-**Conflict Outcomes**
+<center>
+### Conflict Outcomes
+</center>
 
 As illustrated below, most conflicts end up with low activity (less than 25 battle field related deaths per year). However, negotiated settlements and government victories each occur approx. twice as often as rebel victories. 
 
-```{r fig.width=5, fig.height=4, echo=FALSE, message=FALSE}
+```{r fig.width=5, fig.height=4, echo=FALSE, message=FALSE, fig.align='center'}
 qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Conflict Outcomes", xlab = "Outcome Types (see below)", ylab = "Frequency", fill = I("lightblue"))
 ```
 
-*0: Low Activity*, *1: Rebel Victory*, *2: Negotiated Settlement*, *3: Government Victory*
+<center>*0: Low Activity*, *1: Rebel Victory*, *2: Negotiated Settlement*, *3: Government Victory*</center>
 
 
-**Results**
+<center>
+### Results
+</center>
 
 TBD
 
 
-
-**Further information**
+<center>
+### Further Information and Contact
+</center>
 
 Click [here](https://github.com/jasmincantzler/TaxMorale/blob/master/Final%20Project/Final.pdf) to read the full paper and [here](https://github.com/KatrinHeger/CollaborativeResearchProject) to look at our reproducible analysis data on Github.
+
+**Email:**
+
+Katrin Heger: <katrin.m.heger@gmail.com>
+
+Benedikt Abendroth: <benediktabendroth@outlook.com
