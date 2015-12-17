@@ -17,7 +17,8 @@ bibliography: BibliographyFinal.bib
 ---
 \pagebreak
 
-```{r, results='asis', message=FALSE, echo=FALSE, warning=FALSE}
+```{r, include=FALSE}
+
 library("rio")
 library("gdata")
 library("mlogit")
@@ -63,7 +64,8 @@ Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
 Dataset_1$gov.supXfight.cap <- as.numeric(as.character(Dataset_1$gov.support_d)) * as.numeric(as.character(Dataset_1$fightcaphigh))
 DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Dataset_1$rtypesup_cat), as.numeric(Dataset_1$gov.supXfight.cap), as.numeric(Dataset_1$lngdp), as.numeric(Dataset_1$coup), as.numeric(Dataset_1$secessionist), as.numeric(Dataset_1$lnyears), as.numeric(Dataset_1$postCW), as.numeric(Dataset_1$rebpolwinglegal_d))
 dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE & is.na(Dataset_1$gov.supXfight.cap) == FALSE, ]
-# Until Line 295 in Final_Code
+mlogit3_complete <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
+
 ```
 
 #Introduction 
@@ -186,11 +188,17 @@ Prior to conducting the multinomial regressions, we correlated our independent v
 
 In our 497 observation, we only had 40 complete cases, which left us with very limited data to test our theory. As lies in the nature of conflict data, the availability is very limited. 
 
+\pagebreak
+
 #Table 1: Multinomial Logit Regression
-```{r, results='asis', message=FALSE, echo=FALSE, warning=FALSE}
-mlogit3_complete <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
-stargazer(mlogit3_complete, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Rebel S. Military', 'Rebel S. Non-military', 'Fighting Capacity','Interaction GovXFi', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
+
+```{r, message=FALSE, results='asis', echo=FALSE, warning=FALSE}
+
+stargazer::stargazer(mlogit3_complete, type = 'latex', digits = 2, header = FALSE, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Rebel S. Military', 'Rebel S. Non-military', 'Fighting Capacity','Interaction GovXFi', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
+
 ```
+
+\pagebreak
 
 #Conclusion
 In policy-making, intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. In this paper, we set out to contribute to the current civil war research by examining closer the relationship between different forms of third-party intervention into intrastate conflict and conflict outcomes. We derived a theoretical model from the assumption that under the conditions of asymmetric power in civil wars, rebels and government face a bargaining problem. We hypothesized that troops and other forms of military and non-military support provided to the government increase the likelihood for a military victory of the incumbent only, when rebel forces are sufficiently strong and thus constitute a tangible target. Troop support to rebels, on the other hand, has an unconditional positive effect on the likelihood of rebel victory. Supplying rebels with military equipment should, in fact, decrease the probability of the opposition winning because it makes them more vulnerable to conventional government force. When rebels receive non-military assistant from a third party, negotiated settlements become less likely because more fungible support creates uncertainty about the credible commitment of rebels to peace, which might deter the government from bargaining in first place. 
