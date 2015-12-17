@@ -65,8 +65,7 @@ dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$
 ### Motivation
 </center>
 
-After the end of the Cold War there was optimism that the number of conflicts would decrease, but this hope was dashed with the emergence of numerous intrastate conflicts in Europe, Africa, and Asia. Although the incidences of conflict have declined over the last decade, the world seems far from being in peace with conflicts currently raging in Syria, Ukraine, Yemen, South Sudan and the DR Congo. Delivering money, weapons, and training to conflict zones has become a convenient solution for many Western states that constitutes a middle ground between being a passive bystander and sending troops. In Syria, the US provided weapons to the rebels fighting the autocratic Assad regime and in Ukraine, the pro-government forces have received arms in order to fight the separatist movement. In policy-making, military intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars.
-
+After the end of the Cold War there was optimism that the number of conflicts would decrease, but this hope was dashed with the emergence of numerous intrastate conflicts in Europe, Africa, and Asia. The world seems far from being in peace with conflicts raging in Iraq, Syria, Ukraine, Yemen, South Sudan and the DR Congo. Delivering money, weapons, and training to conflict zones has become a convenient solution for many Western states, not wanting to do the dirty work themselves. Sending military equipment and other supplies constitutes a middle ground between being a passive bystander and sending troops. In Syria, the US provided weapons to the rebels fighting the autocratic Assad regime and in Ukraine, the pro-government forces have received arms in order to fight the separatist movement. These policies are based on rather little knowledge about the concrete impacts third-party intervention.
 
 [Syrian Rebel using a modern weapon](http://bit.ly/1Ow4hRV)   |  [Russian Troops in Syria](http://bit.ly/1P8n0rn)
 :-------------------------:|:-------------------------:
@@ -91,7 +90,7 @@ text
 ### Intervention Types
 </center>
 
-We differentiate between 1) Troops, 2) Military and 3) Non-military types of support to either the government or the rebels. Military support reflects goods such as weapons and tanks, whereas non-military support captures goods that can have an impact on the outcome of the conflict, e.g. money.
+We differentiate between 1) troops, 2) military and 3) non-military support to either the government or the rebels. Military support includes goods, such as weapons and tanks, whereas non-military support captures more fungible things, such as money. 
 
 ```{r, two_plots_same_size_side_by_side, header=FALSE, echo=FALSE, dpi=65}
 qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = 1, main = "Government Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightgreen")) + 
