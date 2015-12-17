@@ -13,26 +13,11 @@
 # Setting the working directory (in this case: Github Folder online)
 # setwd(~/GitHub/CollaborativeResearchProject)
 
-# In order to pursue our analysis, the following packages are necessary:
-# (1) rio
-# (2) gdata
-# (3) mlogit
-# (4) dplyr
-# (5) testdat
-# (6) car
-# (7) Hmisc
-# (8) ggplot2
-# (9) nnet
-# (10) memisc
-# (11) stargazer
-# Information about the packages being used in this project
-# can be found in our BibTeX file.
-
 ##################################
 # Load all packages being used   #
 ##################################
 
-# Start all necessary packages as mentioned above
+# Start all necessary packages
 library("rio")
 library("gdata")
 library("mlogit")
@@ -46,9 +31,12 @@ library("memisc")
 library("stargazer")
 library("mnlogit")
 
-#######################
-# Load all datasets   #
-#######################
+# Information about the packages being used in this project
+# can be found in our BibTeX file.
+
+###################
+# Load datasets   #
+###################
 
 # Load and import the CIMI_Dataset from our Github repository
 # Note:
@@ -511,6 +499,23 @@ confint(mlogit3_reb_3)
 # Odds Ratios
 exp(coef(mlogit3_reb_3))
 
+#######################################################
+# New Complete Final Multinomial Logit Regression     #
+#######################################################
+
+# Multinomial Logit Regression 3 - Government Support Type
+mlogit3_complete <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
+# Table
+stargazer(mlogit3_complete, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3))
+
+
+###########################
+# Relative Risk Ratio     #
+###########################
+
+exp(coef(mlogit3_reb_3))
+
+
 ##############################
 # Predicted Probabilities    #
 ##############################
@@ -521,51 +526,10 @@ mlogit3_reb_3_pred <- predict(mlogit3_reb_3, dat.3, "probs")
 # Create table
 stargazer(mlogit3_reb_3_pred, type = "text", digits = 2)
 
-# The result of this command is an n by k matrix, where n is the number of
-# data points being predicted and k is the number of options.
-# Therefore to make a choice, we need to calculate the cumulative probabilities
-# associated with each option. We can then draw a random value between 0 to 1;
-# the option with the greatest cumulative probability below our draw value is our choice.
-# This can be written into a function for easier use.
-# Source: http://bit.ly/1UBXJGk
-
-# Function to predict multinomial logit choice model outcomes
-predictMNL <- function(model, newdata) {
-  
-  # Only works for neural network models
-  if (is.element("nnet",class(model))) {
-    # Calculate the individual and cumulative probabilities
-    probs <- predict(model,newdata,"probs")
-    cum.probs <- t(apply(probs,1,cumsum))
-    
-    # Draw random values
-    vals <- runif(nrow(newdata))
-    
-    # Join cumulative probabilities and random draws
-    tmp <- cbind(cum.probs,vals)
-    
-    # For each row, get choice index.
-    k <- ncol(probs)
-    ids <- 1 + apply(tmp,1,function(x) length(which(x[1:k] < x[k+1])))
-    
-    # Return the values
-    return(ids)
-  }
-}
-
-# Using the function created above to predict the outcome for our dataset
-n <- 40
-df_pred <- data.frame(x1=runif(n,0,40),
-                 x2=runif(n,0,40),
-                 set="Model")
-y2 <- predictMNL(mlogit3_reb_3, df_pred)
-df2 <- cbind(df_pred,y=y2)
-
-
-stargazer(df2, type = "text", digits = 2)
+# TBD
 
 #####################################
 # Tests: Quality of the Model       #
 #####################################
 
-TBD
+# TBD
