@@ -1,0 +1,149 @@
+---
+title: "Third-Party Intervention in Intrastate War"
+author: "Katrin Heger & Benedikt Abendroth"
+date: "December 4, 2015"
+output:
+  ioslides_presentation:
+    css: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
+    transition: slower
+    logo: https://openclipart.org/image/2400px/svg_to_png/97015/tanque.png
+  beamer_presentation: default
+---
+
+```{r header=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+library("rio")
+library("gdata")
+library("mlogit")
+library("dplyr")
+library("testdat")
+library("car")
+library("Hmisc")
+library("ggplot2")
+library("nnet")
+library("memisc")
+library("stargazer")
+library("png")
+CIMI_Dataset <- rio::import("https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Data_Gathering/CIMI.csv")
+NSA_Dataset <- rio::import("http://privatewww.essex.ac.uk/~ksg/data/nsa_v3.4_21November2013.asc", format = "tsv")
+Cleaned_CIMI <- subset(CIMI_Dataset, select = c(1, 2, 3, 4, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24, 25))
+colnames(Cleaned_CIMI)[colnames(Cleaned_CIMI)=="outcome_d"] <- "conflict_outcome"
+colnames(Cleaned_CIMI)[colnames(Cleaned_CIMI)=="land"] <- "secessionist"
+Cleaned_CIMI <- Cleaned_CIMI[!is.na(Cleaned_CIMI$conflict_outcome),]
+Cleaned_NSA <- subset(NSA_Dataset, select = c(3, 7, 8, 14, 27, 32, 33, 35, 36))
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rebel.support),]
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$gov.support),]
+Cleaned_NSA$rebel.support_d <- recode(Cleaned_NSA$rebel.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
+Cleaned_NSA$gov.support_d <- recode(Cleaned_NSA$gov.support, " 'explicit' = 1;'no' = 0;'alleged' = 0 ")
+Cleaned_NSA$rebpolwinglegal_d <- recode(Cleaned_NSA$rebpolwinglegal, " 'yes' = 1; 'no' = 0 ")
+Cleaned_NSA$rebel.support_d=as.factor(Cleaned_NSA$rebel.support_d)
+Cleaned_NSA$gov.support_d=as.factor(Cleaned_NSA$rebel.support_d)
+Cleaned_NSA$rtypesup <- gsub(';', '', Cleaned_NSA$rtypesup)
+Cleaned_NSA$rtypesup[Cleaned_NSA$rtypesup == 'endorsement alleged military'] <- NA
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$rtypesup),]
+Cleaned_NSA <- Cleaned_NSA[!is.na(Cleaned_NSA$gtypesup),]
+Cleaned_NSA$rtypesup_cat <- recode(Cleaned_NSA$rtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
+Cleaned_NSA$gtypesup_cat <- recode(Cleaned_NSA$gtypesup, " 'troops' = 1; 'military' = 2; 'non-military' = 3 ")
+Cleaned_NSA$rtypesup_cat=as.factor(Cleaned_NSA$rtypesup_cat)
+Cleaned_NSA$gtypesup_cat=as.factor(Cleaned_NSA$gtypesup_cat)
+Cleaned_CIMI <- rename(Cleaned_CIMI, dyad_id = "dyadid")
+Dataset_1 <- merge(x = Cleaned_CIMI, y= Cleaned_NSA, by = "dyadid" , all = TRUE)
+Dataset_1 <- dplyr::select(Dataset_1, -postCW.1)
+Dataset_1$gov.vic.dummy <- recode(Dataset_1$conflict_outcome, " '3' = 1; '0' = 0; '1' = 0; '2' = 0 ")
+Dataset_1$reb.vic.dummy <- recode(Dataset_1$conflict_outcome, " '1' = 1; '0' = 0; '2' = 0; '3' = 0 ")
+Dataset_1$settle.dummy <- recode(Dataset_1$conflict_outcome, " '2' = 1; '0' = 0; '1' = 0; '3' = 0 ")
+Dataset_1$low.act.dummy <- recode(Dataset_1$conflict_outcome, " '0' = 1; '1' = 0; '2' = 0; '3' = 0 ")
+Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
+Dataset_1_gtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
+Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
+dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$coup) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE, ]
+```
+
+## Outline
+
+1. Motivation & Relevance
+2. Research Question
+3. Data
+4. Model
+5. Analysis
+6. Results
+
+## 1. Motivation & Relevance
+
+![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Presentation/rsz_266314_1armed-conflict-by-type-1946-2014jpg.jpg)
+
+## 1. Motivation & Relevance {.flexbox .vcenter}
+<div class="columns-2">
+```{r, header=FALSE, echo=FALSE, message=FALSE, dpi=53}
+qplot(Dataset_1_gtype_HG$gtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Government Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("lightgreen")) + 
+scale_x_discrete(breaks = 1:3, labels=c("Troops","Military","Non-military")) +
+xlab(NULL)
+```
+
+```{r, header=FALSE, echo=FALSE, message=FALSE, dpi=53}
+Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
+qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown")) + 
+scale_x_discrete(breaks = 1:3, labels=c("Troops","Military","Non-military")) +
+xlab(NULL)
+```
+</div>
+
+## 2. Research Question
+
+**How do different forms of third-party intervention affect the outcome of a conflict?**
+
+Assumptions:
+
+* **H1:** The more fungible the support to rebels, the less likely is a rebel victory
+* **H2:** Troops and military support to governments will increase the probability of a government military victory only when opposition military strength approaches that of the state.
+
+## 3. Data
+
+- Two Datasets: 1. Non-state Actor dataset & 2. Replication dataset
+- Cover years from 1975 to 2009
+- Conflict Unit = Conflict Dyad
+- 169 different conflict dyads
+- Limitations: Covert weapons transfers and data on lethal aid
+
+## 4. Model
+
+**Dependent Variable**
+
+- Conflict Outcome
+- 1. Rebel Military Victory, 2. Government Military Victory, 3. Negotiated Settlement, or 4. Low Intensity
+
+**Independent Variable**
+
+- Type of support to either government or rebels
+- 1. Troops, 2. Military, or 3. Non-military
+
+## 4. Model
+
+**Control Variables**
+
+* Fighting Capacity
+* GDP
+* Coup
+* Duration of Conflict
+* Legal Political Wing
+* Secessionist
+
+## 5. Analysis
+
+![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/rsz_3table_1.png)
+
+## 5. Analysis
+
+![alt text](https://raw.githubusercontent.com/KatrinHeger/CollaborativeResearchProject/master/Assignment3_Data-Analysis/rsz_3table_2.png)
+
+## 6. Results {.smaller}
+
+**Significant results:**
+
+1. Any type of government support will decrease the probabiity for a negotiated settlement
+2. Rebel support: Only military support will decrease the probability for a government victory
+3. If the rebels have a legal political wing a negotiated settlement becomes more likely
+4. A secession by the rebels decreases the probability for a negotiated settlement and increases the likelihood for a rebel victory
+
+## Feedback {.flexbox .vcenter}
+
+![alt text](https://www.valuiza.com/assets/images/customer_feedback.png)
