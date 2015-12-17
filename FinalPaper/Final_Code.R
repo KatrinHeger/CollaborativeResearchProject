@@ -466,7 +466,7 @@ mlogit3_reb_3_pred <- predict(mlogit3_reb_3, dat.3, "probs")
 
 # Create table
 stargazer(mlogit3_reb_3_pred, type = "text", digits = 2)
-
+ 
 # TBD
 
 #####################################

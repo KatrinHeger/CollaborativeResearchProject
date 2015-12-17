@@ -131,7 +131,7 @@ $H_4b: Non-military support to governments will decrease the likelihood of a neg
 This section sets the methodological framework for our analysis. After presenting some definitions, we introduce our data and variables and describe the choice of our research design. 
 
 ##Definitions and Level of Analysis
-We base our definition of conflict on the terminology introduced by UCDP together with the Peace Research Institute Oslo (PRIO) [@themner2011armed; @gleditsch2002armed]. A 'major armed conflict' or 'war' is characterized by at least 1,000 battle related, military or civilian, deaths a year, while conflicts with 25 to 999 battle deaths a year are categorized as 'minor armed conflict'. They further distinguish other forms of violence from conflicts by adding the component of an organized effective violent opposition to the government, thereby excluding genocides and similar forms of violence from their definition of conflict. 
+We base our definition of conflict on the terminology introduced by the University of Uppsalla Conflict Data Program (UCDP) together with the Peace Research Institute Oslo (PRIO) [@themner2011armed; @gleditsch2002armed]. A 'major armed conflict' or 'war' is characterized by at least 1,000 battle related, military or civilian, deaths a year, while conflicts with 25 to 999 battle deaths a year are categorized as 'minor armed conflict'. They further distinguish other forms of violence from conflicts by adding the component of an organized effective violent opposition to the government, thereby excluding genocides and similar forms of violence from their definition of conflict. 
 As is common in recent conflict research, Sullivan and Kenneth take conflict dyads as their level of analysis, modeling civil wars as dyadic struggles between the government and an opposition party instead of focusing on the state-level. Conflict dyads record each violent interaction between an incumbent regime and an opposition and this unit of analysis thus allows us to isolate the effect of weapons deliveries to one side of the dyad and its effect on ending violence. Both NSA data as well as UCDP data are available as conflict dyads, which makes a merging of different datasets easier.
 
 ##Data 
@@ -156,36 +156,7 @@ In our model, j represents each of the four outcomes and i indexes the unit of a
 
 #Results and Discussion
 
-In this section, we present and discuss our statistical findings and the quality of our model. Overall, our hypotheses were supported by the data. However, some limitations in 
 
-##Intervention in Support of the Government
-Table 1 displays the results of three multinomial logit estimations. Model 1 regresses our main explanatory variable, the type of support to government, on the dependet variable conflict outcome. Model 2 adds as a further explanatory variable the relative figting capacity of rebels and the interaction term. In Model 3, we include our set of control variables.    
-In our full model, we see that 
-
-Troops and military support to governments will increase the probability of government military victory only when opposition military strength approaches that of the state.
-
-Non-military support to governments will increase the probability of government military victory only when opposition military strength approaches that of the state.
-
-##Intervention in Support of the Opposition
-Identical to the multinomial regression above, we step-by-step added variables to the main explanatory factor, support to rebels. Models 1 to 3 are displayed in table 2.  
-
-Troops support to rebels will increase the probability of rebel military victory. 
-
-Military support to rebels will increase the probability of government military victory, and decrease the probability of rebel military victory.
-
-Non-military support to rebels decreases the likelihood of a negotiated settlement.
-
-##Control Variables
-Similar to Sullivan and Karreth's findings, we see a 
-duration of conflict
-secessionist
-Cold War
-legal wing
-
-##Model Quality
-Prior to conducting the multinomial regressions, we correlated our independent variables and could exclude multicollinearity issues. We further tested for the validity of the independence of irrelevant alternatives (IIA), an assumption underlying multinomial regression models, with a Hausman test. 
-
-In our 497 observation, we only had 40 complete cases, which left us with very limited data to test our theory. As lies in the nature of conflict data, the availability is very limited. 
 
 \pagebreak
 
