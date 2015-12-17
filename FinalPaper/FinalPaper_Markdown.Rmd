@@ -95,24 +95,26 @@ It further has been suggested that the duration of the conflict and government s
 Taking into account the motivation of the rebels, we borrow from Sullivan and Karreth a variable indicating whether the war is a secessionist conflict because we expect that secessionist wars affect conflict outcomes differently than wars aiming at regime change [@karl2004dynamics; @regan2002civil]. Similarly, we control for whether the rebel group has a legal political wing that could be integrated into the government [@cunningham2009takes]. 
 
 ##Statistical Model
-In our research, we seek to examine how different types of external support to both rebels and governments during civil war influence the outcome of conflicts. In line with this encounter, we apply a regression design to assess the relationship between conflict outcome as our dependent variable and the support type as explanatory variables. 
-Since our dependent variable is a discrete variable, taking on four different values (0 = low intensity conflict, 1 = victory, 2 = negotiated settlement, 3 = victory), we employ a logistic regression model. We combine these regressions into one model by estimating a multinomial logistic regression with conflict outcome as a dependent variable with four categories. Since the categories are not ordinal, a simple multinomial model is appropriate. 
+In our research, we seek to examine how different types of external support to both rebels and governments during civil war influence the outcome of conflicts. In line with this encounter, we apply a regression design to assess the relationship between conflict outcome as our dependent variable and the support types as explanatory variables. Since our dependent variable is a discrete variable, taking on four different values (0 = low intensity conflict, 1 = victory, 2 = negotiated settlement, 3 = victory), we employ a multinomial logistic regression model. Instead of running one single model, we break up the multinomial regression into two separate estimations and separately regress government-biased and rebel-biased intervention on conflict outcome.
 
 \begin{equation}\begin{aligned} Pr(Y_{i}=j) = \frac{exp(X_{i}\beta_{j})} {\sum_{j=1}^{J} exp(X_{i}\beta_{j})}\end{aligned}\end{equation}
 
-In our model, j represents each of the four outcomes and i indexes the unit of analysis, being a dyadic episode of intrastate armed conflict. Following Sullivan and Karreth, we omit the most common conflict outcome, low intensity conflict, as the baseline category and calculate estimates for the remaining outcomes government victory, negotiated settlement and rebel victory. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
+In our model, j represents each of the four outcomes and i indexes the unit of analysis, being a dyadic episode of intrastate armed conflict. We omit the most common conflict outcome, low intensity conflict, as the baseline category and calculate estimates for the remaining outcomes government victory, negotiated settlement and rebel victory. The results tell us how different kinds of third-party intervention affect the likelihood of a conflict having a specific outcome vs. the reference (low intensity conflict).
 
 
 #Results and Discussion
+
 In this section, we present and discuss our statistical findings and the quality of our model. Overall, our hypotheses were supported by the data. However, some limitations in 
 
 ##Intervention in Support of the Government
+Table 1 displays the results of three multinomial logit estimations. Model 1 regresses our main explanatory variable, the type of support to government, on the dependet variable conflict outcome. Model 2 adds as a further explanatory variable the relative figting capacity of rebels and the interaction term. In Model 3, we include our set of control variables.    
 
 Troops and military support to governments will increase the probability of government military victory only when opposition military strength approaches that of the state.
 
 Non-military support to governments will increase the probability of government military victory only when opposition military strength approaches that of the state.
 
 ##Intervention in Support of the Opposition
+Identical to the multinomial regression above, we step-by-step added variables to the main explanatory factor, support to rebels. Models 1 to 3 are displayed in table 2.  
 
 Troops support to rebels will increase the probability of rebel military victory. 
 
