@@ -508,17 +508,24 @@ exp(coef(mlogit3_reb_3_final))
 # Multinomial Logit Regression 3.1 - Complete
 mlogit3_complete3.1 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1, data = Dataset_1)
 # Create Table
-stargazer(mlogit3_complete3.1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Rebel S. Military', 'Rebel S. Non-military'))
+stargazer(mlogit3_complete3.1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. Troops', 'Gov. Military', 'Gov. Non-military', 'Rebel Military', 'Rebel Non-military'))
 
 # Multinomial Logit Regression 3.2 - Complete
-mlogit3_complete3.2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1 + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap, data = Dataset_1)
+mlogit3_complete3.2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1 + Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh, Dataset_1$gov.supXfight.cap, data = Dataset_1)
 # Create Table
-stargazer(mlogit3_complete3.2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Rebel S. Military', 'Rebel S. Non-military', 'Fighting Capacity'))
+stargazer(mlogit3_complete3.2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. Troops', 'Gov. Military', 'Gov. Non-military', 'Rebel Military', 'Rebel Non-military', 'Rebel Strength', 'Gov. Intervention x Strong Rebels'))
 
 # Multinomial Logit Regression 3.3 - Complete
-mlogit3_complete3.3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = Dataset_1)
+mlogit3_complete3.3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = Dataset_1)
 # Create Table
-stargazer(mlogit3_complete3.3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Rebel S. Military', 'Rebel S. Non-military', 'Fighting Capacity','Interaction GovXFi', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
+stargazer(mlogit3_complete3.3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. Troops', 'Gov. Military', 'Gov. Non-military', 'Rebel Military', 'Rebel Non-military', 'Rebel Strength','Gov. Intervention x Strong Rebels', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
 
-# Anova
-Anova(mlogit3_complete)
+# Anova Deviance Table
+Anova(mlogit3_complete3.3)
+devtable <- Anova(mlogit3_complete3.3)
+stargazer(devtable, type = "text", digits = 2)
+
+# Summary Table
+mtable(mlogit3_complete3.1, mlogit3_complete3.2, mlogit3_complete3.3, digits = 2)
+stargazer(summary_table, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. Troops', 'Gov. Military', 'Gov. Non-military', 'Rebel Troops', 'Rebel Military', 'Rebel Non-military', 'Rebel Strength','Gov. Intervention x Strong Rebels', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist')
+          
