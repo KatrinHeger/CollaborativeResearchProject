@@ -77,14 +77,14 @@ $H_4: Non-military support to governments will increase the probability of gover
 
 #Methodology
 
-This section sets the methodological framework for our analysis. After presenting some definitions, we introduce the data used and describe how we operationalized it for testing our hypotheses. The section concludes with the choice of our research design. 
+This section sets the methodological framework for our analysis. After presenting some definitions, we introduce our data and variables and describe the choice of our research design. 
 
 ##Definitions and Level of Analysis
 We base our definition of conflict on the terminology introduced by UCDP together with the Peace Research Institute Oslo (PRIO) [@themner2011armed; @gleditsch2002armed]. A 'major armed conflict' or 'war' is characterized by at least 1,000 battle related, military or civilian, deaths a year, while conflicts with 25 to 999 battle deaths a year are categorized as 'minor armed conflict'. They further distinguish other forms of violence from conflicts by adding the component of an organized effective violent opposition to the government, thereby excluding genocides and similar forms of violence from their definition of conflict. 
 As is common in recent conflict research, Sullivan and Kenneth take conflict dyads as their level of analysis, modeling civil wars as dyadic struggles between the government and an opposition party instead of focusing on the state-level. Conflict dyads record each violent interaction between an incumbent regime and an opposition and this unit of analysis thus allows us to isolate the effect of weapons deliveries to one side of the dyad and its effect on ending violence. Both NSA data as well as UCDP data are available as conflict dyads, which makes a merging of different datasets easier.
 
 ##Data 
-We use as a baseline for our analysis a publicly available dataset created by Sullivan and Karreth [@sullivan2014conditional], which  will henceforth be referred to as the CIMI Dataset. Sullivan and Karreth draw from the 3.3 version of the Non-state Actors (NSA) dataset [@cunningham2013non], as well as the University of Uppsala Conflict Data Program's (UCDP) Conflict Termination Dataset [@kreutz2010and] and External Support Dataset [@hogbladh2011external].  For the purpose of testing our hypothesis, we complement the CIMI dataset with additional variables included in the NSA data. 
+We use as a baseline for our analysis a publicly available dataset created by Sullivan and Karreth [@sullivan2014conditional], which  will henceforth be referred to as the CIMI Dataset. Sullivan and Karreth draw from the 3.3 version of the Non-state Actors (NSA) dataset [@cunningham2013non], as well as the University of Uppsala Conflict Data Program's (UCDP) Conflict Termination Dataset [@kreutz2010and] and External Support Dataset [@hogbladh2011external].  For the purpose of testing our hypotheses, we complement the CIMI dataset with additional variables included in the NSA data, which leaves us with 497 conflict dyad spells over a period of time from 1946 to 2010. 
 
 Our dependent variable is conflict outcome, since we are interested in the impact of outside intervention on the termination of conflict. We adopt conflict_outcome from the CIMI Dataset, which disaggregates outcome into four different conflict outcomes coded from the UCDP Conflict Termination Dataset. Accordingly, internal conflicts either fade out into a period of low activity (0), they end with a victory by the rebels (1), they terminate with some form of negotiated settlement (2), or with government victory (3). The most common outcome for a conflict dyad is low activity, defined as a violent conflict with less than 25 deaths per year for at least one year. While 44% of all conflict dyads level off like that, 35% end in a victory of one side. Governments win the conflict in 22% of the cases, rebels prevail in only 13%. 21% of conflicts terminate with a negotiated settlements.  
 
@@ -105,15 +105,15 @@ In our model, j represents each of the four outcomes and i indexes the unit of a
 
 
 #Results and Discussion
-In 
+In this section, we present and discuss our statistical findings and the quality of our model. Overall, our hypotheses were supported by the data. However, some limitations in 
 
-##Intervention on Behalf of the Government
+##Intervention in SUpport of the Government
 
 Troops and military support to governments will increase the probability of government military victory only when opposition military strength approaches that of the state.
 
 Non-military support to governments will increase the probability of government military victory only when opposition military strength approaches that of the state.
 
-##Intervention on Behalf of the Opposition
+##Intervention in Support of the Opposition
 
 Troops support to rebels will increase the probability of rebel military victory. 
 
@@ -131,9 +131,13 @@ legal wing
 ##Model Quality
 Prior to conducting the multinomial regressions, we correlated our independent variables and could exclude multicollinearity issues. We further tested for the validity of the independence of irrelevant alternatives (IIA), an assumption underlying multinomial regression models, with a Hausman test. 
 
-#Conclusion
-In policy-making, intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. In this paper, we set out to contribute to the current civil war research by examining closer the relationship between different forms of third-party intervention into intrastate conflict and conflict outcomes. We derived a theoretical model from the assumption that under the conditions of asymmetric powerin civil wars, rebels and government face a bargaining problem. 
+In our 497 observation, we only had 40 complete cases, which left us with very limited data to test our theory. As lies in the nature of conflict data, the availability is very limited. 
 
+#Conclusion
+In policy-making, intervention is often depicted as a solution to internal conflicts, while at the same time, academic research has revealed that intervention oftentimes rather prolongs and exacerbates civil wars. In this paper, we set out to contribute to the current civil war research by examining closer the relationship between different forms of third-party intervention into intrastate conflict and conflict outcomes. We derived a theoretical model from the assumption that under the conditions of asymmetric power in civil wars, rebels and government face a bargaining problem. We hypothesized that troops and other forms of military and non-military support provided to the government increase the likelihood for a military victory of the incumbent only, when rebel forces are sufficienlty strong and thus constitute a tangible target. Troop support to rebels, on the other hand, has an unconditional positive effect on the likelihood of rebel victory. Supplying rebels with military equipment should, in fact, decrease the probability of the opposition winning because it makes them more vulnerable to conventional governemnt force. When rebels receive non-military assistant from a third party, negotiated settlements become less likely because more fungible support creates uncertainty about the credible commitment of rebels to peace, which might deter the government from bargaining in first place. 
+Our statistical analysis indicated that
+
+Disaggregating the categories of non-military and military support further, could be a fruitful encounter for future research. 
 
 \pagebreak
 
