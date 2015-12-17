@@ -62,7 +62,7 @@ Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
 
 ### Motivation
 
-After the end of the Cold War there was optimism that the number of conflicts would decrease, but this hope was dashed with the emergence of numerous intrastate conflicts in Europe, Africa, and Asia. The world seems far from being in peace with conflicts raging in Iraq, Syria, Ukraine, Yemen, South Sudan and the DR Congo. Delivering money, weapons, and training to conflict zones has become a convenient solution for many Western states, not wanting to do the dirty work themselves. Sending military equipment and other supplies constitutes a middle ground between being a passive bystander and sending troops. In Syria, the US provided weapons to the rebels fighting the autocratic Assad regime and in Ukraine, the pro-government forces have received arms in order to fight the separatist movement. These policies are based on rather little knowledge about the concrete impacts third-party intervention.
+After the end of the Cold War there was optimism that the number of conflicts would decrease, but this hope was dashed with the emergence of numerous intrastate conflicts in Europe, Africa, and Asia. The world seems far from being in peace with conflicts raging in Iraq, Syria, Ukraine, Yemen, South Sudan and the DR Congo. Delivering money, weapons, and training to conflict zones has become a convenient solution for many Western states, not wanting to do the dirty work themselves. Sending military equipment and other supplies constitutes a middle ground between being a passive bystander and sending troops. In Syria, the US provided weapons to the rebels fighting the autocratic Assad regime, and in Ukraine, the pro-government forces have received arms in order to fight the separatist movement. These policies are based on rather little knowledge about the concrete impacts of third-party intervention.
 
 [Syrian Rebel using a modern weapon](http://bit.ly/1Ow4hRV)   |  [Russian Troops in Syria](http://bit.ly/1P8n0rn)
 :-------------------------:|:-------------------------:
@@ -100,22 +100,20 @@ qplot(Dataset_1$conflict_outcome, geom = "histogram", binwidth = .5, main = "Con
 
 
 ### Approach
-For our analysis we use a publicly available dataset created by [Sullivan P. and Karreth J.](http://bit.ly/1NUGi2E). They both draw from a dataset from [Cunningham D.](http://bit.ly/1ZdqZFV), as well as the University of Uppsala Conflict Data Program's (UCDP) [Conflict Termination Dataset](http://bit.ly/1QiI5zh) and [External Support Dataset](http://bit.ly/1mpfehB). For the purpose of our analysis, we add additional variables to our dataset, which leaves us with 497 conflict dyad spells over a period of time from 1946 to 2010. We apply a regression design to assess the relationship between conflict outcome as our dependent variable and the support types as explanatory variables.
+For our analysis we use a publicly available dataset created by [Sullivan P. and Karreth J.](http://bit.ly/1NUGi2E). They both draw from a dataset from [Cunningham D.](http://bit.ly/1ZdqZFV), as well as the University of Uppsala Conflict Data Program's (UCDP) [Conflict Termination Dataset](http://bit.ly/1QiI5zh) and [External Support Dataset](http://bit.ly/1mpfehB). For the purpose of our analysis, we add additional variables, which leaves us with 497 conflict dyad spells over a period of time from 1946 to 2010. We apply a regression design to assess the relationship between conflict outcome as our dependent variable and the support types as explanatory variables.
 
 
-### Results
+### Top insights
 
-**Top 4 insights:**
-
-+   text1
-+   text2
-+   text3
-+   text4
++   **We didn't find any impact of the type of government intervention on conflict outcome.**
++   **The only factor that seems to play a significant role is the type of conflict.**
++   **In a secessionist conflict, such as in Syria for instance, the rebels are more likely to prevail.**
++   **The longer the conflict, the less likely it is for the government to win.**
 
 
 ### Further Information and Contact
 
-Click [here](https://github.com/KatrinHeger/CollaborativeResearchProject/raw/master/FinalPaper/Final_PDF.pdf) to download the full paper and [here](https://github.com/KatrinHeger/CollaborativeResearchProject) to view our reproducible data on Github. The code created with the R Programming language can be found [here](https://github.com/KatrinHeger/CollaborativeResearchProject/blob/master/FinalPaper/Final_Code.R).
+Click [here](https://github.com/KatrinHeger/CollaborativeResearchProject/raw/master/FinalPaper/FinalPaper_Markdown.pdf) to download the full paper and [here](https://github.com/KatrinHeger/CollaborativeResearchProject) to view our reproducible data on Github. The code created with the R Programming language can be found [here](https://github.com/KatrinHeger/CollaborativeResearchProject/blob/master/FinalPaper/Final_Code.R).
 
 **Email:**
 
