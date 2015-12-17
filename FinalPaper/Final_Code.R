@@ -505,16 +505,15 @@ exp(coef(mlogit3_reb_3))
 
 # Multinomial Logit Regression 3 - Government Support Type
 mlogit3_complete <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
-# Table
-stargazer(mlogit3_complete, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3))
 
+# Create Table
+stargazer(mlogit3_complete, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Rebel S. Military', 'Rebel S. Non-military', 'Fighting Capacity','Interaction GovXFi', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
 
 ###########################
 # Relative Risk Ratio     #
 ###########################
 
-exp(coef(mlogit3_reb_3))
-
+exp(coef(mlogit3_complete))
 
 ##############################
 # Predicted Probabilities    #
