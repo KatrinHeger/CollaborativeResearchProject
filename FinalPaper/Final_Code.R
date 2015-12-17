@@ -1,11 +1,10 @@
 ##################################################################
 # MPP-E1180: Intro. to Collab. Social Science Data Analyis       #
-# November 2015                                                  #
+# 17 December 2015                                               #
 # Collaborative Research Project                                 #
 # Katrin Heger & Benedikt Abendroth                              #
 # Impact of Intervention on Conflict Outcomes                    #
 # For more information please read the README file or            #
-# Research Proposal                                              #
 ##################################################################
 
 # Retrieving current working directory
@@ -45,6 +44,7 @@ library("ggplot2")
 library("nnet")
 library("memisc")
 library("stargazer")
+library("mnlogit")
 
 #######################
 # Load all datasets   #
@@ -184,12 +184,11 @@ Dataset_1$low.act.dummy <- recode(Dataset_1$conflict_outcome, " '0' = 1; '1' = 0
 # Show class of "fightcaphigh"
 class(Dataset_1$fightcaphigh)
 
-# Recode "fightcaphigh" into from an integer to a factor
+# Recode "fightcaphigh" from an integer to a factor
 Dataset_1$fightcaphigh <- factor(Dataset_1$fightcaphigh)
 
 # Create interaction variable between government intervention and fighting capacity
-Dataset_1$gov.supXfight.cap <- as.numeric(as.character(Dataset_1$gov.support_d)) * 
-                                as.numeric(as.character(Dataset_1$fightcaphigh))
+Dataset_1$gov.supXfight.cap <- as.numeric(as.character(Dataset_1$gov.support_d)) * as.numeric(as.character(Dataset_1$fightcaphigh))
 
 # Check for complete cases
 sum(complete.cases(Dataset_1))
@@ -253,7 +252,6 @@ Dataset_1_rtype_HG <- Dataset_1[!is.na(Dataset_1$gtypesup_cat),]
 # Create histogram of third-party support types for rebels
 qplot(Dataset_1_rtype_HG$rtypesup_cat, geom = "histogram", binwidth = .5, main = "Frequency of Rebel Support Types", xlab = "Support Types", ylab = "Frequency", alpha = I(.9), fill = I("brown"))
 
-
 ###########################
 # Inferential Statistics  #
 ###########################
@@ -264,21 +262,10 @@ DF_Independent <- data.frame(as.numeric(Dataset_1$gtypesup_cat), as.numeric(Data
 
 # Check for multicollinearity with correlation matrix of independent variables
 COR <- cor(DF_Independent, use = 'complete.obs')
-
-# Check for multicollinearity using the "Variance Inflation Factor (VIF)"
-# !!! Not working yet due to error "atomic vector"
-# VIF <- vif(Dataset_1$gtypesup_cat, Dataset_1$rtypesup_cat, Dataset_1$gov.supXfight.cap, Dataset_1$lngdp, Dataset_1$coup, Dataset_1$secessionist, Dataset_1$lnyears, Dataset_1$postCW, Dataset_1$rebpolwinglegal)
-
-# Test for endogeneity with a Hausman test
-
-# Test for heteroscedasticity
-# plot(XXXXX, which = 1)
-
-# Test for non-normality of errors
-# plot(XXX, which = 2)
+# Findings: No multicollinearity
 
 ####################
-# Logit Regression #        Plot logit regressions with "car::scatterplotMatrix(XXX)" 
+# Logit Regression #
 ####################
 
 # What kind of support is most likely to lead to an intended outcome?
@@ -292,11 +279,11 @@ COR <- cor(DF_Independent, use = 'complete.obs')
 Dataset_1$gov.vic.dummy <- as.factor(Dataset_1$gov.vic.dummy)
 
 # Logit Regression on government victory (1)
-reg1.1_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat, data=Dataset_1, family = binomial)
+reg1.1_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat -1, data=Dataset_1, family = binomial)
 stargazer(reg1.1_gov.vic, type = "text", digits = 2)
 
 # Logit Regression on government victory (2)
-reg1.2_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap, data=Dataset_1, family = binomial)
+reg1.2_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat -1 + Dataset_1$mi_fightcap, data=Dataset_1, family = binomial)
 stargazer(reg1.2_gov.vic, type = "text", digits = 2)
 
 # Logit Regression on government victory (3)
@@ -304,24 +291,23 @@ reg1.3_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1
 stargazer(reg1.3_gov.vic, type = "text", digits = 2)
 
 # Logit Regression on government victory (4)
-reg1.4_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup, data=Dataset_1, family = binomial)
+reg1.4_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp, data=Dataset_1, family = binomial)
 stargazer(reg1.4_gov.vic, type = "text", digits = 2)
 
 # Logit Regression on government victory (5)
-reg1.5_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears, data=Dataset_1, family = binomial)
+reg1.5_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$lnyears, data=Dataset_1, family = binomial)
 stargazer(reg1.5_gov.vic, type = "text", digits = 2)
 
 # Logit Regression on government victory (6)
-reg1.6_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal, data=Dataset_1, family = binomial)
+reg1.6_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal, data=Dataset_1, family = binomial)
 stargazer(reg1.6_gov.vic, type = "text", digits = 2)
 
 # Logit Regression on government victory (7)
-reg1.7_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data=Dataset_1, family = binomial)
+reg1.7_gov.vic<-glm(Dataset_1$gov.vic.dummy ~ Dataset_1$gtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data=Dataset_1, family = binomial)
 stargazer(reg1.7_gov.vic, type = "text", digits = 2)
 
 # Confidence Intervals
 confint(reg1.7_gov.vic)
-
 
 ###############################
 # Regression on rebel victory #
@@ -331,8 +317,8 @@ confint(reg1.7_gov.vic)
 Dataset_1$reb.vic.dummy <- as.factor(Dataset_1$reb.vic.dummy)
 
 # Logit Regression on rebel victory (1)
-reg2.1_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat, family = binomial)
-stargazer(reg2.1_reb.vic, type = "text", digits = 2)
+reg2.1_reb.vic <- nnet(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat, family = binomial, size = 3)
+stargazer(reg2.1_reb.vic, type = "latex", digits = 2)
 
 # Logit Regression on rebel victory (2)
 reg2.2_reb.vic <- glm(Dataset_1$reb.vic.dummy ~ Dataset_1$rtypesup_cat + Dataset_1$fightcaphigh, family = binomial)
@@ -413,42 +399,173 @@ stargazer(reg4.4_low.act, type = "text", digits = 2)
 # Confidence Intervals
 confint(reg4.4_low.act)
 
-
-
 ################################
 # Multinomial Logit Regression #
 ################################
 
-#####################################
-# !!! Add missing Hausman Tests !!! #
-#####################################
+## Dropping NA's from Dataset
+dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE & is.na(Dataset_1$gov.supXfight.cap) == FALSE, ]
 
-# Hausman-McFadden Test for testing independence of irrelevant alternatives
-# hmftest(x, )
+## Government without Interaction Variable
 
-# Multinomial Logit Regression - Model 1
-dat.1 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE, ]
-mlogit1 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat -1, data = dat.1)
-stargazer(mlogit1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
-
-# Multinomial Logit Regression - Model 2
-dat.2 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE, ]
-mlogit2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp -1, data = dat.2)
-stargazer(mlogit2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
-
-# Multinomial Logit Regression - Model 3
-dat.3 <- Dataset_1[is.na(Dataset_1$conflict_outcome) == FALSE & is.na(Dataset_1$gtypesup_cat) == FALSE & is.na(Dataset_1$rtypesup_cat) == FALSE & is.na(Dataset_1$mi_fightcap) == FALSE & is.na(Dataset_1$lngdp) == FALSE & is.na(Dataset_1$coup) == FALSE & is.na(Dataset_1$lnyears) == FALSE & is.na(Dataset_1$rebpolwinglegal) == FALSE & is.na(Dataset_1$secessionist) == FALSE, ]
-mlogit3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat + Dataset_1$rtypesup_cat + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$coup + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist -1, data = dat.3)
-stargazer(mlogit3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel', 'Nego.', 'Gov.'), 3))
-
+# Multinomial Logit Regression 1 - Government Support Type
+mlogit3_gov_1 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1, data = dat.3)
+# Table
+stargazer(mlogit3_gov_1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military'))
+# Anova
+Anova(mlogit3_gov_1)
 # Confidence Intervals
-confint(mlogit3)
+confint(mlogit3_gov_1)
+# Odds Ratios
+exp(coef(mlogit3_gov_1))
 
-# Create probabilities for each complete case
-predict_mlogit3 <- predict(mlogit3, dat.3, type = "prob")
-table(predict_mlogit3)
-stargazer(predict_mlogit3, type = "text", digits = 2)
+# Multinomial Logit Regression 2 - Government Support Type
+mlogit3_gov_2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1 + Dataset_1$mi_fightcap, data = dat.3)
+# Table
+stargazer(mlogit3_gov_2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Fighting Capacity', 'Interaction GovXFi'))
+# Anova
+Anova(mlogit3_gov_2)
+# Confidence Intervals
+confint(mlogit3_gov_2)
+# Odds Ratios
+exp(coef(mlogit3_gov_2))
 
-d_conflict_outcome <- data.frame(rtypesup_cat = c("troops", "military", "non-military"), conflict_outcome = mean(dat.3$conflict_outcome))
+# Multinomial Logit Regression 3 - Government Support Type
+mlogit3_gov_3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
+# Table
+stargazer(mlogit3_gov_3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Fighting Capacity','Interaction GovXFi', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
+# Anova
+Anova(mlogit3_gov_3)
+# Confidence Intervals
+confint(mlogit3_gov_3)
+# Odds Ratios
+exp(coef(mlogit3_gov_3))
 
-summary(Dataset_1$rtypesup_cat)
+## Government with Interaction Variable
+
+# Multinomial Logit Regression 1 - Government Support Type
+mlogit3_gov_1X <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1, data = dat.3)
+# Table
+stargazer(mlogit3_gov_1X, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military'))
+# Anova
+Anova(mlogit3_gov_1X)
+# Confidence Intervals
+confint(mlogit3_gov_1X)
+# Odds Ratios
+exp(coef(mlogit3_gov_1X))
+
+# Multinomial Logit Regression 2 - Government Support Type
+mlogit3_gov_2X <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap, data = dat.3)
+# Table
+stargazer(mlogit3_gov_2X, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Fighting Capacity', 'Interaction GovXFi'))
+# Anova
+Anova(mlogit3_gov_2X)
+# Confidence Intervals
+confint(mlogit3_gov_2X)
+# Odds Ratios
+exp(coef(mlogit3_gov_2X))
+
+# Multinomial Logit Regression 3 - Government Support Type
+mlogit3_gov_3X <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$gtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$gov.supXfight.cap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
+# Table
+stargazer(mlogit3_gov_3X, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Gov. S. Troops', 'Gov. S. Military', 'Gov. S. Non-military', 'Fighting Capacity','Interaction GovXFi', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
+# Anova
+Anova(mlogit3_gov_3X)
+# Confidence Intervals
+confint(mlogit3_gov_3X)
+# Odds Ratios
+exp(coef(mlogit3_gov_3X))
+
+## Rebels without Interaction Variable
+
+# Multinomial Logit Regression 1 - Rebel Support Type
+mlogit3_reb_1 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$rtypesup_cat -1, data = dat.3)
+# Table
+stargazer(mlogit3_reb_1, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Rebel S. Troops', 'Rebel. S. Military', 'Rebel. S. Non-military'))
+# Anova
+Anova(mlogit3_reb_1)
+# Confidence Intervals
+confint(mlogit3_reb_1)
+# Odds Ratios
+exp(coef(mlogit3_reb_1))
+
+# Multinomial Logit Regression 2 - Rebel Support Type
+mlogit3_reb_2 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$rtypesup_cat -1 + Dataset_1$mi_fightcap, data = dat.3)
+# Table
+stargazer(mlogit3_reb_2, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Rebel S. Troops', 'Rebel. S. Military', 'Rebel. S. Non-military', 'Fighting Capacity'))
+# Anova
+Anova(mlogit3_reb_2)
+# Confidence Intervals
+confint(mlogit3_reb_2)
+# Odds Ratios
+exp(coef(mlogit3_reb_2))
+
+# Multinomial Logit Regression 3 - Rebel Support Type
+mlogit3_reb_3 <- multinom(Dataset_1$conflict_outcome ~ Dataset_1$rtypesup_cat -1 + Dataset_1$mi_fightcap + Dataset_1$lngdp + Dataset_1$lnyears + Dataset_1$rebpolwinglegal + Dataset_1$secessionist, data = dat.3)
+# Table
+stargazer(mlogit3_reb_3, type = "text", digits = 2, dep.var.labels = rep(c('Rebel Victory', 'Negotiation', 'Gov. Victory'), 3), covariate.labels=c('Rebel S. Troops', 'Rebel. S. Military', 'Rebel. S. Non-military', 'Fighting Capacity', 'GDP', 'Duration', 'Reb. Legal Wing', 'Secessionist'))
+# Anova
+Anova(mlogit3_reb_3)
+# Confidence Intervals
+confint(mlogit3_reb_3)
+# Odds Ratios
+exp(coef(mlogit3_reb_3))
+
+##############################
+# Predicted Probabilities    #
+##############################
+
+# Predicting the choice probabilities
+mlogit3_reb_3_pred <- predict(mlogit3_reb_3, dat.3, "probs")
+
+# Create table
+stargazer(mlogit3_reb_3_pred, type = "text", digits = 2)
+
+# The result of this command is an n by k matrix, where n is the number of
+# data points being predicted and k is the number of options.
+# Therefore to make a choice, we need to calculate the cumulative probabilities
+# associated with each option. We can then draw a random value between 0 to 1;
+# the option with the greatest cumulative probability below our draw value is our choice.
+# This can be written into a function for easier use.
+# Source: http://bit.ly/1UBXJGk
+
+# Function to predict multinomial logit choice model outcomes
+predictMNL <- function(model, newdata) {
+  
+  # Only works for neural network models
+  if (is.element("nnet",class(model))) {
+    # Calculate the individual and cumulative probabilities
+    probs <- predict(model,newdata,"probs")
+    cum.probs <- t(apply(probs,1,cumsum))
+    
+    # Draw random values
+    vals <- runif(nrow(newdata))
+    
+    # Join cumulative probabilities and random draws
+    tmp <- cbind(cum.probs,vals)
+    
+    # For each row, get choice index.
+    k <- ncol(probs)
+    ids <- 1 + apply(tmp,1,function(x) length(which(x[1:k] < x[k+1])))
+    
+    # Return the values
+    return(ids)
+  }
+}
+
+# Using the function created above to predict the outcome for our dataset
+n <- 40
+df_pred <- data.frame(x1=runif(n,0,40),
+                 x2=runif(n,0,40),
+                 set="Model")
+y2 <- predictMNL(mlogit3_reb_3, df_pred)
+df2 <- cbind(df_pred,y=y2)
+
+
+stargazer(df2, type = "text", digits = 2)
+
+#####################################
+# Tests: Quality of the Model       #
+#####################################
+
+TBD
